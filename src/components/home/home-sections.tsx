@@ -32,7 +32,7 @@ export const What: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h1" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
               What is the Orbital Data Stack?
             </Typography>
             <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
@@ -134,7 +134,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h1" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
               Why the Orbital Data Stack Is Hard
             </Typography>
 
@@ -345,7 +345,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               workload will eventually land on.
             </Typography>
 
-            <Typography
+            {/* <Typography
               variant="h6"
               color="#cccccc"
               sx={{ mt: 1, maxWidth: 900 }}
@@ -353,7 +353,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               If you believe AI, sensing, and security are moving into space,
               the upside isn’t one more satellite. It’s owning the data centers
               they all depend on. That’s the bet SpaceBilt is giving you.
-            </Typography>
+            </Typography> */}
           </Grid>
         </Grid>
       </Container>
@@ -399,12 +399,51 @@ export const Big: React.FC = () => {
 
             <Typography
               variant="h5"
-              color="#cccccc"
-              sx={{ mb: 4, maxWidth: 900 }}
+              color="white"
+              sx={{ mb: 2, maxWidth: 900 }}
             >
               Over the next decade, three things are going to space at the same time:
-AI models, sensor constellations, and factories. ISAM architectures turn orbit into a construction site; in-space manufacturing turns it into an industrial park; AI makes all of it autonomous. None of that works without an Orbital Data Stack to run the robots, close the control loops, and store the data. That’s the layer SpaceBilt is building.
             </Typography>
+            <List sx={{ 
+              color: 'white',
+              mb: 2,
+              maxWidth: 900,
+              '& .MuiListItemText-primary': {
+                fontSize: '1.2rem'
+              }
+            }}>
+              <ListItem disableGutters>
+                <ListItemText primary="• AI models" />
+              </ListItem>
+              <ListItem disableGutters>
+                <ListItemText primary="• Sensor constellations" />
+              </ListItem>
+              <ListItem disableGutters>
+                <ListItemText primary="• Factories" />
+              </ListItem>
+            </List>
+            <Typography
+              variant="h5"
+              color="white"
+              sx={{ mb: 4, maxWidth: 900 }}
+            >
+              ISAM architectures turn orbit into a construction site; in-space manufacturing turns it into an industrial park; AI makes all of it autonomous.
+            </Typography>
+            <Typography
+              variant="h5"
+              color="white"
+              sx={{ mb: 4, maxWidth: 900 }}
+            >
+              None of that works without an Orbital Data Stack to run the robots, close the control loops, and store the data.
+            </Typography>
+            <Typography
+              variant="h5"
+              color="white"
+              sx={{ mb: 4, maxWidth: 900 }}
+            >
+              That's the layer SpaceBilt is building.
+            </Typography>
+
 
           </Grid>
         </Grid>

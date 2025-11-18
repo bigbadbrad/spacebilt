@@ -21,7 +21,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
       }}
     >
       <Container maxWidth="lg">
-              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: { xs: 4, md: 24 } }}>
+              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: { xs: 1, md: 24 } }}>
       
                 <Grid
                   item
@@ -38,7 +38,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
                     pt: 0,
                   }}
                 >
-        <Typography color="#ffffff" variant="h1" component="h2" sx={{ textAlign: 'left' }}>
+        <Typography color="#ffffff" variant="h2" component="h2" sx={{ textAlign: 'left' }}>
             We build the data centers that live in space.
         </Typography>
 
