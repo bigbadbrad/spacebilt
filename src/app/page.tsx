@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import { Metadata } from "next";
 import { HomeHero } from "../components/home/home-hero";
 import {
-  Proven, Rugged, What, WhyOrbitalDataStack, WhoNeedsOrbitalDataStack, Big
+  Proven, Rugged, What, WhyOrbitalDataStack, OuterEdge, WhoNeedsOrbitalDataStack, Big
 } from "@/components/home/home-sections";
 import { HomeCompare } from "../components/home/home-compare";
 import { HomePricing } from "../components/home/home-pricing";
@@ -63,6 +63,7 @@ export default function Page() {
       <HomeHero />
       <What />
       <WhyOrbitalDataStack />
+      <OuterEdge />
       <WhoNeedsOrbitalDataStack />
       <Big />
       {/* <Rugged /> */}

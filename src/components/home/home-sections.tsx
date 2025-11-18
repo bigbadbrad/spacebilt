@@ -217,6 +217,75 @@ export const WhyOrbitalDataStack: React.FC = () => {
   );
 };
 
+export const OuterEdge: React.FC = () => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#000000",
+        pt: { xs: 15, md: 20 },
+        pb: 15,
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="flex-start"
+          spacing={0}
+        >
+          {/* Left: Visual placeholder */}
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{
+              order: { xs: 1, md: 1 },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              mt: { xs: 0, md: 0 },
+              pl: { xs: 0, md: 4 },
+            }}
+          >
+            {/* Drop an illustration / diagram here */}
+          </Grid>
+
+          {/* Right: Text */}
+          <Grid
+            item
+            xs={12}
+            md={8}
+            sx={{
+              order: { xs: 2, md: 2 },
+              textAlign: { xs: "left", md: "left" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              pl: { xs: 0, md: 4 },
+              pb: { xs: 2, md: 6 },
+            }}
+          >
+            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+              We enable the outer edge of AI.
+            </Typography>
+
+            <Typography
+              variant="h5"
+              color="#ffffff"
+              sx={{ mt: 4, mb: 3 }}
+            >
+              SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Instead of hauling raw feeds back to Earth, models run next to telescopes, sensors, factories, and spacecraft—filtering, fusing, and acting on data in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
+            </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
 export const WhoNeedsOrbitalDataStack: React.FC = () => {
   return (
     <Box
