@@ -139,7 +139,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
             </Typography>
 
             <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
-              Three very important things most companies can’t do — and SpaceBilt already has:
+              Three things most companies can’t do — and SpaceBilt already has:
             </Typography>
 
             <List sx={{ 
@@ -264,7 +264,15 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               Orbital Data Stack is the layer those customers will build on.
             </Typography>
 
-            <List sx={{ color: "#ffffff", mb: 4 }}>
+            <List sx={{ 
+              color: '#ffffff',
+              '& .MuiListItemText-primary': {
+                fontSize: '1.25rem'
+              },
+              '& .MuiListItemText-secondary': {
+                fontSize: '1.1rem'
+              }
+            }}>
               <ListItem disableGutters>
                 <ListItemText
                   primary="AI model operators and inference platforms"
@@ -312,6 +320,19 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   secondaryTypographyProps={{ color: "#cccccc" }}
                 />
               </ListItem>
+
+              <ListItem disableGutters>
+                <ListItemText
+                  primary="In-space manufacturing & ISAM operators"
+                  secondary="Factories in orbit — from semiconductor foundries and fiber lines to biopharma and 3D-printed structures — generate huge volumes of process and sensor data that can’t wait to come back to Earth. The Orbital Data Stack lets manufacturers run AI-driven process control, quality inspection, and digital twins next to the line, while ISAM missions use the same infrastructure to coordinate robotic assembly, servicing, and refueling. It’s the data backbone for everything we build and repair in space."
+                  primaryTypographyProps={{
+                    color: "#ffffff",
+                    sx: { fontWeight: 600, mb: 0.5 },
+                  }}
+                  secondaryTypographyProps={{ color: "#cccccc" }}
+                />
+              </ListItem>
+
             </List>
 
             <Typography
@@ -333,6 +354,58 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               the upside isn’t one more satellite. It’s owning the data centers
               they all depend on. That’s the bet SpaceBilt is giving you.
             </Typography>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export const Big: React.FC = () => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#000000",
+        pt: { xs: 10, md: 14 },
+        pb: { xs: 14, md: 18 },
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+        borderTop: "1px solid #222222",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="flex-start"
+          spacing={0}
+        >
+          <Grid
+            item
+            xs={12}
+            md={10}
+            sx={{
+              textAlign: { xs: "left", md: "left" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              pl: { xs: 0, md: 4 },
+            }}
+          >
+            <Typography variant="h2" color="#ffffff" sx={{ mb: 3 }}>
+              Why this is big
+            </Typography>
+
+            <Typography
+              variant="h5"
+              color="#cccccc"
+              sx={{ mb: 4, maxWidth: 900 }}
+            >
+              Over the next decade, three things are going to space at the same time:
+AI models, sensor constellations, and factories. ISAM architectures turn orbit into a construction site; in-space manufacturing turns it into an industrial park; AI makes all of it autonomous. None of that works without an Orbital Data Stack to run the robots, close the control loops, and store the data. That’s the layer SpaceBilt is building.
+            </Typography>
+
           </Grid>
         </Grid>
       </Container>

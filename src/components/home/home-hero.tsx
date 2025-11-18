@@ -21,7 +21,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
       }}
     >
       <Container maxWidth="lg">
-              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: 24 }}>
+              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: { xs: 4, md: 24 } }}>
       
                 <Grid
                   item
@@ -59,7 +59,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
             }}
           >
         <Typography color="#ffffff" variant="h5" sx={{ textAlign: { xs: 'left', md: 'center' }, }}>
-            From the first commercial lunar data server to petabyte-class Orbital Data Center nodes on the ISS, SpaceBilt designs and integrates the servers, storage, and infrastructure that make orbital cloud real.
+            From the first commercial lunar data server to petabyte-class Orbital Data Center nodes on the ISS, SpaceBilt designs and integrates the servers, storage, and infrastructure that make the orbital cloud real.
         </Typography>
         </Grid>
         </Grid>

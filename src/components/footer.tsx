@@ -114,7 +114,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
                 pb: 5,
               }}
             >
-              © 2025 SpaceBilt<br />
+              © 2026 SpaceBilt<br />
               All Rights Reserved.
             </Typography>
       </Box>
