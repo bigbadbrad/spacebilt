@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 import { Metadata } from "next";
 import { HomeHero } from "../components/home/home-hero";
 import {
-  Proven, Rugged, What
+  Proven, Rugged, What, WhyOrbitalDataStack, WhoNeedsOrbitalDataStack
 } from "@/components/home/home-sections";
 import { HomeCompare } from "../components/home/home-compare";
 import { HomePricing } from "../components/home/home-pricing";
@@ -62,8 +62,9 @@ export default function Page() {
     <>
       <HomeHero />
       <What />
-      <Proven />
-      <Rugged />
+      <WhyOrbitalDataStack />
+      <WhoNeedsOrbitalDataStack />
+      {/* <Rugged /> */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   );

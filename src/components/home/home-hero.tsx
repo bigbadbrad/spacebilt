@@ -8,53 +8,66 @@ interface HomeHeroProps {
   backgroundColor?: string;
 }
 
-const stackItems = [
-  'Traffic Source',
-  'Segment / PostHog',
-  'Data Warehouse (Snowflake/BigQuery)',
-  'dbt / Modeling Layer',
-  'CDP (Salesforce/Adobe)',
-  'Personalization Engine (Optimizely/Dynamic Yield)',
-  'React App',
-  'User',
-];
-
-const audienceFlowItems = [
-  'Traffic Source',
-  'AudienceFlow SDK',
-  'AF Vector Database',
-  'AF Real-Time AI Personalization API',
-  'React App',
-  'User',
-];
-
 export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => {
   return (
     <>
     <Box
       sx={{
         backgroundColor: '#000000',
-        pt: { xs: 0, md: 18 },
+        pt: { xs: 2, md: 4 },
         width: '100%',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
       <Container maxWidth="lg">
-        <Typography color="#ffffff" variant="h2" component="h2" sx={{ mt: 4, mb: 3, textAlign: 'center' }}>
-            We build the data centers<br />that live in space.
+              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: 24 }}>
+      
+                <Grid
+                  item
+                  xs={12}
+                  md={6}
+                  sx={{
+                    order: { xs: 1, md: 1 }, // Text on left
+                    textAlign: { xs: "left", md: "left" },
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    alignItems: "flex-start",
+                    pl: { xs: 0, md: 4 }, // Adjust padding for left-aligned text
+                    pt: 0,
+                  }}
+                >
+        <Typography color="#ffffff" variant="h1" component="h2" sx={{ textAlign: 'left' }}>
+            We build the data centers that live in space.
         </Typography>
 
-        </Container>
+        </Grid>
 
-        <Container maxWidth="md" sx={{ px: { xs: 2, md: 0 } }}>
-            
-        <Typography color="#ffffff" variant="h3" sx={{ mt: 4, mb: 0, textAlign: { xs: 'left', md: 'center' }, }}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              order: { xs: 2, md: 2 }, // Visual on right
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              alignItems: { xs: "flex-start", md: "center" },
+              pt: 6,
+              pl: { xs: 0, md: 4 } // Adjust padding for right-aligned visual
+            }}
+          >
+        <Typography color="#ffffff" variant="h5" sx={{ textAlign: { xs: 'left', md: 'center' }, }}>
             From the first commercial lunar data server to petabyte-class Orbital Data Center nodes on the ISS, SpaceBilt designs and integrates the servers, storage, and infrastructure that make orbital cloud real.
         </Typography>
+        </Grid>
+        </Grid>
         </Container>
 
-        <Typography color="#ffffff" variant="h6" sx={{ mt: 12, mb: 0, textAlign: { xs: 'left', md: 'center' }, }}>
+
+        <Container maxWidth="md" sx={{ px: { xs: 2, md: 0 } }}>
+        <Typography color="#ffffff" variant="h6" sx={{ mt: 28, mb: 0, textAlign: { xs: 'left', md: 'center' }, }}>
             INTRODUCING THE
             </Typography>
         <Typography
@@ -76,16 +89,21 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
           Orbital Data Stack
         </Typography>
 
-        <Container maxWidth="md">
+
             <Typography variant="h4" color="white" sx={{ mt: 3, textAlign: { xs: 'left', md: 'center' }, }}>
             The Orbital Data Stack is everything it takes to run a data center in space — from radiation-tolerant servers and petabyte-scale storage to optical backhaul and in-orbit logistics.
             </Typography>
-            <Typography variant="h4" color="white" sx={{ mt: 3, mb: 12, textAlign: { xs: 'left', md: 'center' }, }}>
+            <Typography variant="h4" color="white" sx={{ mt: 3, mb: 4, textAlign: { xs: 'left', md: 'center' }, }}>
             SpaceBilt isn’t just talking about it. We’ve already flown it:
             </Typography>
-            <List color="white">
+            <List sx={{ 
+              color: '#ffffff',
+              '& .MuiListItemText-primary': {
+                fontSize: '1.25rem'
+              }
+            }}>
               <ListItem disableGutters>
-                <ListItemText primary="✅  Compute + storage layer: Large in-Space Server (LiSS), the world’s first 100+ TB orbital data server, flight-qualified on the ISS." />
+                <ListItemText primary="✅  Compute + storage layer: Large in-Space Server (LiSS), the world's first 100+ TB orbital data server, flight-qualified on the ISS." />
               </ListItem>
               <ListItem disableGutters>
                 <ListItemText primary="✅  Data center node layer: Axiom Orbital Data Center Node on the ISS, where SpaceBilt leads engineering and integration of optically interconnected, petabyte-class infrastructure." />
