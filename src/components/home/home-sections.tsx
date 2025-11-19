@@ -36,7 +36,7 @@ export const What: React.FC = () => {
               Three-layer breakdown:
             </Typography>
             <Grid container spacing={4} sx={{ mb: 4 }}>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={4}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
@@ -67,7 +67,7 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={4}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
@@ -98,7 +98,7 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={4}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
@@ -282,8 +282,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
             </List>
 
             <Typography variant="h5" color="#ffffff" sx={{ mt: 2, mb: 3 }}>
-              Very few companies on Earth can deliver the full Orbital Data
-              Stack. SpaceBilt is one of them — and we've already flown most of
+              Very few companies on Earth can deliver the full Orbital AI Factory. SpaceBilt is one of them — and we've already flown most of
               it.
             </Typography>
           </Grid>
