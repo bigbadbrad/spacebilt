@@ -22,7 +22,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
     >
       <Container maxWidth="md" sx={{ pt: { xs: 2, md: 24 }, pb: 4 }}>
         <Typography color="#ffffff" variant="h2" component="h2" sx={{ textAlign: 'center', mb: 4 }}>
-          We build the data centers<br /> that live in space.
+          We build the AI factories<br /> that live in space.
         </Typography>
         <Typography color="text.secondary" variant="h5" sx={{ textAlign: 'center' }}>
           From the first commercial lunar data server to petabyte-class Orbital Data Center nodes on the ISS, SpaceBilt designs and integrates the servers, storage, and infrastructure that make the orbital cloud real.
@@ -50,12 +50,12 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
         },
             }}
         >
-          Orbital Data Stack
+          Orbital AI Factory
         </Typography>
 
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 3, textAlign: { xs: 'left', md: 'center' }, }}>
-            The Orbital Data Stack is everything it takes to run a data center in space — from radiation-tolerant servers and petabyte-scale storage to optical backhaul and in-orbit logistics.
+            The Orbital AI Factory is everything it takes to run a data center in space — from radiation-tolerant servers and petabyte-scale storage to optical backhaul and in-orbit logistics.
             </Typography>
             <Typography variant="h5" color="white" sx={{ mt: 4, mb: 4, textAlign: { xs: 'left', md: 'center' }, }}>
             SpaceBilt isn’t just talking about it. We’ve already flown it:

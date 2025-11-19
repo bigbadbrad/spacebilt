@@ -30,7 +30,7 @@ export const What: React.FC = () => {
             }}
           >
             <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
-              What is the Orbital Data Stack?
+              What is the Orbital AI Factory?
             </Typography>
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
               Three-layer breakdown:
@@ -131,7 +131,7 @@ export const What: React.FC = () => {
               </Grid>
             </Grid>
             <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3 }}>
-              SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack.
+              SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital AI Factory.
             </Typography>
           </Grid>
         </Grid>
@@ -173,7 +173,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               pl: { xs: 0, md: 4 },
             }}
           >
-            {/* Drop an illustration / diagram of the Orbital Data Stack here */}
+            {/* Drop an illustration / diagram of the Orbital AI Factory here */}
           </Grid>
 
           {/* Right: Text */}
@@ -192,7 +192,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
             }}
           >
             <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
-              Why the Orbital Data Stack is hard.
+              Why the Orbital AI Factory is hard.
             </Typography>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
@@ -336,7 +336,7 @@ export const OuterEdge: React.FC = () => {
               color="text.secondary"
               sx={{ mt: 4, mb: 3 }}
             >
-              SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Multiple Orbital Data Stack nodes on a station come together as an <Box component="span" sx={{ color: "#ffffff" }}>orbital AI factory</Box> – a cluster where raw feeds from telescopes, sensors, factories, and spacecraft are turned into decisions on the spot, not after a round trip to Earth. Instead of hauling data home, models run in space, filtering, fusing, and acting in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
+              SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Multiple Orbital AI Factory nodes on a station come together as an <Box component="span" sx={{ color: "#ffffff" }}>orbital AI factory</Box> – a cluster where raw feeds from telescopes, sensors, factories, and spacecraft are turned into decisions on the spot, not after a round trip to Earth. Instead of hauling data home, models run in space, filtering, fusing, and acting in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
             </Typography>
           </Grid>
 
@@ -422,7 +422,7 @@ export const HowYouBuild: React.FC = () => {
             </Typography>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
-              At SpaceBilt, the Orbital Data Stack is built around three realities:
+              At SpaceBilt, the Orbital AI Factory is built around three realities:
             </Typography>
 
             <List sx={{ 
@@ -502,13 +502,13 @@ export const HowYouBuild: React.FC = () => {
                     mb: 4
                   }}
                 >
-                  Single points of failure in orbit aren't just outages, they're lost missions. We assume radiation hits, thermal excursions, and partial brownouts are normal operating conditions, and architect the Orbital Data Stack to degrade in slices: lose one node, one link, or one rail and the system keeps running at reduced capacity instead of going dark. That's what lets you accelerate the velocity of data on the outer edge without betting the mission on perfect conditions.
+                  Single points of failure in orbit aren't just outages, they're lost missions. We assume radiation hits, thermal excursions, and partial brownouts are normal operating conditions, and architect the Orbital AI Factory to degrade in slices: lose one node, one link, or one rail and the system keeps running at reduced capacity instead of going dark. That's what lets you accelerate the velocity of data on the outer edge without betting the mission on perfect conditions.
                 </Typography>
               </ListItem>
             </List>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
-              Whitepapers describe how orbital data centers should work. SpaceBilt's Orbital Data Stack is how they actually do — with the interfaces, envelopes, and failure modes already proven in space.
+              Whitepapers describe how orbital data centers should work. SpaceBilt's Orbital AI Factory is how they actually do — with the interfaces, envelopes, and failure modes already proven in space.
             </Typography>
           </Grid>
         </Grid>
@@ -550,7 +550,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
             }}
           >
             <Typography variant="h2" color="#ffffff" sx={{ mb: 3 }}>
-              Who the Orbital Data Stack is for.
+              Who the Orbital AI Factory is for.
             </Typography>
 
             <Typography
@@ -561,7 +561,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               As launch gets cheaper and terrestrial data centers hit power and
               cooling walls, the next wave of infrastructure isn’t another
               hyperscale region on Earth — it’s data centers in orbit. The
-              Orbital Data Stack is the layer those customers will build on.
+              Orbital AI Factory is the layer those customers will build on.
             </Typography>
 
             <Grid container spacing={3} sx={{ mb: 4, width: "100%" }}>
@@ -776,7 +776,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               color="text.secondary"
               sx={{ mt: 0, mb: 1, maxWidth: 900, fontWeight: 600 }}
             >
-              SpaceBilt is building the default Orbital Data Stack those
+              SpaceBilt is building the default Orbital AI Factory those
               customers plug into — the off-planet layer every high-value
               workload will eventually land on.
             </Typography>
@@ -916,7 +916,7 @@ export const Big: React.FC = () => {
               color="text.secondary"
               sx={{ mb: 4, maxWidth: 900 }}
             >
-              None of that works without an Orbital Data Stack to run the robots, close the control loops, and store the data.
+              None of that works without an Orbital AI Factory to run the robots, close the control loops, and store the data.
             </Typography>
             <Typography
               variant="h5"
