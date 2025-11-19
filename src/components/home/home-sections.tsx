@@ -32,11 +32,11 @@ export const What: React.FC = () => {
             <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
               What is the Orbital Data Stack?
             </Typography>
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 5 }}>
               Three-layer breakdown:
             </Typography>
-            <Grid container spacing={3} sx={{ mb: 4 }}>
-              <Grid item xs={12} md={4}>
+            <Grid container spacing={4} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={8}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
@@ -67,7 +67,7 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={8}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
@@ -98,7 +98,7 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={8}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
@@ -130,7 +130,7 @@ export const What: React.FC = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 0, mb: 3 }}>
+            <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3 }}>
               SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack.
             </Typography>
           </Grid>
@@ -622,7 +622,7 @@ export const Big: React.FC = () => {
             }}
           >
             <Typography variant="h2" color="#ffffff" sx={{ mb: 3 }}>
-              Why this is big
+              Why this is big.
             </Typography>
 
             <Typography

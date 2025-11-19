@@ -25,7 +25,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
   return (
   <Box
     sx={{
-      backgroundColor: colorScheme === 'dark' ? '#000000' : '#f3f3f6',
+      backgroundColor: colorScheme === 'dark' ? '#1d1d1f' : '#f3f3f6',
       textAlign: 'center',
       pt: 8,
       pb: 10,
