@@ -625,7 +625,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                       fontSize: "1.1rem",
                     }}
                   >
-                    Stations, depots, and logistics hubs need a way to monetize their real estate beyond hosting experiments. Plugging into the Orbital Data Stack turns them into orbital cloud regions — leasing compute, storage, and data services to every spacecraft that flies through their neighborhood.
+                    Stations, depots, and logistics hubs need a way to monetize their real estate beyond hosting experiments. Plugging into our stack turns them into orbital cloud regions — leasing compute, storage & data services to every spacecraft that flies through their neighborhood.
                   </Typography>
                 </Box>
               </Grid>
@@ -659,7 +659,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                       fontSize: "1.1rem",
                     }}
                   >
-                    Factories in orbit — from semiconductor foundries and fiber lines to biopharma and 3D-printed structures — generate huge volumes of process and sensor data that can't wait to come back to Earth. The Orbital Data Stack lets manufacturers run AI-driven process control, quality inspection, and digital twins next to the line.
+                    Factories in orbit — from semiconductor foundries and fiber lines to biopharma and 3D-printed structures — generate huge volumes of process and sensor data that can't wait to come back to Earth. Our stack lets manufacturers run AI-driven process control, quality inspection, and digital twins next to the line.
                   </Typography>
                 </Box>
               </Grid>
@@ -772,7 +772,7 @@ export const Big: React.FC = () => {
               <Grid item xs={12} md={4}>
                 <Box
                   sx={{
-                    backgroundColor: "#000000",
+                    backgroundColor: "#2d2d2f",
                     p: 3,
                     height: "100%",
                     borderRadius: 1,
@@ -792,7 +792,7 @@ export const Big: React.FC = () => {
               <Grid item xs={12} md={4}>
                 <Box
                   sx={{
-                    backgroundColor: "#000000",
+                    backgroundColor: "#2d2d2f",
                     p: 3,
                     height: "100%",
                     borderRadius: 1,
@@ -812,7 +812,7 @@ export const Big: React.FC = () => {
               <Grid item xs={12} md={4}>
                 <Box
                   sx={{
-                    backgroundColor: "#000000",
+                    backgroundColor: "#2d2d2f",
                     p: 3,
                     height: "100%",
                     borderRadius: 1,
