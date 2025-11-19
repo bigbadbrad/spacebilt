@@ -6,6 +6,7 @@ import { Box, Container, Typography, Button, Tooltip, useTheme, useMediaQuery } 
 import Link from 'next/link';
 import { Logo } from './logo';
 import { Icon } from './icon';
+import { IconBetter } from './icon-better';
 import { IconWide } from './icon-wide';
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -44,7 +45,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
         
         <Link href="/" style={{ display: 'flex', justifyContent: 'center' }}>
           <Box sx={{ mt: 1, mb: 0, width: { xs: '40%', sm: '40%' } }}>
-            <Icon fill={iconColor} />
+            <IconBetter fill={iconColor} />
           </Box>
         </Link>
         <Typography variant="h6" sx={{ pt: 1, pb: 3, }}>
