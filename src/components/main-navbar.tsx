@@ -108,7 +108,7 @@ export const MainNavbar: FC<MainNavbarProps> = ({ colorScheme = 'dark' }) => {
                   mx: 'auto',
                 }}
               >
-                <LogoThin height={26} fill={logoFillColor} />
+                <LogoThin height={isMobile ? 20 : 26} fill={logoFillColor} />
               </Box>
             </Link>
           </Box>

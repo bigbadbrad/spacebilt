@@ -43,8 +43,8 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
       >
         
         <Link href="/" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Box sx={{ mt: 1, mb: 0, width: { xs: '20%', sm: '20%' } }}>
-            <IconWide fill={iconColor} />
+          <Box sx={{ mt: 1, mb: 0, width: { xs: '40%', sm: '40%' } }}>
+            <Icon fill={iconColor} />
           </Box>
         </Link>
         <Typography variant="h6" sx={{ pt: 1, pb: 3, }}>
@@ -71,7 +71,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
               <Button sx={{ color: iconColor, textTransform: 'none' }}>Privacy</Button>
             </Link>
             <Link href="/">
-              <Button sx={{ color: iconColor, textTransform: 'none' }}>Terms</Button>
+              <Button sx={{ color: iconColor, textTransform: 'none' }}>Press</Button>
             </Link>
             <Tooltip title="hello@audienceflow.co">
               <Button sx={{ color: iconColor, textTransform: 'none' }}>Contact</Button>
@@ -99,7 +99,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
     <XIcon
       sx={{
         color: colorScheme === 'dark' ? '#d1d1d2' : '#444444',
-        fontSize: '3rem',
+        fontSize: '2.6rem',
         mx: '0.4rem',
       }}
     />

@@ -21,7 +21,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
       }}
     >
       <Container maxWidth="lg">
-              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: { xs: 1, md: 24 } }}>
+              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: { xs: 0, md: 24 } }}>
       
                 <Grid
                   item
