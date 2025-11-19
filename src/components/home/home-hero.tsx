@@ -20,7 +20,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
         overflow: 'hidden',
       }}
     >
-      <Container maxWidth="md" sx={{ pt: { xs: -6, md: 24 }, pb: 4 }}>
+      <Container maxWidth="md" sx={{ pt: { xs: -10, md: 24 }, pb: 4 }}>
         <Typography color="#ffffff" variant="h2" component="h2" sx={{ textAlign: 'center', mb: 4 }}>
           We build the data centers<br /> that live in space.
         </Typography>

@@ -208,40 +208,76 @@ export const WhyOrbitalDataStack: React.FC = () => {
                 fontSize: '1.1rem'
               }
             }}>
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="1. Petabyte-class hardware in brutal environments"
-                  secondary="We've flown 100+ TB Large in-Space Servers on the ISS exterior and delivered the first commercial data server to the Moon, proving enterprise-class compute and storage can survive radiation, vacuum, and extreme thermal swings."
-                  primaryTypographyProps={{
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
                     color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
+                >
+                  1. Petabyte-class hardware in brutal environments
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  We've flown 100+ TB Large in-Space Servers on the ISS exterior and delivered the first commercial data server to the Moon, proving enterprise-class compute and storage can survive radiation, vacuum, and extreme thermal swings.
+                </Typography>
               </ListItem>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="2. Real data center nodes, not one-off payloads"
-                  secondary="We're leading the engineering and payload implementation of Axiom's Orbital Data Center Node ISS — a petabyte-scale, optically connected infrastructure node that satellites, spacecraft, and stations can use as shared compute and storage, not just a single experiment."
-                  primaryTypographyProps={{
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
                     color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
+                >
+                  2. Real data center nodes, not one-off payloads
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  We're leading the engineering and payload implementation of Axiom's Orbital Data Center Node ISS — a petabyte-scale, optically connected infrastructure node that satellites, spacecraft, and stations can use as shared compute and storage, not just a single experiment.
+                </Typography>
               </ListItem>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="3. The lifecycle nobody sees"
-                  secondary="As an ISS National Lab implementation partner, we handle flight qualification, launch integration, on-orbit operations, and remote control through platforms like SMART-1 — and we're designing orbital logistics to upgrade, move, and repurpose capacity without de-orbiting hardware."
-                  primaryTypographyProps={{
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
                     color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
+                >
+                  3. The lifecycle nobody sees
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  As an ISS National Lab implementation partner, we handle flight qualification, launch integration, on-orbit operations, and remote control through platforms like SMART-1 — and we're designing orbital logistics to upgrade, move, and repurpose capacity without de-orbiting hardware.
+                </Typography>
               </ListItem>
             </List>
 
@@ -398,40 +434,76 @@ export const HowYouBuild: React.FC = () => {
                 fontSize: '1.1rem'
               }
             }}>
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="You design for orchestration, not boxes."
-                  secondary={`A "module" in orbit isn't just a metal can with compute inside. It's a self-contained power, thermal, network, and storage envelope that can be scheduled, throttled, and replaced without touching the rest of the stack. We standardize those envelopes so that a LiSS server, a sensor processor, or a manufacturing controller all plug into the same backbone and can be reconfigured like cloud instances, not one-off satellites.`}
-                  primaryTypographyProps={{
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
                     color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
+                >
+                  You design for orchestration, not boxes.
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  {`A "module" in orbit isn't just a metal can with compute inside. It's a self-contained power, thermal, network, and storage envelope that can be scheduled, throttled, and replaced without touching the rest of the stack. We standardize those envelopes so that a LiSS server, a sensor processor, or a manufacturing controller all plug into the same backbone and can be reconfigured like cloud instances, not one-off satellites.`}
+                </Typography>
               </ListItem>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="Serviceability is an interface problem, not a slogan."
-                  secondary={`Saying you can swap containers is easy; doing it in microgravity, on a station with safety constraints, is not. We collapse power, data, and cooling into a small set of repeatable interfaces and keep moving parts out of the critical path, so an astronaut, robot, or ISAM vehicle can remove and replace a node without taking the rest of the data center down. That's how you get to 10+ years of useful life without a "rip and replace" event.`}
-                  primaryTypographyProps={{
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
                     color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
+                >
+                  Serviceability is an interface problem, not a slogan.
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  {`Saying you can swap containers is easy; doing it in microgravity, on a station with safety constraints, is not. We collapse power, data, and cooling into a small set of repeatable interfaces and keep moving parts out of the critical path, so an astronaut, robot, or ISAM vehicle can remove and replace a node without taking the rest of the data center down. That's how you get to 10+ years of useful life without a "rip and replace" event.`}
+                </Typography>
               </ListItem>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="Resiliency is graceful failure, not wishful redundancy."
-                  secondary="Single points of failure in orbit aren't just outages, they're lost missions. We assume radiation hits, thermal excursions, and partial brownouts are normal operating conditions, and architect the Orbital Data Stack to degrade in slices: lose one node, one link, or one rail and the system keeps running at reduced capacity instead of going dark. That's what lets you accelerate the velocity of data on the outer edge without betting the mission on perfect conditions."
-                  primaryTypographyProps={{
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
                     color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
+                >
+                  Resiliency is graceful failure, not wishful redundancy.
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  Single points of failure in orbit aren't just outages, they're lost missions. We assume radiation hits, thermal excursions, and partial brownouts are normal operating conditions, and architect the Orbital Data Stack to degrade in slices: lose one node, one link, or one rail and the system keeps running at reduced capacity instead of going dark. That's what lets you accelerate the velocity of data on the outer edge without betting the mission on perfect conditions.
+                </Typography>
               </ListItem>
             </List>
 
