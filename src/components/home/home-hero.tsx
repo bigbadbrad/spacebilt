@@ -14,13 +14,13 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
     <Box
       sx={{
         backgroundColor: '#000000',
-        pt: { xs: 2, md: 4 },
+        pt: { xs: 0, md: 4 },
         width: '100%',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      <Container maxWidth="md" sx={{ pt: { xs: -10, md: 24 }, pb: 4 }}>
+      <Container maxWidth="md" sx={{ pt: { xs: 2, md: 24 }, pb: 4 }}>
         <Typography color="#ffffff" variant="h2" component="h2" sx={{ textAlign: 'center', mb: 4 }}>
           We build the data centers<br /> that live in space.
         </Typography>

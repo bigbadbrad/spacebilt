@@ -33,7 +33,7 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
                     paddingTop: '40',
                     backgroundColor: '#000000',
                     '@media (max-width:600px)': {
-                      paddingTop: '150px',
+                      paddingTop: '80px',
                     },
                   }}
                 >
