@@ -1,7 +1,7 @@
 // /components/home/home-sections.tsx
 import React from "react";
 import Link from 'next/link';
-import { Box, Container, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableRow, Paper, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Container, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableRow, Paper, List, ListItem, ListItemText, Divider } from "@mui/material";
 
 export const What: React.FC = () => {
   return (
@@ -29,10 +29,10 @@ export const What: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
               What is the Orbital Data Stack?
             </Typography>
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 5 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
               Three-layer breakdown:
             </Typography>
             <Grid container spacing={4} sx={{ mb: 4 }}>
@@ -191,11 +191,11 @@ export const WhyOrbitalDataStack: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
               Why the Orbital Data Stack is hard.
             </Typography>
 
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
               Three things most companies can't do — and SpaceBilt already has:
             </Typography>
 
@@ -245,7 +245,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               </ListItem>
             </List>
 
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 0, mb: 3 }}>
+            <Typography variant="h5" color="#ffffff" sx={{ mt: 2, mb: 3 }}>
               Very few companies on Earth can deliver the full Orbital Data
               Stack. SpaceBilt is one of them — and we've already flown most of
               it.
@@ -291,13 +291,13 @@ export const OuterEdge: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
               We enable the outer edge of AI.
             </Typography>
 
             <Typography
               variant="h5"
-              color="#ffffff"
+              color="text.secondary"
               sx={{ mt: 4, mb: 3 }}
             >
               SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Instead of hauling raw feeds back to Earth, models run next to telescopes, sensors, factories, and spacecraft—filtering, fusing, and acting on data in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
@@ -377,15 +377,15 @@ export const HowYouBuild: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h2" color="#cccccc" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
               How you actually build an orbital data center.
             </Typography>
 
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
               Everyone's deck says the same four words: modular, resilient, scalable, maintainable. On the ground, that's a slide. In orbit, it's a set of brutal engineering constraints you either solve in hardware or you don't fly.
             </Typography>
 
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
               At SpaceBilt, the Orbital Data Stack is built around three realities:
             </Typography>
 
@@ -435,7 +435,7 @@ export const HowYouBuild: React.FC = () => {
               </ListItem>
             </List>
 
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
               Whitepapers describe how orbital data centers should work. SpaceBilt's Orbital Data Stack is how they actually do — with the interfaces, envelopes, and failure modes already proven in space.
             </Typography>
           </Grid>
@@ -458,7 +458,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
         borderTop: "1px solid #222222",
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
         <Grid
           container
           justifyContent="center"
@@ -483,7 +483,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
 
             <Typography
               variant="h5"
-              color="#cccccc"
+              color="text.secondary"
               sx={{ mb: 4, maxWidth: 900 }}
             >
               As launch gets cheaper and terrestrial data centers hit power and
@@ -492,80 +492,216 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
               Orbital Data Stack is the layer those customers will build on.
             </Typography>
 
-            <List sx={{ 
-              color: '#ffffff',
-              '& .MuiListItemText-primary': {
-                fontSize: '1.25rem'
-              },
-              '& .MuiListItemText-secondary': {
-                fontSize: '1.1rem'
-              }
-            }}>
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="AI model operators and inference platforms"
-                  secondary="Foundation models, real-time copilots, and edge inference engines need cheap solar, free radiative cooling, and proximity to sensors. Off-planet regions let them spin up orbital capacity the way they spin up cloud regions today — without waiting years for a new substation on the ground."
-                  primaryTypographyProps={{
-                    color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
-                  }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
-              </ListItem>
+            <Grid container spacing={3} sx={{ mb: 4, width: "100%" }}>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="Earth observation and sensor constellations"
-                  secondary="Imaging, weather, RF, and SAR constellations are drowning in raw data. Processing and filtering in orbit — next to the sensors — lets operators downlink products instead of noise, unlock new analytics, and sell ‘insights-as-a-service’ instead of bandwidth-hungry pixels."
-                  primaryTypographyProps={{
-                    color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+              <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+                <Box
+                  component="div"
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    width: "100%",
+                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
-              </ListItem>
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    AI model operators and inference platforms
+                  </Typography>
+                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
+                  <Typography
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Foundation models, real-time copilots, and edge inference engines need cheap solar, free radiative cooling, and proximity to sensors. Off-planet regions let them spin up orbital capacity the way they spin up cloud regions today — without waiting years for a new substation on the ground.
+                  </Typography>
+                </Box>
+              </Grid>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="National security and space-domain awareness"
-                  secondary="Defense, intel, and allied space operators need resilient compute close to their assets — to fuse signals, run AI on live feeds, and keep operating when links to the ground are contested or delayed. An orbital data center is the tactical edge node for space."
-                  primaryTypographyProps={{
-                    color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+              <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+                <Box
+                  component="div"
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    width: "100%",
+                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
-              </ListItem>
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    Earth observation and sensor constellations
+                  </Typography>
+                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
+                  <Typography
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Imaging, weather, RF, and SAR constellations are drowning in raw data. Processing and filtering in orbit — next to the sensors — lets operators downlink products instead of noise, unlock new analytics, and sell 'insights-as-a-service' instead of bandwidth-hungry pixels.
+                  </Typography>
+                </Box>
+              </Grid>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="Commercial stations and in-space infrastructure"
-                  secondary="Stations, depots, and logistics hubs need a way to monetize their real estate beyond hosting experiments. Plugging into the Orbital Data Stack turns them into orbital cloud regions — leasing compute, storage, and data services to every spacecraft that flies through their neighborhood."
-                  primaryTypographyProps={{
-                    color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+              <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+                <Box
+                  component="div"
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    width: "100%",
+                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
-              </ListItem>
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    National security and space-domain awareness
+                  </Typography>
+                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
+                  <Typography
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Defense, intel, and allied space operators need resilient compute close to their assets — to fuse signals, run AI on live feeds, and keep operating when links to the ground are contested or delayed. An orbital data center is the tactical edge node for space.
+                  </Typography>
+                </Box>
+              </Grid>
 
-              <ListItem disableGutters>
-                <ListItemText
-                  primary="In-space manufacturing & ISAM operators"
-                  secondary="Factories in orbit — from semiconductor foundries and fiber lines to biopharma and 3D-printed structures — generate huge volumes of process and sensor data that can’t wait to come back to Earth. The Orbital Data Stack lets manufacturers run AI-driven process control, quality inspection, and digital twins next to the line, while ISAM missions use the same infrastructure to coordinate robotic assembly, servicing, and refueling. It’s the data backbone for everything we build and repair in space."
-                  primaryTypographyProps={{
-                    color: "#ffffff",
-                    sx: { fontWeight: 600, mb: 0.5 },
+              <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+                <Box
+                  component="div"
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    width: "100%",
+                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                   }}
-                  secondaryTypographyProps={{ color: "#cccccc" }}
-                />
-              </ListItem>
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    Commercial stations and in-space infrastructure
+                  </Typography>
+                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
+                  <Typography
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Stations, depots, and logistics hubs need a way to monetize their real estate beyond hosting experiments. Plugging into the Orbital Data Stack turns them into orbital cloud regions — leasing compute, storage, and data services to every spacecraft that flies through their neighborhood.
+                  </Typography>
+                </Box>
+              </Grid>
 
-            </List>
+              <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+                <Box
+                  component="div"
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    width: "100%",
+                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    In-space manufacturing
+                  </Typography>
+                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
+                  <Typography
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Factories in orbit — from semiconductor foundries and fiber lines to biopharma and 3D-printed structures — generate huge volumes of process and sensor data that can't wait to come back to Earth. The Orbital Data Stack lets manufacturers run AI-driven process control, quality inspection, and digital twins next to the line.
+                  </Typography>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={4} sx={{ display: "flex" }}>
+                <Box
+                  component="div"
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    width: "100%",
+                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    ISAM operators
+                  </Typography>
+                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
+                  <Typography
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    ISAM missions use the same infrastructure to coordinate robotic assembly, servicing, and refueling. It's the data backbone for everything we build and repair in space.
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
 
             <Typography
               variant="h5"
-              color="#ffffff"
+              color="text.secondary"
               sx={{ mt: 0, mb: 1, maxWidth: 900, fontWeight: 600 }}
             >
               SpaceBilt is building the default Orbital Data Stack those
@@ -627,32 +763,76 @@ export const Big: React.FC = () => {
 
             <Typography
               variant="h5"
-              color="white"
-              sx={{ mb: 2, maxWidth: 900 }}
+              color="text.secondary"
+              sx={{ mb: 5, maxWidth: 900 }}
             >
               Over the next decade, three things are going to space at the same time:
             </Typography>
-            <List sx={{ 
-              color: 'white',
-              mb: 2,
-              maxWidth: 900,
-              '& .MuiListItemText-primary': {
-                fontSize: '1.2rem'
-              }
-            }}>
-              <ListItem disableGutters>
-                <ListItemText primary="• AI models" />
-              </ListItem>
-              <ListItem disableGutters>
-                <ListItemText primary="• Sensor constellations" />
-              </ListItem>
-              <ListItem disableGutters>
-                <ListItemText primary="• Factories" />
-              </ListItem>
-            </List>
+            <Grid container spacing={3} sx={{ mb: 5, maxWidth: 900 }}>
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.2rem",
+                    }}
+                  >
+                    AI models
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.2rem",
+                    }}
+                  >
+                    Sensor constellations
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                    textAlign: "center",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.2rem",
+                    }}
+                  >
+                    Factories
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
             <Typography
               variant="h5"
-              color="white"
+              color="text.secondary"
               sx={{ mb: 4, maxWidth: 900 }}
             >
               ISAM architectures turn orbit into a construction site; 
@@ -661,7 +841,7 @@ export const Big: React.FC = () => {
             </Typography>
             <Typography
               variant="h5"
-              color="white"
+              color="text.secondary"
               sx={{ mb: 4, maxWidth: 900 }}
             >
               None of that works without an Orbital Data Stack to run the robots, close the control loops, and store the data.

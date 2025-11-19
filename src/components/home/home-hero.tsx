@@ -1,6 +1,6 @@
 // /components/home/home-hero-money.tsx
 import React from 'react';
-import { Box, Container, Grid, Typography, Button, Card, CardContent, Divider, List, ListItem, ListItemText } from '@mui/material';
+import { Box, Container, Typography, Button, Card, CardContent, Divider, List, ListItem, ListItemText } from '@mui/material';
 import type { FC } from 'react';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
@@ -20,50 +20,14 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
         overflow: 'hidden',
       }}
     >
-      <Container maxWidth="lg">
-              <Grid container alignItems="flex-start" spacing={0} sx={{ pt: { xs: 0, md: 24 } }}>
-      
-                <Grid
-                  item
-                  xs={12}
-                  md={6}
-                  sx={{
-                    order: { xs: 1, md: 1 }, // Text on left
-                    textAlign: { xs: "left", md: "left" },
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "flex-start",
-                    alignItems: "flex-start",
-                    pl: { xs: 0, md: 4 }, // Adjust padding for left-aligned text
-                    pt: 0,
-                  }}
-                >
-        <Typography color="#ffffff" variant="h2" component="h2" sx={{ textAlign: 'left' }}>
-            We build the data centers that live in space.
+      <Container maxWidth="md" sx={{ pt: { xs: 4, md: 24 }, pb: 4 }}>
+        <Typography color="#ffffff" variant="h2" component="h2" sx={{ textAlign: 'center', mb: 4 }}>
+          We build the data centers<br /> that live in space.
         </Typography>
-
-        </Grid>
-
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              order: { xs: 2, md: 2 }, // Visual on right
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: { xs: "flex-start", md: "center" },
-              pt: 6,
-              pl: { xs: 0, md: 4 } // Adjust padding for right-aligned visual
-            }}
-          >
-        <Typography color="#ffffff" variant="h5" sx={{ textAlign: { xs: 'left', md: 'center' }, }}>
-            From the first commercial lunar data server to petabyte-class Orbital Data Center nodes on the ISS, SpaceBilt designs and integrates the servers, storage, and infrastructure that make the orbital cloud real.
+        <Typography color="text.secondary" variant="h5" sx={{ textAlign: 'center' }}>
+          From the first commercial lunar data server to petabyte-class Orbital Data Center nodes on the ISS, SpaceBilt designs and integrates the servers, storage, and infrastructure that make the orbital cloud real.
         </Typography>
-        </Grid>
-        </Grid>
-        </Container>
+      </Container>
 
 
         <Container maxWidth="md" sx={{ px: { xs: 2, md: 0 }, pb: 16 }}>
@@ -90,10 +54,10 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
         </Typography>
 
 
-            <Typography variant="h4" color="white" sx={{ mt: 3, textAlign: { xs: 'left', md: 'center' }, }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 3, textAlign: { xs: 'left', md: 'center' }, }}>
             The Orbital Data Stack is everything it takes to run a data center in space — from radiation-tolerant servers and petabyte-scale storage to optical backhaul and in-orbit logistics.
             </Typography>
-            <Typography variant="h4" color="white" sx={{ mt: 3, mb: 4, textAlign: { xs: 'left', md: 'center' }, }}>
+            <Typography variant="h5" color="white" sx={{ mt: 4, mb: 4, textAlign: { xs: 'left', md: 'center' }, }}>
             SpaceBilt isn’t just talking about it. We’ve already flown it:
             </Typography>
             <List sx={{ 
