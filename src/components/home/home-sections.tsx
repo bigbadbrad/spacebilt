@@ -857,7 +857,7 @@ export const Big: React.FC = () => {
                       fontSize: "1.2rem",
                     }}
                   >
-                    AI models
+                    AI factories
                   </Typography>
                 </Box>
               </Grid>
@@ -897,7 +897,7 @@ export const Big: React.FC = () => {
                       fontSize: "1.2rem",
                     }}
                   >
-                    Factories
+                    Physical factories
                   </Typography>
                 </Box>
               </Grid>
