@@ -16,19 +16,16 @@ export const What: React.FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container justifyContent="center" alignItems="flex-start" spacing={0}>
-
+        <Grid container justifyContent="flex-start" alignItems="flex-start" spacing={0}>
           <Grid
             item
             xs={12}
-            md={8}
             sx={{
-              order: { xs: 1, md: 1 }, // Text on left
               textAlign: { xs: "left", md: "left" },
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-start",
-              pl: { xs: 0, md: 4 }, // Adjust padding for left-aligned text
+              pl: { xs: 0, md: 4 },
               pb: { xs: 2, md: 6 },
             }}
           >
@@ -38,61 +35,104 @@ export const What: React.FC = () => {
             <Typography variant="h5" color="#ffffff" sx={{ mt: 4, mb: 3 }}>
               Three-layer breakdown:
             </Typography>
-            <List sx={{ 
-              color: '#ffffff',
-              '& .MuiListItemText-primary': {
-                fontSize: '1.25rem'
-              },
-              '& .MuiListItemText-secondary': {
-                fontSize: '1.1rem'
-              }
-            }}>
-              <ListItem disableGutters>
-                <ListItemText 
-                  primary="1. Orbital Compute & Storage"
-                  secondary="Ruggedized servers and SSD arrays designed for radiation, vacuum, and thermal extremes — from 100+ TB LiSS units to petabyte-class AxODC nodes on the ISS."
-                  primaryTypographyProps={{ color: '#ffffff', sx: { fontWeight: 600, mb: 0.5 } }}
-                  secondaryTypographyProps={{ color: '#cccccc' }}
-                />
-              </ListItem>
-              <ListItem disableGutters>
-                <ListItemText 
-                  primary="2. Data Center Integration"
-                  secondary="Power, cooling, networking, and optical links that turn individual servers into a true orbital data center — including AxODC Node ISS with high-speed optical backhaul."
-                  primaryTypographyProps={{ color: '#ffffff', sx: { fontWeight: 600, mb: 0.5 } }}
-                  secondaryTypographyProps={{ color: '#cccccc' }}
-                />
-              </ListItem>
-              <ListItem disableGutters>
-                <ListItemText 
-                  primary="3. Orbital Logistics & Lifecycle"
-                  secondary="Design, qualification, launch integration, on-orbit operations, upgrades, and repurposing — so capacity can be added, moved, and modernized without de-orbiting hardware."
-                  primaryTypographyProps={{ color: '#ffffff', sx: { fontWeight: 600, mb: 0.5 } }}
-                  secondaryTypographyProps={{ color: '#cccccc' }}
-                />
-              </ListItem>
-            </List>
+            <Grid container spacing={3} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    1. Orbital Compute & Storage
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Ruggedized servers and SSD arrays designed for radiation, vacuum, and thermal extremes — from 100+ TB LiSS units to petabyte-class AxODC nodes on the ISS.
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    2. Data Center Integration
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Power, cooling, networking, and optical links that turn individual servers into a true orbital data center — including AxODC Node ISS with high-speed optical backhaul.
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 1,
+                    }}
+                  >
+                    3. Orbital Logistics & Lifecycle
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#cccccc",
+                      fontSize: "1.1rem",
+                    }}
+                  >
+                    Design, qualification, launch integration, on-orbit operations, upgrades, and repurposing — so capacity can be added, moved, and modernized without de-orbiting hardware.
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
             <Typography variant="h5" color="#ffffff" sx={{ mt: 0, mb: 3 }}>
               SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack.
             </Typography>
-
-          </Grid>
-
-          {/* Right: VisualAPI Flow */}
-          <Grid
-            item
-            xs={12}
-            md={4}
-            sx={{
-              order: { xs: 2, md: 2 }, // Visual on right
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "top",
-              mt: { xs: 0, md: 0 },
-              pl: { xs: 0, md: 4 } // Adjust padding for right-aligned visual
-            }}
-          >
-            {/* an image */}
           </Grid>
         </Grid>
       </Container>
