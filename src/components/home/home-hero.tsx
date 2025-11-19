@@ -66,7 +66,7 @@ export const HomeHero: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => 
         </Container>
 
 
-        <Container maxWidth="md" sx={{ px: { xs: 2, md: 0 } }}>
+        <Container maxWidth="md" sx={{ px: { xs: 2, md: 0 }, pb: 16 }}>
         <Typography color="#ffffff" variant="h6" sx={{ mt: 28, mb: 0, textAlign: { xs: 'left', md: 'center' }, }}>
             INTRODUCING THE
             </Typography>

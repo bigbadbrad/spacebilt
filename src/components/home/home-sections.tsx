@@ -7,7 +7,7 @@ export const What: React.FC = () => {
   return (
     <Box
       sx={{
-        backgroundColor: "#000000",
+        backgroundColor: "#1b1b1d",
         pt: { xs: 15, md: 20 },
         pb: 15,
         width: "100%",
@@ -615,7 +615,9 @@ export const Big: React.FC = () => {
               color="white"
               sx={{ mb: 4, maxWidth: 900 }}
             >
-              ISAM architectures turn orbit into a construction site; in-space manufacturing turns it into an industrial park; AI makes all of it autonomous.
+              ISAM architectures turn orbit into a construction site; 
+              in-space manufacturing turns it into an industrial park; 
+              AI makes all of it autonomous.
             </Typography>
             <Typography
               variant="h5"

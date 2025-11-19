@@ -6,6 +6,7 @@ import { HomeHero } from "../components/home/home-hero";
 import {
   Proven, Rugged, What, WhyOrbitalDataStack, OuterEdge, HowYouBuild, WhoNeedsOrbitalDataStack, Big
 } from "@/components/home/home-sections";
+import { Signals } from "../components/home/home-signals";
 import { HomeCompare } from "../components/home/home-compare";
 import { HomePricing } from "../components/home/home-pricing";
 
@@ -66,6 +67,7 @@ export default function Page() {
       <OuterEdge />
       <HowYouBuild />
       <WhoNeedsOrbitalDataStack />
+      <Signals />
       <Big />
       {/* <Rugged /> */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
