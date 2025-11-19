@@ -336,7 +336,7 @@ export const OuterEdge: React.FC = () => {
               color="text.secondary"
               sx={{ mt: 4, mb: 3 }}
             >
-              SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Instead of hauling raw feeds back to Earth, models run next to telescopes, sensors, factories, and spacecraft—filtering, fusing, and acting on data in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
+              SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Multiple Orbital Data Stack nodes on a station come together as an <Box component="span" sx={{ color: "#ffffff" }}>orbital AI factory</Box> – a cluster where raw feeds from telescopes, sensors, factories, and spacecraft are turned into decisions on the spot, not after a round trip to Earth. Instead of hauling data home, models run in space, filtering, fusing, and acting in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
             </Typography>
           </Grid>
 
