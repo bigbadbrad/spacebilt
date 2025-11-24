@@ -3,6 +3,7 @@ import React from "react";
 import dynamic from 'next/dynamic';
 import { Metadata } from "next";
 import { HomeHero } from "../components/home/home-hero";
+import { HomeHeroMoney } from "../components/home/home-hero-money";
 import {
   Proven, Rugged, What, WhyOrbitalDataStack, OuterEdge, HowYouBuild, WhoNeedsOrbitalDataStack, Big
 } from "@/components/home/home-sections";
@@ -62,6 +63,7 @@ export default function Page() {
   return (
     <>
       <HomeHero />
+      {/* <HomeHeroMoney /> */}
       <What />
       <WhyOrbitalDataStack />
       <OuterEdge />
