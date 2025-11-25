@@ -19,7 +19,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
       <Box
         sx={{
           position: 'relative',
-          pt: { xs: 8, md: 16 },
+          pt: { xs: 8, md: 26 },
           pb: { xs: 16, md: 28 },
         }}
       >
@@ -36,7 +36,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
             color="#ffffff"
             variant="h2"
             component="h2"
-            sx={{ mb: 4 }}
+            sx={{ mt: 6, mb: 4 }}
           >
             We build the AI factories
             <br /> that live in space.
@@ -66,7 +66,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           >
             <Box
               component="img"
-              src="/assets/orbital-ai-factory3.png"
+              src="/assets/orbital-ai-factory4.png"
               alt="Orbital AI Factory node in low Earth orbit"
               sx={{
                 width: '100%',
@@ -92,13 +92,14 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         >
           <Box
             component="img"
-            src="/assets/orbital-ai-factory3.png"
+            src="/assets/orbital-ai-factory4.png"
             alt="Orbital AI Factory node in low Earth orbit"
             sx={{
               height: '90%',      // scale down so the whole satellite fits
-              marginTop: '5%',    // center it vertically in the hero block
+              marginTop: 'calc(5% + 60px)',    // center it vertically + 20px down
               width: 'auto',
               display: 'block',
+              marginLeft: 'auto',  // ensure right alignment
             }}
           />
 
@@ -122,7 +123,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         maxWidth="md"
         sx={{
           px: { xs: 2, md: 0 },
-          pt: { xs: 2, md: 6 },
+          pt: { xs: 2, md: 10 },
           pb: 16,
         }}
       >
