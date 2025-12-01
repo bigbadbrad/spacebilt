@@ -66,7 +66,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           >
             <Box
               component="img"
-              src="/assets/orbital-ai-factory4.png"
+              src="/assets/ai-factory-pod.png"
               alt="Orbital AI Factory node in low Earth orbit"
               sx={{
                 width: '100%',
@@ -92,7 +92,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         >
           <Box
             component="img"
-            src="/assets/orbital-ai-factory4.png"
+            src="/assets/ai-factory-pod.png"
             alt="Orbital AI Factory node in low Earth orbit"
             sx={{
               height: '90%',      // scale down so the whole satellite fits
