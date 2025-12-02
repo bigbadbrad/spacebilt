@@ -133,7 +133,7 @@ export const What: React.FC = () => {
               </Grid>
             </Grid>
             <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3 }}>
-              SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack – and multiple Orbital Data Stack nodes on a station are what form an Orbital AI Factory.
+              SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack. Multiple Orbital Data Stack nodes on a station come together to form an Orbital AI Factory.
             </Typography>
           </Grid>
         </Grid>
