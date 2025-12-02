@@ -36,7 +36,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
             color="#ffffff"
             variant="h2"
             component="h2"
-            sx={{ mt: 6, mb: 4 }}
+            sx={{ mt: { xs: 2, md: 6 }, mb: 4 }}
           >
             We build the AI factories
             <br /> that live in space.
@@ -66,7 +66,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           >
             <Box
               component="img"
-              src="/assets/ai-factory-money2.png"
+              src="/assets/ai-factory-mobile.png"
               // src="/assets/ai-factory-pod.png"
               alt="Orbital AI Factory node in low Earth orbit"
               sx={{
