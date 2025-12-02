@@ -62,8 +62,8 @@ export default function Page() {
   
   return (
     <>
-      <HomeHero />
-      {/* <HomeHeroMoney /> */}
+      {/* <HomeHero /> */}
+      <HomeHeroMoney />
       <What />
       <WhyOrbitalDataStack />
       <OuterEdge />
