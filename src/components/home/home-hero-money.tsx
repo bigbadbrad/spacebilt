@@ -66,7 +66,8 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           >
             <Box
               component="img"
-              src="/assets/ai-factory-pod.png"
+              src="/assets/ai-factory-money2.png"
+              // src="/assets/ai-factory-pod.png"
               alt="Orbital AI Factory node in low Earth orbit"
               sx={{
                 width: '100%',
@@ -92,7 +93,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         >
           <Box
             component="img"
-            src="/assets/ai-factory-pod.png"
+            src="/assets/ai-factory-money2.png"
             alt="Orbital AI Factory node in low Earth orbit"
             sx={{
               height: 'calc(100% - 60px)',  // Use container height minus top margin
