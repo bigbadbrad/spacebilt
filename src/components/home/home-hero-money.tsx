@@ -19,8 +19,8 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
       <Box
         sx={{
           position: 'relative',
-          pt: { xs: 8, md: 26 },
-          pb: { xs: 16, md: 28 },
+          pt: { xs: 0, md:34 },
+          pb: { xs: 16, md: 32 },
         }}
       >
         {/* Main hero text */}
@@ -95,11 +95,12 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
             src="/assets/ai-factory-pod.png"
             alt="Orbital AI Factory node in low Earth orbit"
             sx={{
-              height: '90%',      // scale down so the whole satellite fits
-              marginTop: 'calc(5% + 60px)',    // center it vertically + 20px down
+              height: 'calc(100% - 60px)',  // Use container height minus top margin
+              marginTop: '60px',            // Offset from top
               width: 'auto',
               display: 'block',
-              marginLeft: 'auto',  // ensure right alignment
+              marginLeft: 'auto',           // ensure right alignment
+              objectFit: 'contain',         // Preserve aspect ratio, show full image
             }}
           />
 
@@ -123,7 +124,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         maxWidth="md"
         sx={{
           px: { xs: 2, md: 0 },
-          pt: { xs: 2, md: 10 },
+          pt: { xs: 2, md: 12 },
           pb: 16,
         }}
       >
