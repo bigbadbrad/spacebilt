@@ -521,6 +521,267 @@ export const HowYouBuild: React.FC = () => {
   );
 };
 
+
+// ***** Orbital AI Factory Specs & Details *****
+export const OrbitalAIFactorySpecs: React.FC = () => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#1b1b1d",
+        pt: { xs: 15, md: 20 },
+        pb: 15,
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container justifyContent="flex-start" alignItems="flex-start" spacing={0}>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              textAlign: { xs: "left", md: "left" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              pl: { xs: 0, md: 4 },
+              pb: { xs: 2, md: 6 },
+            }}
+          >
+            <Typography
+              color="#ffffff"
+              variant="h6"
+              sx={{
+                mb: 0,
+                textAlign: { xs: 'left', md: 'left' },
+              }}
+            >
+              ORBITAL AI FACTORY
+            </Typography>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
+              1 MW Class Node
+            </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 2, mb: 4, fontStyle: "italic" }}>
+              Concept reference design for free-flying SpaceBilt nodes
+            </Typography>
+
+            <Typography variant="h5" color="white" sx={{ mt: 4, mb: 3, fontWeight: 600 }}>
+              Mission Profile
+            </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+              <strong>Role:</strong> High-density AI compute + storage node in low Earth orbit
+            </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+              <strong>Use cases:</strong>
+            </Typography>
+            <List sx={{ color: "#cccccc", pl: 4, mb: 3 }}>
+              <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
+                <ListItemText 
+                  primary="On-orbit AI inference and training near telescopes, sensor constellations, stations, in-space factories"
+                  primaryTypographyProps={{ fontSize: "1.1rem" }}
+                />
+              </ListItem>
+              <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
+                <ListItemText 
+                  primary="Data reduction + compression at the edge"
+                  primaryTypographyProps={{ fontSize: "1.1rem" }}
+                />
+              </ListItem>
+              <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
+                <ListItemText 
+                  primary="Secure orbital data center for commercial, defense, and science payloads"
+                  primaryTypographyProps={{ fontSize: "1.1rem" }}
+                />
+              </ListItem>
+            </List>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
+              <strong>Orbit:</strong> Sun-synchronous LEO, ~600–700 km, ~97–98° inclination<br />
+              <strong>Design life:</strong> 5–10 years, robotically serviceable
+            </Typography>
+
+            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 3, fontWeight: 600 }}>
+              Node at a Glance
+            </Typography>
+            <Grid container spacing={3} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 2,
+                    }}
+                  >
+                    Power & Scale
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
+                    • Peak electrical power (Sunlit): ~1 MW (scalable)
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
+                    • AI compute pods per node: 4–8 modular pods on a central spine
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
+                    • Thermal rejection: ~1 MW thermal via deployable radiator assemblies
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 2,
+                    }}
+                  >
+                    Structure & Servicing
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
+                    • Main structure: 25–40 m lattice spine with ROSA-class solar wings on each end
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
+                    • Designed for robotic swap-out of pods, radiators, and arrays
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+
+            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 4, fontWeight: 600 }}>
+              Explore the Details
+            </Typography>
+            <Grid container spacing={3} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={4}>
+                <Link href="/orbital-ai-factory/nodes" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "#000000",
+                      p: 3,
+                      height: "100%",
+                      borderRadius: 1,
+                      border: "1px solid #333333",
+                      transition: "border-color 0.2s",
+                      "&:hover": {
+                        borderColor: "#555555",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                        fontWeight: 600,
+                        mb: 1.5,
+                      }}
+                    >
+                      Node Architecture
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1rem", mb: 2 }}>
+                      Structure, spine design, modularity, and robotic servicing interfaces
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
+                      Learn more →
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Link href="/orbital-ai-factory/compute-pods" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "#000000",
+                      p: 3,
+                      height: "100%",
+                      borderRadius: 1,
+                      border: "1px solid #333333",
+                      transition: "border-color 0.2s",
+                      "&:hover": {
+                        borderColor: "#555555",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                        fontWeight: 600,
+                        mb: 1.5,
+                      }}
+                    >
+                      Compute Pods
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1rem", mb: 2 }}>
+                      Physical specs, AI compute configurations, storage, networking, and pod-level power/thermal
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
+                      Learn more →
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Link href="/orbital-ai-factory/power-thermal" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "#000000",
+                      p: 3,
+                      height: "100%",
+                      borderRadius: 1,
+                      border: "1px solid #333333",
+                      transition: "border-color 0.2s",
+                      "&:hover": {
+                        borderColor: "#555555",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                        fontWeight: 600,
+                        mb: 1.5,
+                      }}
+                    >
+                      Power & Thermal
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1rem", mb: 2 }}>
+                      ROSA-class solar arrays, power conversion, ISS-derived deployable radiators, and thermal management
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
+                      Learn more →
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
 // ***** Who the Orbital AI Factory is for *****
 export const WhoNeedsOrbitalDataStack: React.FC = () => {
   return (
