@@ -665,6 +665,28 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Grid>
             </Grid>
 
+            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 3, fontWeight: 600 }}>
+              Network & Interconnect
+            </Typography>
+            <Box
+              sx={{
+                backgroundColor: "#000000",
+                p: 3,
+                borderRadius: 1,
+                mb: 4,
+              }}
+            >
+              <Typography variant="body1" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 2 }}>
+                <strong>Inside the node:</strong> High-speed optical compute fabric connects AI pods across the node with aggregate throughput in the tens of terabits per second, making clusters of pods behave like a single, tightly-coupled AI supercomputer.
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 2 }}>
+                <strong>Between nodes:</strong> Free-space optical links (FSO) provide fiber-class bandwidth—hundreds of Gbps to multi-Tbps per link, scaling to tens of Tbps node-to-node. Nodes form a resilient mesh across orbital planes, with laser crosslinks for AI data and model sync, while RF serves as control and backup.
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
+                Instead of isolated "AI satellites," the Orbital AI Factory operates as a distributed, laser-linked supercomputer in low Earth orbit, designed for high-bandwidth, synchronised AI workloads.
+              </Typography>
+            </Box>
+
             <Typography variant="h5" color="white" sx={{ mt: 6, mb: 4, fontWeight: 600 }}>
               Explore the Details
             </Typography>
