@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SpaceBilt – We build the data centers that live in space.",
     description: "SpaceBilt – We build the data centers that live in space.",
-    url: "https://www.spacebilt.co",
+    url: "https://orbitalaifactory.com",
     siteName: "SpaceBilt",
     locale: "en_US",
     type: "website",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "SpaceBilt – We build the data centers that live in space.",
     site: "@spacebilt",
     creator: "@spacebilt",
-    images: ["https://spacebilt.co/icon"],
+    images: ["https://orbitalaifactory.com/icon"],
   },
   robots: {
     index: true,
@@ -50,7 +50,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "SpaceBilt",
   sameAs: [
-    "https://spacebilt.co",
+    "https://orbitalaifactory.com",
     "https://twitter.com/spacebilt",
     "https://facebook.com/spacebilt"
   ],

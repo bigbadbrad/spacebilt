@@ -49,7 +49,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
           </Box>
         </Link>
         <Typography variant="h6" sx={{ pt: 1, pb: 3, }}>
-        We build the data centers that live in space.
+        We build the AI factories that live in space.
         </Typography>
 
         <Box
@@ -74,9 +74,30 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
             <Link href="/">
               <Button sx={{ color: iconColor, textTransform: 'none' }}>Press</Button>
             </Link>
-            <Tooltip title="hello@audienceflow.co">
+            <Box
+              sx={{
+                position: 'relative',
+                display: 'inline-block',
+                '&:hover::before': {
+                  content: '"hello@orbitalaifactory.com"',
+                  position: 'absolute',
+                  bottom: '100%',
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                  color: 'white',
+                  padding: '8px 12px',
+                  borderRadius: '4px',
+                  fontSize: '0.875rem',
+                  whiteSpace: 'nowrap',
+                  zIndex: 9999,
+                  pointerEvents: 'none',
+                  marginBottom: '8px',
+                },
+              }}
+            >
               <Button sx={{ color: iconColor, textTransform: 'none' }}>Contact</Button>
-            </Tooltip>
+            </Box>
         </Box>
 
         <Box

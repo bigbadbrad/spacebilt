@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Orbital AI Compute Pods | SpaceBilt',
     description: 'Detailed specifications for Orbital AI Factory compute pods with AI compute, storage, networking, and power/thermal systems.',
-    url: 'https://www.spacebilt.co/orbital-ai-factory/compute-pods',
+    url: 'https://www.orbitalaifactory.com/orbital-ai-factory/compute-pods',
     siteName: 'SpaceBilt',
     locale: 'en_US',
     type: 'article',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     site: '@spacebilt',
   },
   alternates: {
-    canonical: 'https://www.spacebilt.co/orbital-ai-factory/compute-pods',
+    canonical: 'https://www.orbitalaifactory.com/orbital-ai-factory/compute-pods',
   },
   robots: {
     index: true,
@@ -47,7 +47,7 @@ const jsonLd = {
   datePublished: '2025-01-01',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://www.spacebilt.co/orbital-ai-factory/compute-pods',
+    '@id': 'https://www.orbitalaifactory.com/orbital-ai-factory/compute-pods',
   },
 };
 
@@ -67,9 +67,9 @@ export default function ComputePodsPage() {
         <Container maxWidth="lg">
           <Breadcrumbs sx={{ mb: 4, color: '#cccccc' }}>
             <Link href="/" style={{ textDecoration: 'none', color: '#cccccc' }}>
-              Home
+              Orbital AI Factory
             </Link>
-            <Typography color="#ffffff">Orbital AI Factory Compute Pods</Typography>
+            <Typography color="#ffffff">Compute Pods</Typography>
           </Breadcrumbs>
 
           <Typography variant="h1" color="white" sx={{ mb: 2, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
@@ -303,6 +303,120 @@ export default function ComputePodsPage() {
             </Grid>
           </Box>
 
+          {/* Radiation Environment & Chip Reliability */}
+          <Box sx={{ mb: 8 }}>
+            <Typography variant="h3" color="white" sx={{ mb: 3, fontSize: { xs: '2rem', md: '2.5rem' } }}>
+              Radiation Environment & Chip Reliability
+            </Typography>
+
+            <Box
+              sx={{
+                backgroundColor: '#1b1b1d',
+                p: 4,
+                borderRadius: 1,
+                mb: 4,
+              }}
+            >
+              <Typography variant="h5" color="white" sx={{ mb: 3, fontWeight: 600 }}>
+                Orbit & Shielding Strategy
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2, fontSize: '1.1rem' }}>
+                Nodes operate in Sun-synchronous LEO (~600–700 km) where trapped radiation is manageable but non-trivial.
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2, fontSize: '1.1rem' }}>
+                Each compute pod includes:
+              </Typography>
+              <List sx={{ color: '#cccccc', pl: 4, mb: 2 }}>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 0.5 }}>
+                  <ListItemText 
+                    primary="A structural 'vault' around the AI blades (Al / composite + localized high-Z / hydrogen-rich materials where it buys the most)"
+                    primaryTypographyProps={{ fontSize: '1rem' }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 0.5 }}>
+                  <ListItemText 
+                    primary="Layout and materials tuned to reduce total ionizing dose (TID) and single event effects (SEE) on GPUs, memory and power electronics"
+                    primaryTypographyProps={{ fontSize: '1rem' }}
+                  />
+                </ListItem>
+              </List>
+            </Box>
+
+            <Box
+              sx={{
+                backgroundColor: '#1b1b1d',
+                p: 4,
+                borderRadius: 1,
+                mb: 4,
+              }}
+            >
+              <Typography variant="h5" color="white" sx={{ mb: 3, fontWeight: 600 }}>
+                COTS AI Hardware with System-Level Mitigation
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2, fontSize: '1.1rem' }}>
+                The concept assumes H100-class, largely commercial GPUs/ASICs, not fully rad-hard bespoke chips. Instead, we:
+              </Typography>
+              <List sx={{ color: '#cccccc', pl: 4, mb: 2 }}>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 0.5 }}>
+                  <ListItemText 
+                    primary="Derate operating voltages and temps to give margin against upsets"
+                    primaryTypographyProps={{ fontSize: '1rem' }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 0.5 }}>
+                  <ListItemText 
+                    primary="Use ECC everywhere (HBM, SSDs, inter-pod fabric) and periodic memory scrubbing"
+                    primaryTypographyProps={{ fontSize: '1rem' }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 0.5 }}>
+                  <ListItemText 
+                    primary="Add watchdog logic and checkpoint/rollback so a transient fault at the chip level doesn't corrupt long-running training or inference workloads"
+                    primaryTypographyProps={{ fontSize: '1rem' }}
+                  />
+                </ListItem>
+              </List>
+            </Box>
+
+            <Grid container spacing={4} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    backgroundColor: '#1b1b1d',
+                    p: 4,
+                    borderRadius: 1,
+                    height: '100%',
+                  }}
+                >
+                  <Typography variant="h5" color="white" sx={{ mb: 2, fontWeight: 600 }}>
+                    Redundancy and Graceful Degradation
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
+                    AI workloads are deployed across multiple pods with redundant model shards and data copies. If a pod experiences persistent radiation-induced faults, it can be logically isolated and down-binned (e.g., used for lower-criticality tasks) without taking down the node. Pods are designed for robotic replacement, so persistent high-dose hardware can be swapped out on-orbit.
+                  </Typography>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    backgroundColor: '#1b1b1d',
+                    p: 4,
+                    borderRadius: 1,
+                    height: '100%',
+                  }}
+                >
+                  <Typography variant="h5" color="white" sx={{ mb: 2, fontWeight: 600 }}>
+                    Control Electronics & Safety
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
+                    Critical control paths (power control, thermal control, attitude, comms) use radiation-tolerant components and fault-tolerant architectures (e.g., TMR for key controllers, hardened FPGAs), separating them from the high-density AI compute where occasional soft errors are acceptable and correctable.
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+          </Box>
+
           {/* Reliability & Servicing */}
           <Box sx={{ mb: 8 }}>
             <Typography variant="h3" color="white" sx={{ mb: 3, fontSize: { xs: '2rem', md: '2.5rem' } }}>
@@ -355,7 +469,7 @@ export default function ComputePodsPage() {
               Explore More
             </Typography>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={3}>
                 <Link href="/orbital-ai-factory/nodes" style={{ textDecoration: 'none' }}>
                   <Box
                     sx={{
@@ -378,8 +492,8 @@ export default function ComputePodsPage() {
                   </Box>
                 </Link>
               </Grid>
-              <Grid item xs={12} md={4}>
-                <Link href="/orbital-ai-factory/power-thermal" style={{ textDecoration: 'none' }}>
+              <Grid item xs={12} md={3}>
+                <Link href="/orbital-ai-factory/solar-power" style={{ textDecoration: 'none' }}>
                   <Box
                     sx={{
                       backgroundColor: '#1b1b1d',
@@ -393,15 +507,61 @@ export default function ComputePodsPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Power & Thermal →
+                      Solar Power →
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Solar arrays, power conversion, and radiator systems
+                      ROSA-class solar arrays and power conversion systems
                     </Typography>
                   </Box>
                 </Link>
               </Grid>
-              <Grid item xs={12} md={4}>
+              <Grid item xs={12} md={3}>
+                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: '#1b1b1d',
+                      p: 3,
+                      borderRadius: 1,
+                      border: '1px solid #333333',
+                      transition: 'border-color 0.2s',
+                      '&:hover': {
+                        borderColor: '#555555',
+                      },
+                    }}
+                  >
+                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
+                      Network & Interconnect →
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Optical compute fabric and free-space optical links
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Link href="/orbital-ai-factory/heat-management" style={{ textDecoration: 'none' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: '#1b1b1d',
+                      p: 3,
+                      borderRadius: 1,
+                      border: '1px solid #333333',
+                      transition: 'border-color 0.2s',
+                      '&:hover': {
+                        borderColor: '#555555',
+                      },
+                    }}
+                  >
+                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
+                      Heat Management →
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Direct liquid cooling and deployable radiator systems
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={3}>
                 <Link href="/" style={{ textDecoration: 'none' }}>
                   <Box
                     sx={{

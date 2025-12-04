@@ -200,7 +200,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
             </Typography>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
-              Three things most companies can't do — and SpaceBilt already has:
+              Four things most companies can't do — and SpaceBilt already has:
             </Typography>
 
             <List sx={{ 
@@ -270,7 +270,31 @@ export const WhyOrbitalDataStack: React.FC = () => {
                     width: "100%",
                   }}
                 >
-                  3. The lifecycle nobody sees
+                  3. Making COTS AI chips work in high-radiation environments
+                </Typography>
+                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
+                <Typography
+                  sx={{
+                    color: "#cccccc",
+                    fontSize: "1.1rem",
+                    mb: 4
+                  }}
+                >
+                  We're not building custom rad-hard chips — we're running H100-class commercial GPUs in orbit using system-level mitigation: shielded compute pods, ECC everywhere, watchdog logic, checkpoint/rollback, and workload-level redundancy. This lets us deploy cutting-edge AI hardware at scale while tolerating single-event upsets and long-term dose effects.
+                </Typography>
+              </ListItem>
+
+              <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <Typography
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: "1.25rem",
+                    fontWeight: 600,
+                    mb: 1,
+                    width: "100%",
+                  }}
+                >
+                  4. The lifecycle nobody sees
                 </Typography>
                 <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
@@ -633,6 +657,9 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                   <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
                     • Thermal rejection: ~1 MW thermal via deployable radiator assemblies
                   </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mt: 1.5 }}>
+                    <strong>Thermal:</strong> Direct liquid cooling from H100-class chips to low-mass deployable radiators, rejecting ~1 MW of heat via high-emissivity panels pointed at deep space.
+                  </Typography>
                 </Box>
               </Grid>
               <Grid item xs={12} md={6}>
@@ -665,27 +692,65 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Grid>
             </Grid>
 
-            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 3, fontWeight: 600 }}>
-              Network & Interconnect
-            </Typography>
-            <Box
-              sx={{
-                backgroundColor: "#000000",
-                p: 3,
-                borderRadius: 1,
-                mb: 4,
-              }}
-            >
-              <Typography variant="body1" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 2 }}>
-                <strong>Inside the node:</strong> High-speed optical compute fabric connects AI pods across the node with aggregate throughput in the tens of terabits per second, making clusters of pods behave like a single, tightly-coupled AI supercomputer.
-              </Typography>
-              <Typography variant="body1" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 2 }}>
-                <strong>Between nodes:</strong> Free-space optical links (FSO) provide fiber-class bandwidth—hundreds of Gbps to multi-Tbps per link, scaling to tens of Tbps node-to-node. Nodes form a resilient mesh across orbital planes, with laser crosslinks for AI data and model sync, while RF serves as control and backup.
-              </Typography>
-              <Typography variant="body1" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
-                Instead of isolated "AI satellites," the Orbital AI Factory operates as a distributed, laser-linked supercomputer in low Earth orbit, designed for high-bandwidth, synchronised AI workloads.
-              </Typography>
-            </Box>
+            <Grid container spacing={3} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={6}>
+                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "#000000",
+                      p: 3,
+                      height: "100%",
+                      borderRadius: 1,
+                      border: "1px solid #333333",
+                      transition: "border-color 0.2s",
+                      "&:hover": {
+                        borderColor: "#555555",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                        fontWeight: 600,
+                        mb: 2,
+                      }}
+                    >
+                      Network & Interconnect
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
+                      Instead of isolated "AI satellites," the Orbital AI Factory operates as a distributed, laser-linked supercomputer in low Earth orbit, designed for high-bandwidth, synchronised AI workloads.
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Box
+                  sx={{
+                    backgroundColor: "#000000",
+                    p: 3,
+                    height: "100%",
+                    borderRadius: 1,
+                  }}
+                >
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: "#ffffff",
+                      fontSize: "1.25rem",
+                      fontWeight: 600,
+                      mb: 2,
+                    }}
+                  >
+                    Reliability
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
+                    <strong>Radiation-aware AI pods:</strong> H100-class AI stacks run inside shielded compute pods with ECC, scrubbing, watchdogs and workload-level redundancy, so the system tolerates single-event upsets and long-term dose while still using mostly commercial hardware.
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
 
             <Typography variant="h5" color="white" sx={{ mt: 6, mb: 4, fontWeight: 600 }}>
               Explore the Details
@@ -762,7 +827,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                 </Link>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Link href="/orbital-ai-factory/power-thermal" style={{ textDecoration: "none" }}>
+                <Link href="/orbital-ai-factory/solar-power" style={{ textDecoration: "none" }}>
                   <Box
                     sx={{
                       backgroundColor: "#000000",
@@ -785,10 +850,80 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                         mb: 1.5,
                       }}
                     >
-                      Power & Thermal
+                      Solar Power
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1rem", mb: 2 }}>
-                      ROSA-class solar arrays, power conversion, ISS-derived deployable radiators, and thermal management
+                      ROSA-class solar arrays and power conversion systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
+                      Learn more →
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Link href="/orbital-ai-factory/heat-management" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "#000000",
+                      p: 3,
+                      height: "100%",
+                      borderRadius: 1,
+                      border: "1px solid #333333",
+                      transition: "border-color 0.2s",
+                      "&:hover": {
+                        borderColor: "#555555",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                        fontWeight: 600,
+                        mb: 1.5,
+                      }}
+                    >
+                      Heat Management
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1rem", mb: 2 }}>
+                      Direct liquid cooling and deployable radiator systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
+                      Learn more →
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: "none" }}>
+                  <Box
+                    sx={{
+                      backgroundColor: "#000000",
+                      p: 3,
+                      height: "100%",
+                      borderRadius: 1,
+                      border: "1px solid #333333",
+                      transition: "border-color 0.2s",
+                      "&:hover": {
+                        borderColor: "#555555",
+                      },
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: "#ffffff",
+                        fontSize: "1.25rem",
+                        fontWeight: 600,
+                        mb: 1.5,
+                      }}
+                    >
+                      Network & Interconnect
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1rem", mb: 2 }}>
+                      Optical compute fabric and free-space optical links
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
                       Learn more →
