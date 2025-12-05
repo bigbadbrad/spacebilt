@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     card: "summary",
     title: "SpaceBilt – We build the data centers that live in space.",
     description: "SpaceBilt – We build the data centers that live in space.",
-    site: "@spacebilt",
-    creator: "@spacebilt",
+    site: "@orbitalfactory",
+    creator: "@orbitalfactory",
     images: ["https://orbitalaifactory.com/icon"],
   },
   robots: {

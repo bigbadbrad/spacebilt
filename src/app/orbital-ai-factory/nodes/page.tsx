@@ -5,22 +5,22 @@ import Link from 'next/link';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Divider, Breadcrumbs } from '@mui/material';
 
 export const metadata: Metadata = {
-  title: 'Orbital AI Factory Node Architecture – Structure, Spine Design & Robotic Servicing | SpaceBilt',
+  title: 'Orbital AI Factory Node Architecture – Structure, Spine Design & Robotic Servicing',
   description: 'Detailed specifications for Orbital AI Factory nodes: 25–40 m lattice spine, modular pod architecture, ROSA-class solar arrays, ISS-derived radiators, and robotic servicing interfaces.',
   keywords: ['orbital AI factory node', 'space data center architecture', 'orbital node design', 'space station data center', 'orbital compute architecture'],
   openGraph: {
-    title: 'Orbital AI Factory Node Architecture | SpaceBilt',
+    title: 'Orbital AI Factory Node Architecture',
     description: 'Detailed specifications for Orbital AI Factory nodes: 25–40 m lattice spine, modular pod architecture, and robotic servicing interfaces.',
     url: 'https://www.orbitalaifactory.com/orbital-ai-factory/nodes',
-    siteName: 'SpaceBilt',
+    siteName: 'Orbital AI Factory',
     locale: 'en_US',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orbital AI Factory Node Architecture | SpaceBilt',
+    title: 'Orbital AI Factory Node Architecture',
     description: 'Detailed specifications for Orbital AI Factory nodes with modular pod architecture and robotic servicing.',
-    site: '@spacebilt',
+    site: '@orbitalfactory',
   },
   alternates: {
     canonical: 'https://www.orbitalaifactory.com/orbital-ai-factory/nodes',
@@ -38,11 +38,11 @@ const jsonLd = {
   description: 'Detailed specifications for Orbital AI Factory nodes including structure, spine design, modularity, and robotic servicing interfaces.',
   author: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   datePublished: '2025-01-01',
   mainEntityOfPage: {

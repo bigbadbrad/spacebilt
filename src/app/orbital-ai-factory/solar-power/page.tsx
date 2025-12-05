@@ -5,22 +5,22 @@ import Link from 'next/link';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Divider, Breadcrumbs } from '@mui/material';
 
 export const metadata: Metadata = {
-  title: 'Orbital Solar Power System – ROSA Solar Arrays & Power Conversion | SpaceBilt',
+  title: 'Orbital Solar Power System – ROSA Solar Arrays & Power Conversion',
   description: 'Detailed specifications for Orbital AI Factory solar power systems: ROSA-class roll-out solar arrays, 300–600 V DC bus, MPPT units, and power conversion systems.',
   keywords: ['orbital solar arrays', 'space data center power', 'ROSA solar arrays', 'orbital power systems', 'space solar power'],
   openGraph: {
-    title: 'Orbital Solar Power System | SpaceBilt',
+    title: 'Orbital Solar Power System',
     description: 'Detailed specifications for Orbital AI Factory solar power systems including ROSA-class solar arrays and power conversion.',
     url: 'https://www.orbitalaifactory.com/orbital-ai-factory/solar-power',
-    siteName: 'SpaceBilt',
+    siteName: 'Orbital AI Factory',
     locale: 'en_US',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orbital Solar Power System | SpaceBilt',
+    title: 'Orbital Solar Power System',
     description: 'Detailed specifications for Orbital AI Factory solar power systems.',
-    site: '@spacebilt',
+    site: '@orbitalfactory',
   },
   alternates: {
     canonical: 'https://www.orbitalaifactory.com/orbital-ai-factory/solar-power',
@@ -38,11 +38,11 @@ const jsonLd = {
   description: 'Detailed specifications for Orbital AI Factory solar power systems including ROSA-class roll-out solar arrays and power conversion systems.',
   author: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   datePublished: '2025-01-01',
   mainEntityOfPage: {

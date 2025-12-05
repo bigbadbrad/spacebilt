@@ -5,22 +5,22 @@ import Link from 'next/link';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Divider, Breadcrumbs } from '@mui/material';
 
 export const metadata: Metadata = {
-  title: 'Orbital Heat Management & Radiators – ISS-Derived Deployable Assemblies | SpaceBilt',
+  title: 'Orbital Heat Management & Radiators – ISS-Derived Deployable Assemblies',
   description: 'Detailed specifications for Orbital AI Factory heat management: direct liquid cooling from AI chips, low-mass deployable radiators, ISS-derived assemblies, and thermal rejection systems.',
   keywords: ['orbital heat management', 'space radiators', 'ISS radiators', 'orbital thermal rejection', 'space cooling systems'],
   openGraph: {
-    title: 'Orbital Heat Management & Radiators | SpaceBilt',
+    title: 'Orbital Heat Management & Radiators',
     description: 'Detailed specifications for Orbital AI Factory heat management including deployable radiators and direct liquid cooling systems.',
     url: 'https://www.orbitalaifactory.com/orbital-ai-factory/heat-management',
-    siteName: 'SpaceBilt',
+    siteName: 'Orbital AI Factory',
     locale: 'en_US',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orbital Heat Management & Radiators | SpaceBilt',
+    title: 'Orbital Heat Management & Radiators',
     description: 'Detailed specifications for Orbital AI Factory heat management systems.',
-    site: '@spacebilt',
+    site: '@orbitalfactory',
   },
   alternates: {
     canonical: 'https://www.orbitalaifactory.com/orbital-ai-factory/heat-management',
@@ -38,11 +38,11 @@ const jsonLd = {
   description: 'Detailed specifications for Orbital AI Factory heat management systems including direct liquid cooling, deployable radiators, and thermal rejection.',
   author: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   datePublished: '2025-01-01',
   mainEntityOfPage: {

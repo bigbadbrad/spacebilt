@@ -5,22 +5,22 @@ import Link from 'next/link';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Divider, Breadcrumbs } from '@mui/material';
 
 export const metadata: Metadata = {
-  title: 'Orbital AI Compute Pods – Specs, AI Compute Configurations & Storage | SpaceBilt',
+  title: 'Orbital AI Compute Pods – Specs, AI Compute Configurations & Storage',
   description: 'Detailed specifications for Orbital AI Factory compute pods: 50–150 kW thermal design power, multi-petabyte storage, GPU/AI-ASIC blades, high-speed networking, and robotic servicing.',
   keywords: ['orbital AI compute pod', 'space data center compute', 'orbital GPU pods', 'space AI hardware', 'orbital compute modules'],
   openGraph: {
-    title: 'Orbital AI Compute Pods | SpaceBilt',
+    title: 'Orbital AI Compute Pods',
     description: 'Detailed specifications for Orbital AI Factory compute pods with AI compute, storage, networking, and power/thermal systems.',
     url: 'https://www.orbitalaifactory.com/orbital-ai-factory/compute-pods',
-    siteName: 'SpaceBilt',
+    siteName: 'Orbital AI Factory',
     locale: 'en_US',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orbital AI Compute Pods | SpaceBilt',
+    title: 'Orbital AI Compute Pods',
     description: 'Detailed specifications for Orbital AI Factory compute pods with AI compute and storage.',
-    site: '@spacebilt',
+    site: '@orbitalfactory',
   },
   alternates: {
     canonical: 'https://www.orbitalaifactory.com/orbital-ai-factory/compute-pods',
@@ -38,11 +38,11 @@ const jsonLd = {
   description: 'Detailed specifications for Orbital AI Factory compute pods including physical specs, AI compute configurations, storage, networking, and power/thermal systems.',
   author: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   datePublished: '2025-01-01',
   mainEntityOfPage: {

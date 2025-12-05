@@ -5,22 +5,22 @@ import Link from 'next/link';
 import { Box, Container, Typography, Grid, List, ListItem, ListItemText, Divider, Breadcrumbs } from '@mui/material';
 
 export const metadata: Metadata = {
-  title: 'Network & Interconnect – Optical Compute Fabric & Free-Space Optical Links | SpaceBilt',
+  title: 'Network & Interconnect – Optical Compute Fabric & Free-Space Optical Links',
   description: 'Detailed specifications for Orbital AI Factory network and interconnect systems: high-speed optical compute fabric, free-space optical links, and distributed laser-linked supercomputer architecture.',
   keywords: ['orbital network', 'space data center networking', 'free-space optical links', 'FSO', 'orbital interconnect', 'laser crosslinks'],
   openGraph: {
-    title: 'Network & Interconnect | SpaceBilt',
+    title: 'Network & Interconnect',
     description: 'Detailed specifications for Orbital AI Factory network and interconnect systems including optical compute fabric and free-space optical links.',
     url: 'https://orbitalaifactory.com/orbital-ai-factory/network-interconnect',
-    siteName: 'SpaceBilt',
+    siteName: 'Orbital AI Factory',
     locale: 'en_US',
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Network & Interconnect | SpaceBilt',
+    title: 'Network & Interconnect',
     description: 'Detailed specifications for Orbital AI Factory network and interconnect systems.',
-    site: '@spacebilt',
+    site: '@orbitalfactory',
   },
   alternates: {
     canonical: 'https://orbitalaifactory.com/orbital-ai-factory/network-interconnect',
@@ -38,11 +38,11 @@ const jsonLd = {
   description: 'Detailed specifications for Orbital AI Factory network and interconnect systems including optical compute fabric, free-space optical links, and distributed supercomputer architecture.',
   author: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   publisher: {
     '@type': 'Organization',
-    name: 'SpaceBilt',
+    name: 'Orbital AI Factory',
   },
   datePublished: '2025-01-01',
   mainEntityOfPage: {
