@@ -204,6 +204,9 @@ export default function PowerThermalPage() {
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2, fontSize: '1.1rem' }}>
                 Single-axis solar array drive per wing at the root. Modes: Sun-tracking, feathered (drag/safe-mode), parked for servicing.
               </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2, fontSize: '1.1rem' }}>
+                Pointing modes include 'science / power max' and 'astronomy-friendly', following lessons learned from large-array LEO sats like <span style={{ color: '#ffffff' }}>AST's BlueWalker</span>: slight tilts of solar and radiator planes reduce optical brightness while maintaining required power and heat rejection.
+              </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
                 Array loads and jitter managed via sensors + attitude control loops, ensuring stable power generation while minimizing structural loads during orbital maneuvers.
               </Typography>
@@ -277,29 +280,6 @@ export default function PowerThermalPage() {
             </Box>
           </Box>
 
-          {/* Heat Management Reference */}
-          <Box sx={{ mb: 8 }}>
-            <Typography variant="h3" color="white" sx={{ mb: 3, fontSize: { xs: '2rem', md: '2.5rem' } }}>
-              Heat Management & Radiators
-            </Typography>
-            <Box
-              sx={{
-                backgroundColor: '#1b1b1d',
-                p: 4,
-                borderRadius: 1,
-                mb: 4,
-              }}
-            >
-              <Typography variant="body1" color="text.secondary" sx={{ mb: 3, fontSize: '1.1rem' }}>
-                For detailed specifications on deployable radiators, radiator architecture, and heat rejection systems, see the dedicated{' '}
-                <Link href="/orbital-ai-factory/heat-management" style={{ color: '#297BC4', textDecoration: 'none' }}>
-                  Heat Management & Radiators
-                </Link>
-                {' '}page.
-              </Typography>
-            </Box>
-          </Box>
-
           {/* Related Links */}
           <Divider sx={{ borderColor: '#333333', my: 6 }} />
           <Box sx={{ mb: 4 }}>
@@ -322,10 +302,13 @@ export default function PowerThermalPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Node Architecture →
+                      Node Architecture
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Structure, spine design, and robotic servicing
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -345,33 +328,13 @@ export default function PowerThermalPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Compute Pods →
+                      Compute Pods
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       AI compute, storage, and networking specs
                     </Typography>
-                  </Box>
-                </Link>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
-                  <Box
-                    sx={{
-                      backgroundColor: '#1b1b1d',
-                      p: 3,
-                      borderRadius: 1,
-                      border: '1px solid #333333',
-                      transition: 'border-color 0.2s',
-                      '&:hover': {
-                        borderColor: '#555555',
-                      },
-                    }}
-                  >
-                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Network & Interconnect →
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Optical compute fabric and free-space optical links
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -391,10 +354,39 @@ export default function PowerThermalPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Heat Management →
+                      Heat Management
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Direct liquid cooling and deployable radiator systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: '#1b1b1d',
+                      p: 3,
+                      borderRadius: 1,
+                      border: '1px solid #333333',
+                      transition: 'border-color 0.2s',
+                      '&:hover': {
+                        borderColor: '#555555',
+                      },
+                    }}
+                  >
+                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
+                      Network & Interconnect
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                      Optical compute fabric and free-space optical links
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>

@@ -224,10 +224,13 @@ export default function NetworkInterconnectPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Node Architecture →
+                      Node Architecture
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Structure, spine design, and robotic servicing
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -247,10 +250,13 @@ export default function NetworkInterconnectPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Compute Pods →
+                      Compute Pods
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       AI compute, storage, and networking specs
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -270,10 +276,13 @@ export default function NetworkInterconnectPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Solar Power →
+                      Solar Power
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       ROSA-class solar arrays and power conversion systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -295,8 +304,11 @@ export default function NetworkInterconnectPage() {
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
                       Heat Management →
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Direct liquid cooling and deployable radiator systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>

@@ -285,10 +285,13 @@ export default function HeatManagementPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Node Architecture →
+                      Node Architecture
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Structure, spine design, and robotic servicing
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -308,33 +311,13 @@ export default function HeatManagementPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Compute Pods →
+                      Compute Pods
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       AI compute, storage, and networking specs
                     </Typography>
-                  </Box>
-                </Link>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
-                  <Box
-                    sx={{
-                      backgroundColor: '#1b1b1d',
-                      p: 3,
-                      borderRadius: 1,
-                      border: '1px solid #333333',
-                      transition: 'border-color 0.2s',
-                      '&:hover': {
-                        borderColor: '#555555',
-                      },
-                    }}
-                  >
-                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Network & Interconnect →
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Optical compute fabric and free-space optical links
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -354,10 +337,39 @@ export default function HeatManagementPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Solar Power →
+                      Solar Power
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       ROSA-class solar arrays and power conversion systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: '#1b1b1d',
+                      p: 3,
+                      borderRadius: 1,
+                      border: '1px solid #333333',
+                      transition: 'border-color 0.2s',
+                      '&:hover': {
+                        borderColor: '#555555',
+                      },
+                    }}
+                  >
+                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
+                      Network & Interconnect
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                      Optical compute fabric and free-space optical links
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>

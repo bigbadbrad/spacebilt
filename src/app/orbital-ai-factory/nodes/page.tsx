@@ -76,15 +76,63 @@ export default function NodesPage() {
             Orbital AI Factory Node Architecture
           </Typography>
           <Typography variant="h5" color="text.secondary" sx={{ mb: 6, maxWidth: '800px' }}>
-            Structure, spine design, modularity, and robotic servicing interfaces for 1 MW-class orbital data center nodes
+            An Orbital AI Factory is a cluster of high-power nodes working together in orbit. Each node is a 1 MW-class AI data center with structure, spine design, modularity, and robotic servicing interfaces.
           </Typography>
 
           <Divider sx={{ borderColor: '#333333', mb: 6 }} />
 
+          {/* Introduction */}
+          <Box sx={{ mb: 8 }}>
+            <Typography variant="h3" color="white" sx={{ mb: 3, fontSize: { xs: '2rem', md: '2.5rem' } }}>
+              Cluster of High-Power Nodes
+            </Typography>
+            <Box
+              sx={{
+                backgroundColor: '#1b1b1d',
+                p: 4,
+                borderRadius: 1,
+                mb: 4,
+              }}
+            >
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 3, fontSize: '1.1rem' }}>
+                An Orbital AI Factory isn't a single spacecraft – it's a cluster of high-power nodes working together in orbit.
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 3, fontSize: '1.1rem' }}>
+                Each node is a 1 MW-class AI data center in space: a central lattice spine with ROSA-style solar wings on each end, deployable radiators, and a chain of modular compute pods. A node carries everything it needs to run large AI models at the edge of space: power generation, thermal rejection, storage, networking, and high-bandwidth free-space optical (FSO) links.
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2, fontSize: '1.1rem', fontWeight: 600 }}>
+                Factories are created by linking multiple nodes into a coherent cluster:
+              </Typography>
+              <List sx={{ color: '#cccccc', pl: 4, mb: 3 }}>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 1.5 }}>
+                  <ListItemText 
+                    primary="Nodes fly in coordinated orbits around the same target (a telescope, sensor constellation, station, or in-space factory)."
+                    primaryTypographyProps={{ fontSize: '1.1rem' }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 1.5 }}>
+                  <ListItemText 
+                    primary="High-capacity FSO links between nodes form a single high-throughput fabric, so workloads, checkpoints, and datasets can move across the cluster as if it were one logical data center."
+                    primaryTypographyProps={{ fontSize: '1.1rem' }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: 'list-item', listStyleType: 'disc', pb: 1.5 }}>
+                  <ListItemText 
+                    primary="Each node remains fully independent and serviceable: pods, wings, and radiators can be added, swapped, or upgraded without disturbing the rest of the factory."
+                    primaryTypographyProps={{ fontSize: '1.1rem' }}
+                  />
+                </ListItem>
+              </List>
+              <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem' }}>
+                This architecture scales like cloud regions: one node for early missions, then two, four, eight nodes as power and AI demand grow – all while reusing the same qualified hardware building blocks.
+              </Typography>
+            </Box>
+          </Box>
+
           {/* Main Spine & Layout */}
           <Box sx={{ mb: 8 }}>
             <Typography variant="h3" color="white" sx={{ mb: 3, fontSize: { xs: '2rem', md: '2.5rem' } }}>
-              Main Spine & Layout
+              Node Main Spine & Layout
             </Typography>
 
             <Grid container spacing={4} sx={{ mb: 4 }}>
@@ -196,10 +244,13 @@ export default function NodesPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Compute Pods →
+                      Compute Pods
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Physical specs, AI compute configurations, storage, and networking
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -219,33 +270,13 @@ export default function NodesPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Solar Power →
+                      Solar Power
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       ROSA-class solar arrays and power conversion systems
                     </Typography>
-                  </Box>
-                </Link>
-              </Grid>
-              <Grid item xs={12} md={3}>
-                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
-                  <Box
-                    sx={{
-                      backgroundColor: '#1b1b1d',
-                      p: 3,
-                      borderRadius: 1,
-                      border: '1px solid #333333',
-                      transition: 'border-color 0.2s',
-                      '&:hover': {
-                        borderColor: '#555555',
-                      },
-                    }}
-                  >
-                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Network & Interconnect →
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                      Optical compute fabric and free-space optical links
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -265,10 +296,39 @@ export default function NodesPage() {
                     }}
                   >
                     <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
-                      Heat Management →
+                      Heat Management
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
                       Direct liquid cooling and deployable radiator systems
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
+                    </Typography>
+                  </Box>
+                </Link>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: 'none' }}>
+                  <Box
+                    sx={{
+                      backgroundColor: '#1b1b1d',
+                      p: 3,
+                      borderRadius: 1,
+                      border: '1px solid #333333',
+                      transition: 'border-color 0.2s',
+                      '&:hover': {
+                        borderColor: '#555555',
+                      },
+                    }}
+                  >
+                    <Typography variant="h6" color="white" sx={{ mb: 1, fontWeight: 600 }}>
+                      Network & Interconnect
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                      Optical compute fabric and free-space optical links
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>

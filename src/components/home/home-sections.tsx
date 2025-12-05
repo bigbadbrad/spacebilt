@@ -31,20 +31,21 @@ export const What: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
-            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2, maxWidth: '66%' }}>
               What is the Orbital Data Stack?
             </Typography>
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
               Three-layer breakdown:
             </Typography>
             <Grid container spacing={4} sx={{ mb: 4 }}>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={12}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
                     p: 3,
                     height: "100%",
                     borderRadius: 1,
+                    maxWidth: { xs: '100%', md: '50%' },
                   }}
                 >
                   <Typography
@@ -69,13 +70,14 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={12}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
                     p: 3,
                     height: "100%",
                     borderRadius: 1,
+                    maxWidth: { xs: '100%', md: '50%' },
                   }}
                 >
                   <Typography
@@ -100,13 +102,14 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={8}>
+              <Grid item xs={12} md={12}>
                 <Box
                   sx={{
                     backgroundColor: "#000000",
                     p: 3,
                     height: "100%",
                     borderRadius: 1,
+                    maxWidth: { xs: '100%', md: '50%' },
                   }}
                 >
                   <Typography
@@ -132,7 +135,7 @@ export const What: React.FC = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3 }}>
+            <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3, maxWidth: '66.67%' }}>
               SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack. Multiple Orbital Data Stack nodes on a station come together to form an Orbital AI Factory.
             </Typography>
           </Grid>
@@ -593,36 +596,46 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
             <Typography variant="h5" color="white" sx={{ mt: 4, mb: 3, fontWeight: 600 }}>
               Mission Profile
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-              <strong>Role:</strong> High-density AI compute + storage node in low Earth orbit
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-              <strong>Use cases:</strong>
-            </Typography>
-            <List sx={{ color: "#cccccc", pl: 4, mb: 3 }}>
-              <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
-                <ListItemText 
-                  primary="On-orbit AI inference and training near telescopes, sensor constellations, stations, in-space factories"
-                  primaryTypographyProps={{ fontSize: "1.1rem" }}
-                />
-              </ListItem>
-              <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
-                <ListItemText 
-                  primary="Data reduction + compression at the edge"
-                  primaryTypographyProps={{ fontSize: "1.1rem" }}
-                />
-              </ListItem>
-              <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
-                <ListItemText 
-                  primary="Secure orbital data center for commercial, defense, and science payloads"
-                  primaryTypographyProps={{ fontSize: "1.1rem" }}
-                />
-              </ListItem>
-            </List>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
-              <strong>Orbit:</strong> Sun-synchronous LEO, ~600–700 km, ~97–98° inclination<br />
-              <strong>Design life:</strong> 5–10 years, robotically serviceable
-            </Typography>
+            <Box
+              sx={{
+                backgroundColor: "#000000",
+                p: 3,
+                borderRadius: 1,
+                mb: 4,
+                maxWidth: { xs: '100%', md: '50%' },
+              }}
+            >
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+                <strong>Role:</strong> High-density AI compute + storage node in low Earth orbit
+              </Typography>
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+                <strong>Use cases:</strong>
+              </Typography>
+              <List sx={{ color: "#cccccc", pl: 4, mb: 3 }}>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
+                  <ListItemText 
+                    primary="On-orbit AI inference and training near telescopes, sensor constellations, stations, in-space factories"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
+                  <ListItemText 
+                    primary="Data reduction + compression at the edge"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
+                  <ListItemText 
+                    primary="Secure orbital data center for commercial, defense, and science payloads"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+              </List>
+              <Typography variant="body1" color="text.secondary">
+                <strong>Orbit:</strong> Sun-synchronous LEO, ~600–700 km, ~97–98° inclination<br />
+                <strong>Design life:</strong> 5–10 years, robotically serviceable
+              </Typography>
+            </Box>
 
             <Typography variant="h5" color="white" sx={{ mt: 6, mb: 3, fontWeight: 600 }}>
               Node at a Glance
@@ -656,9 +669,6 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                   </Typography>
                   <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mb: 1.5 }}>
                     • Thermal rejection: ~1 MW thermal via deployable radiator assemblies
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem", mt: 1.5 }}>
-                    <strong>Thermal:</strong> Direct liquid cooling from H100-class chips to low-mass deployable radiators, rejecting ~1 MW of heat via high-emissivity panels pointed at deep space.
                   </Typography>
                 </Box>
               </Grid>
@@ -786,7 +796,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       Structure, spine design, modularity, and robotic servicing interfaces
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
-                      Learn more →
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -821,7 +831,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       Physical specs, AI compute configurations, storage, networking, and pod-level power/thermal
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
-                      Learn more →
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -856,7 +866,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       ROSA-class solar arrays and power conversion systems
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
-                      Learn more →
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -891,7 +901,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       Direct liquid cooling and deployable radiator systems
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
-                      Learn more →
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -926,7 +936,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       Optical compute fabric and free-space optical links
                     </Typography>
                     <Typography variant="body2" sx={{ color: "#297BC4", fontSize: "1rem", fontWeight: 500 }}>
-                      Learn more →
+                      Learn more &gt;
                     </Typography>
                   </Box>
                 </Link>
@@ -1252,77 +1262,68 @@ export const Big: React.FC = () => {
               pl: { xs: 0, md: 4 },
             }}
           >
-            <Typography variant="h2" color="#ffffff" sx={{ mb: 3 }}>
+            <Typography variant="h1" color="#ffffff" sx={{ mb: 7 }}>
               Why this is big.
             </Typography>
 
             <Typography
               variant="h5"
               color="text.secondary"
-              sx={{ mb: 5, maxWidth: 900 }}
+              sx={{ mb: 9, maxWidth: 900 }}
             >
-              Over the next decade, three things are going to space at the same time:
+              Over the next decade, three things are going to <span style={{ color: '#ffffff' }}>space</span> at the same time:
             </Typography>
-            <Grid container spacing={3} sx={{ mb: 5, maxWidth: 900 }}>
+            <Grid container spacing={3} sx={{ mb: 9, maxWidth: 900 }}>
               <Grid item xs={12} md={4}>
                 <Box
                   sx={{
-                    backgroundColor: "#2d2d2f",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
-                    textAlign: "center",
+                    height: '1px',
+                    background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+                    mb: 2,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: "1.2rem",
                   }}
                 >
-                  <Typography
-                    sx={{
-                      color: "#ffffff",
-                      fontSize: "1.2rem",
-                    }}
-                  >
-                    AI factories
-                  </Typography>
-                </Box>
+                  AI factories
+                </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box
                   sx={{
-                    backgroundColor: "#2d2d2f",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
-                    textAlign: "center",
+                    height: '1px',
+                    background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+                    mb: 2,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: "1.2rem",
                   }}
                 >
-                  <Typography
-                    sx={{
-                      color: "#ffffff",
-                      fontSize: "1.2rem",
-                    }}
-                  >
-                    Sensor constellations
-                  </Typography>
-                </Box>
+                  Sensor constellations
+                </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
                 <Box
                   sx={{
-                    backgroundColor: "#2d2d2f",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
-                    textAlign: "center",
+                    height: '1px',
+                    background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+                    mb: 2,
+                  }}
+                />
+                <Typography
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: "1.2rem",
                   }}
                 >
-                  <Typography
-                    sx={{
-                      color: "#ffffff",
-                      fontSize: "1.2rem",
-                    }}
-                  >
-                    Physical factories
-                  </Typography>
-                </Box>
+                  Physical factories
+                </Typography>
               </Grid>
             </Grid>
             <Typography

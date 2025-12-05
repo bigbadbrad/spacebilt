@@ -68,7 +68,7 @@ export default function Page() {
       <WhyOrbitalDataStack />
       <OuterEdge />
       <HowYouBuild />
-      {/* <OrbitalAIFactorySpecs /> */}
+      <OrbitalAIFactorySpecs />
       <WhoNeedsOrbitalDataStack />
       <Signals />
       <Big />

@@ -1,6 +1,6 @@
 // /components/home/home-hero-money.tsx
 import React, { FC } from 'react';
-import { Box, Container, Typography, List, ListItem, ListItemText } from '@mui/material';
+import { Box, Container, Typography, Grid } from '@mui/material';
 
 interface HomeHeroProps {
   backgroundColor?: string;
@@ -126,7 +126,6 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         sx={{
           px: { xs: 2, md: 0 },
           pt: { xs: 2, md: 12 },
-          pb: 16,
         }}
       >
         <Typography
@@ -175,30 +174,112 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         <Typography
           variant="h5"
           color="white"
-          sx={{ mt: 4, mb: 4, textAlign: { xs: 'left', md: 'center' } }}
+          sx={{ mt: 6, mb: 6, textAlign: { xs: 'left', md: 'center' } }}
         >
           SpaceBilt isn&apos;t just talking about it. We&apos;ve already flown
           the core layers of that stack:
         </Typography>
 
-        <List
-          sx={{
-            color: '#ffffff',
-            '& .MuiListItemText-primary': {
-              fontSize: '1.25rem',
-            },
-          }}
-        >
-          <ListItem disableGutters>
-            <ListItemText primary="✅  Compute + storage layer: Large in-Space Server (LiSS), the world's first 100+ TB orbital data server, flight-qualified on the ISS." />
-          </ListItem>
-          <ListItem disableGutters>
-            <ListItemText primary="✅  Data center node layer: Axiom Orbital Data Center Node on the ISS, where SpaceBilt leads engineering and integration of optically interconnected, petabyte-class infrastructure." />
-          </ListItem>
-          <ListItem disableGutters>
-            <ListItemText primary="✅  Lunar and cislunar layer: The first commercial data server to the Moon, generating real performance data in deep-space environments." />
-          </ListItem>
-        </List>
+      </Container>
+      <Container maxWidth="lg" sx={{
+          px: { xs: 2, md: 0 },
+          pb: 20,
+        }}>
+        <Grid container spacing={3} sx={{ mt: 2 }}>
+          <Grid item xs={12} md={4}>
+            <Box
+              sx={{
+                backgroundColor: '#1b1b1d',
+                p: 3,
+                borderRadius: 2,
+                height: '100%',
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: '#ffffff',
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  mb: 1.5,
+                }}
+              >
+                Compute + storage layer.
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: '#cccccc',
+                  fontSize: '1rem',
+                }}
+              >
+                Large in-Space Server (LiSS), the world&apos;s first 100+ TB orbital data server, flight-qualified on the ISS.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Box
+              sx={{
+                backgroundColor: '#1b1b1d',
+                p: 3,
+                borderRadius: 2,
+                height: '100%',
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: '#ffffff',
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  mb: 1.5,
+                }}
+              >
+                Data center node layer.
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: '#cccccc',
+                  fontSize: '1rem',
+                }}
+              >
+                Axiom Orbital Data Center Node on the ISS, where SpaceBilt leads engineering and integration of optically interconnected, petabyte-class infrastructure.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <Box
+              sx={{
+                backgroundColor: '#1b1b1d',
+                p: 3,
+                borderRadius: 2,
+                height: '100%',
+              }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: '#ffffff',
+                  fontSize: '1.25rem',
+                  fontWeight: 600,
+                  mb: 1.5,
+                }}
+              >
+                Lunar and cislunar layer.
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  color: '#cccccc',
+                  fontSize: '1rem',
+                }}
+              >
+                The first commercial data server to the Moon, generating real performance data in deep-space environments.
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
