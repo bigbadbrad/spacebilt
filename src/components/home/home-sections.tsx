@@ -3,6 +3,20 @@ import React from "react";
 import Link from 'next/link';
 import { Box, Container, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableRow, Paper, List, ListItem, ListItemText, Divider } from "@mui/material";
 
+// Reusable gradient line constant
+const gradientLineStyle = {
+  height: '1px',
+  width: '100%',
+  display: 'block',
+  background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+  mb: 2,
+};
+
+// Reusable gradient line component
+const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
+  <Box component="div" sx={{ ...gradientLineStyle, ...sx }} />
+);
+
 
 // ***** What is the Orbital Data Stack *****
 export const What: React.FC = () => {
@@ -202,7 +216,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               Why the Orbital Data Stack is hard.
             </Typography>
 
-            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
               Four things most companies can't do — and SpaceBilt already has:
             </Typography>
 
@@ -216,6 +230,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               }
             }}>
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -227,12 +242,11 @@ export const WhyOrbitalDataStack: React.FC = () => {
                 >
                   1. Petabyte-class hardware in brutal environments
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   We've flown 100+ TB Large in-Space Servers on the ISS exterior and delivered the first commercial data server to the Moon, proving enterprise-class compute and storage can survive radiation, vacuum, and extreme thermal swings.
@@ -240,6 +254,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               </ListItem>
 
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -251,12 +266,11 @@ export const WhyOrbitalDataStack: React.FC = () => {
                 >
                   2. Real data center nodes, not one-off payloads
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   We're leading the engineering and payload implementation of Axiom's Orbital Data Center Node ISS — a petabyte-scale, optically connected infrastructure node that satellites, spacecraft, and stations can use as shared compute and storage, not just a single experiment.
@@ -264,6 +278,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               </ListItem>
 
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -275,12 +290,11 @@ export const WhyOrbitalDataStack: React.FC = () => {
                 >
                   3. Making COTS AI chips work in high-radiation environments
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   We're not building custom rad-hard chips — we're running H100-class commercial GPUs in orbit using system-level mitigation: shielded compute pods, ECC everywhere, watchdog logic, checkpoint/rollback, and workload-level redundancy. This lets us deploy cutting-edge AI hardware at scale while tolerating single-event upsets and long-term dose effects.
@@ -288,6 +302,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               </ListItem>
 
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -299,12 +314,11 @@ export const WhyOrbitalDataStack: React.FC = () => {
                 >
                   4. The lifecycle nobody sees
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   As an ISS National Lab implementation partner, we handle flight qualification, launch integration, on-orbit operations, and remote control through platforms like SMART-1 — and we're designing orbital logistics to upgrade, move, and repurpose capacity without de-orbiting hardware.
@@ -452,7 +466,7 @@ export const HowYouBuild: React.FC = () => {
               Everyone's deck says the same four words: modular, resilient, scalable, maintainable. On the ground, that's a slide. In orbit, it's a set of brutal engineering constraints you either solve in hardware or you don't fly.
             </Typography>
 
-            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
               At SpaceBilt, the Orbital Data Stack is built around three realities:
             </Typography>
 
@@ -466,6 +480,7 @@ export const HowYouBuild: React.FC = () => {
               }
             }}>
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -477,12 +492,11 @@ export const HowYouBuild: React.FC = () => {
                 >
                   You design for orchestration, not boxes.
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   {`A "module" in orbit isn't just a metal can with compute inside. It's a self-contained power, thermal, network, and storage envelope that can be scheduled, throttled, and replaced without touching the rest of the stack. We standardize those envelopes so that a LiSS server, a sensor processor, or a manufacturing controller all plug into the same backbone and can be reconfigured like cloud instances, not one-off satellites.`}
@@ -490,6 +504,7 @@ export const HowYouBuild: React.FC = () => {
               </ListItem>
 
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -501,12 +516,11 @@ export const HowYouBuild: React.FC = () => {
                 >
                   Serviceability is an interface problem, not a slogan.
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   {`Saying you can swap containers is easy; doing it in microgravity, on a station with safety constraints, is not. We collapse power, data, and cooling into a small set of repeatable interfaces and keep moving parts out of the critical path, so an astronaut, robot, or ISAM vehicle can remove and replace a node without taking the rest of the data center down. That's how you get to 10+ years of useful life without a "rip and replace" event.`}
@@ -514,6 +528,7 @@ export const HowYouBuild: React.FC = () => {
               </ListItem>
 
               <ListItem disableGutters sx={{ flexDirection: "column", alignItems: "flex-start" }}>
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -525,12 +540,11 @@ export const HowYouBuild: React.FC = () => {
                 >
                   Resiliency is graceful failure, not wishful redundancy.
                 </Typography>
-                <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5, width: "100%" }} />
                 <Typography
                   sx={{
                     color: "#cccccc",
                     fontSize: "1.1rem",
-                    mb: 4
+                    mb: 6
                   }}
                 >
                   Single points of failure in orbit aren't just outages, they're lost missions. We assume radiation hits, thermal excursions, and partial brownouts are normal operating conditions, and architect the Orbital AI Factory to degrade in slices: lose one node, one link, or one rail and the system keeps running at reduced capacity instead of going dark. That's what lets you accelerate the velocity of data on the outer edge without betting the mission on perfect conditions.
@@ -1011,6 +1025,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <GradientLine />
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -1021,7 +1036,6 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   >
                     AI model operators and inference platforms
                   </Typography>
-                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
                   <Typography
                     sx={{
                       color: "#cccccc",
@@ -1045,6 +1059,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <GradientLine />
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -1055,7 +1070,6 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   >
                     Earth observation and sensor constellations
                   </Typography>
-                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
                   <Typography
                     sx={{
                       color: "#cccccc",
@@ -1079,6 +1093,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <GradientLine />
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -1089,7 +1104,6 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   >
                     National security and space-domain awareness
                   </Typography>
-                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
                   <Typography
                     sx={{
                       color: "#cccccc",
@@ -1113,6 +1127,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <GradientLine />
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -1123,7 +1138,6 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   >
                     Commercial stations and in-space infrastructure
                   </Typography>
-                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
                   <Typography
                     sx={{
                       color: "#cccccc",
@@ -1147,6 +1161,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <GradientLine />
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -1157,7 +1172,6 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   >
                     In-space manufacturing
                   </Typography>
-                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
                   <Typography
                     sx={{
                       color: "#cccccc",
@@ -1181,6 +1195,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     flexDirection: "column",
                   }}
                 >
+                  <GradientLine />
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -1191,7 +1206,6 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   >
                     ISAM operators
                   </Typography>
-                  <Divider sx={{ borderColor: "#333333", mb: 2, mt: 0.5 }} />
                   <Typography
                     sx={{
                       color: "#cccccc",
@@ -1235,7 +1249,7 @@ export const Big: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "#000000",
-        pt: { xs: 10, md: 14 },
+        pt: { xs: 10, md: 18 },
         pb: { xs: 14, md: 18 },
         width: "100%",
         position: "relative",
@@ -1275,13 +1289,7 @@ export const Big: React.FC = () => {
             </Typography>
             <Grid container spacing={3} sx={{ mb: 9, maxWidth: 900 }}>
               <Grid item xs={12} md={4}>
-                <Box
-                  sx={{
-                    height: '1px',
-                    background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
-                    mb: 2,
-                  }}
-                />
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -1292,13 +1300,7 @@ export const Big: React.FC = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box
-                  sx={{
-                    height: '1px',
-                    background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
-                    mb: 2,
-                  }}
-                />
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
@@ -1309,13 +1311,7 @@ export const Big: React.FC = () => {
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Box
-                  sx={{
-                    height: '1px',
-                    background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
-                    mb: 2,
-                  }}
-                />
+                <GradientLine />
                 <Typography
                   sx={{
                     color: "#ffffff",
