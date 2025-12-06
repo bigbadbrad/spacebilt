@@ -8,6 +8,7 @@ import {
   Proven, Rugged, What, WhyOrbitalDataStack, OuterEdge, HowYouBuild, OrbitalAIFactorySpecs, WhoNeedsOrbitalDataStack, Big
 } from "@/components/home/home-sections";
 import { Signals } from "../components/home/home-signals";
+import { InvestmentIndex } from "../components/home/home-investment-index";
 import { HomeCompare } from "../components/home/home-compare";
 import { HomePricing } from "../components/home/home-pricing";
 
@@ -72,6 +73,7 @@ export default function Page() {
       <WhoNeedsOrbitalDataStack />
       <Signals />
       <Big />
+      <InvestmentIndex />
       {/* <Rugged /> */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>

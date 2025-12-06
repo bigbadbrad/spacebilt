@@ -1,0 +1,259 @@
+'use client';
+
+// /components/home/home-investment-index.tsx
+import React, { useEffect, useState } from "react";
+import { Box, Typography, Container } from "@mui/material";
+
+interface TickerData {
+  symbol: string;
+  name: string;
+  price: number | null;
+  change: number | null;
+  isPrivate?: boolean;
+}
+
+export const InvestmentIndex: React.FC = () => {
+  const [tickers, setTickers] = useState<TickerData[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchStockPrices() {
+      try {
+        const response = await fetch('/api/stock-prices');
+        if (!response.ok) {
+          throw new Error('Failed to fetch stock prices');
+        }
+        const data: TickerData[] = await response.json();
+        setTickers(data);
+      } catch (error) {
+        console.error('Error fetching stock prices:', error);
+        // Fallback to placeholder data
+        setTickers([
+          { symbol: 'VOYG', name: 'Voyager Space', price: null, change: null },
+          { symbol: 'RKLB', name: 'Rocket Lab USA', price: null, change: null },
+          { symbol: 'ASTS', name: 'AST SpaceMobile', price: null, change: null },
+          { symbol: 'LMT', name: 'Lockheed Martin', price: null, change: null },
+          { symbol: 'NOC', name: 'Northrop Grumman', price: null, change: null },
+          { symbol: 'LHX', name: 'L3Harris Technologies', price: null, change: null },
+          { symbol: 'NVDA', name: 'NVIDIA', price: null, change: null },
+          { symbol: 'SPX', name: 'S&P 500 Index', price: null, change: null },
+          { symbol: 'SPCX', name: 'SpaceX', price: null, change: null, isPrivate: true },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchStockPrices();
+    
+    // Refresh prices every 60 seconds
+    const interval = setInterval(fetchStockPrices, 60000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatPrice = (price: number | null, isPrivate?: boolean): string => {
+    if (isPrivate) return 'Private';
+    if (price === null) return '—';
+    return `$${price.toFixed(2)}`;
+  };
+
+  const formatChange = (change: number | null): string => {
+    if (change === null) return '';
+    const sign = change >= 0 ? '+' : '';
+    return `${sign}${change.toFixed(2)}`;
+  };
+
+  return (
+    <>
+      <style dangerouslySetInnerHTML={{ __html: `
+        @keyframes ticker-scroll {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-50%);
+          }
+        }
+        @keyframes price-pulse {
+          0%, 100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.7;
+          }
+        }
+      `}} />
+      <Box
+        sx={{
+          backgroundColor: "#000000",
+          borderTop: "1px solid #222222",
+          borderBottom: "1px solid #222222",
+          py: 3,
+          overflow: "hidden",
+          position: "relative",
+        }}
+      >
+        <Container maxWidth="xl">
+          <Typography
+            variant="h6"
+            sx={{
+              color: "#ffffff",
+              fontSize: "0.875rem",
+              fontWeight: 600,
+              mb: 2,
+              textTransform: "uppercase",
+              letterSpacing: "0.1em",
+              textAlign: "center",
+            }}
+          >
+            Orbital AI Factory Investment Index
+          </Typography>
+        </Container>
+        {loading && tickers.length === 0 ? (
+          <Box sx={{ textAlign: 'center', py: 2 }}>
+            <Typography variant="body2" sx={{ color: '#888888' }}>
+              Loading stock prices...
+            </Typography>
+          </Box>
+        ) : (
+          <Box
+            sx={{
+              position: 'relative',
+              overflow: 'hidden',
+              width: '100%',
+            }}
+          >
+            {/* Gradient fade on left edge */}
+            <Box
+              sx={{
+                position: 'absolute',
+                left: 0,
+                top: 0,
+                bottom: 0,
+                width: '150px',
+                background: 'linear-gradient(to right, #000000, transparent)',
+                zIndex: 2,
+                pointerEvents: 'none',
+              }}
+            />
+            {/* Gradient fade on right edge */}
+            <Box
+              sx={{
+                position: 'absolute',
+                right: 0,
+                top: 0,
+                bottom: 0,
+                width: '150px',
+                background: 'linear-gradient(to left, #000000, transparent)',
+                zIndex: 2,
+                pointerEvents: 'none',
+              }}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                whiteSpace: "nowrap",
+                willChange: "transform",
+                animation: "ticker-scroll 45s linear infinite",
+              }}
+            >
+              {/* Double duplicate for seamless loop - when first copy scrolls -50%, second copy is in exact same position */}
+              {tickers.length > 0 && [...tickers, ...tickers].map((ticker, index) => (
+                <Box
+                  key={`${ticker.symbol}-${index}`}
+                  sx={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    flexShrink: 0,
+                    px: 4,
+                  }}
+                >
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-start",
+                  mr: 3,
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "#ffffff",
+                    fontSize: "1.1rem",
+                    fontWeight: 700,
+                    fontFamily: "monospace",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  {ticker.symbol}
+                </Typography>
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: "#888888",
+                    fontSize: "0.75rem",
+                    mt: 0.25,
+                  }}
+                >
+                  {ticker.name}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                  mr: 3,
+                  minWidth: "90px",
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: ticker.isPrivate ? "#888888" : "#4CAF50",
+                    fontSize: ticker.isPrivate ? "0.875rem" : "1.1rem",
+                    fontWeight: 600,
+                    fontFamily: ticker.isPrivate ? "inherit" : "monospace",
+                    textTransform: ticker.isPrivate ? "uppercase" : "none",
+                    letterSpacing: ticker.isPrivate ? "0.05em" : "normal",
+                    animation: ticker.isPrivate ? "none" : "price-pulse 3s ease-in-out infinite",
+                  }}
+                >
+                  {formatPrice(ticker.price, ticker.isPrivate)}
+                </Typography>
+                {ticker.change !== null && !ticker.isPrivate && (
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: ticker.change >= 0 ? "#4CAF50" : "#f44336",
+                      fontSize: "0.875rem",
+                      fontWeight: 500,
+                      fontFamily: "monospace",
+                      mt: 0.25,
+                    }}
+                  >
+                    {formatChange(ticker.change)}
+                  </Typography>
+                )}
+              </Box>
+              <Box
+                sx={{
+                  width: "6px",
+                  height: "6px",
+                  borderRadius: "50%",
+                  backgroundColor: "#4CAF50",
+                  mx: 3,
+                  opacity: 0.6,
+                }}
+              />
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        )}
+      </Box>
+    </>
+  );
+};
+
