@@ -90,7 +90,7 @@ export async function GET() {
       return NextResponse.json(cachedData.data);
     }
 
-    const symbols = ['VOYG', 'RKLB', 'ASTS', 'LMT', 'NOC', 'LHX', 'NVDA', '^GSPC', 'SPACEX'];
+    const symbols = ['VOYG', 'RKLB', 'ASTS', 'LMT', 'NOC', 'LHX', 'NVDA', 'SPACEX'];
     const companyNames: Record<string, string> = {
       'VOYG': 'Voyager Space',
       'RKLB': 'Rocket Lab USA',
@@ -99,14 +99,7 @@ export async function GET() {
       'NOC': 'Northrop Grumman',
       'LHX': 'L3Harris Technologies',
       'NVDA': 'NVIDIA',
-      '^GSPC': 'S&P 500 Index',
       'SPACEX': 'SpaceX',
-    };
-    
-    // Map display symbols to fetch symbols (for indexes like SPX)
-    const symbolMap: Record<string, string> = {
-      'SPX': '^GSPC',
-      'SPACEX': 'SPACEX', // Private company, won't fetch
     };
 
     // Fetch all quotes in parallel
@@ -123,15 +116,11 @@ export async function GET() {
           };
         }
         
-        // Handle SPX display name for S&P 500
-        const fetchSymbol = symbol === '^GSPC' ? '^GSPC' : symbol;
-        const displaySymbol = symbol === '^GSPC' ? 'SPX' : symbol;
-        
-        const quote = await fetchYahooFinanceQuote(fetchSymbol);
+        const quote = await fetchYahooFinanceQuote(symbol);
         
         if (quote) {
           return {
-            symbol: displaySymbol,
+            symbol,
             name: quote.name || companyNames[symbol] || symbol,
             price: quote.price,
             change: quote.change,
@@ -140,7 +129,7 @@ export async function GET() {
 
         // Fallback to placeholder if API fails
         return {
-          symbol: displaySymbol,
+          symbol,
           name: companyNames[symbol] || symbol,
           price: null,
           change: null,
@@ -167,7 +156,6 @@ export async function GET() {
       { symbol: 'NOC', name: 'Northrop Grumman', price: null, change: null },
       { symbol: 'LHX', name: 'L3Harris Technologies', price: null, change: null },
       { symbol: 'NVDA', name: 'NVIDIA', price: null, change: null },
-      { symbol: 'SPX', name: 'S&P 500 Index', price: null, change: null },
       { symbol: 'SPCX', name: 'SpaceX', price: null, change: null, isPrivate: true },
     ];
 
