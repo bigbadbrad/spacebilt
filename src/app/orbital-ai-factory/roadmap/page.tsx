@@ -67,9 +67,6 @@ export default function RoadmapPage() {
         <Container maxWidth="lg">
           <Breadcrumbs sx={{ mb: 4, color: '#cccccc' }}>
             <Link href="/" style={{ textDecoration: 'none', color: '#cccccc' }}>
-              Home
-            </Link>
-            <Link href="/orbital-ai-factory" style={{ textDecoration: 'none', color: '#cccccc' }}>
               Orbital AI Factory
             </Link>
             <Typography color="#ffffff">Roadmap</Typography>

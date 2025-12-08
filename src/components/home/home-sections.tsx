@@ -1049,24 +1049,9 @@ export const FourPhaseScalingPath: React.FC = () => {
             </Box>
 
             <Link href="/orbital-ai-factory/roadmap" style={{ textDecoration: 'none' }}>
-              <Box
-                component="span"
-                sx={{
-                  display: 'inline-block',
-                  backgroundColor: '#297BC4',
-                  color: 'white',
-                  px: 4,
-                  py: 2,
-                  borderRadius: 1,
-                  fontWeight: 600,
-                  fontSize: '1.1rem',
-                  '&:hover': {
-                    backgroundColor: '#1e5a8a',
-                  },
-                }}
-              >
-                Explore the Full Roadmap →
-              </Box>
+              <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                View Roadmap &gt;
+              </Typography>
             </Link>
           </Grid>
         </Grid>
