@@ -170,6 +170,13 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           every Orbital AI Factory runs on our Orbital Data Stack — the
           infrastructure that makes a data center work in space.
         </Typography>
+        <Typography
+          variant="body1"
+          color="text.secondary"
+          sx={{ mt: 2, textAlign: { xs: 'left', md: 'center' }, fontSize: '1rem', fontStyle: 'italic' }}
+        >
+          Also known as orbital data centers.
+        </Typography>
 
         <Typography
           variant="h5"

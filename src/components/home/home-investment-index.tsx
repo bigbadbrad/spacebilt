@@ -69,19 +69,20 @@ export const InvestmentIndex: React.FC = () => {
         backgroundColor: "#000000",
         borderTop: "1px solid #222222",
         borderBottom: "1px solid #222222",
-        py: 3,
+        py: { xs: 2, md: 3 },
         overflow: "hidden",
         position: "relative",
+        width: "100%",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ px: { xs: 2, md: 3 } }}>
         <Typography
           variant="h6"
           sx={{
             color: "#ffffff",
-            fontSize: "0.875rem",
+            fontSize: { xs: "0.75rem", md: "0.875rem" },
             fontWeight: 600,
-            mb: 2,
+            mb: { xs: 1.5, md: 2 },
             textTransform: "uppercase",
             letterSpacing: "0.1em",
             textAlign: "center",
@@ -102,6 +103,7 @@ export const InvestmentIndex: React.FC = () => {
             position: 'relative',
             overflow: 'hidden',
             width: '100%',
+            minHeight: { xs: '60px', md: 'auto' },
           }}
         >
           {/* Gradient fade on left edge */}
@@ -111,7 +113,7 @@ export const InvestmentIndex: React.FC = () => {
               left: 0,
               top: 0,
               bottom: 0,
-              width: '150px',
+              width: { xs: '50px', md: '150px' },
               background: 'linear-gradient(to right, #000000, transparent)',
               zIndex: 2,
               pointerEvents: 'none',
@@ -124,7 +126,7 @@ export const InvestmentIndex: React.FC = () => {
               right: 0,
               top: 0,
               bottom: 0,
-              width: '150px',
+              width: { xs: '50px', md: '150px' },
               background: 'linear-gradient(to left, #000000, transparent)',
               zIndex: 2,
               pointerEvents: 'none',
@@ -137,6 +139,7 @@ export const InvestmentIndex: React.FC = () => {
             style={{
               display: 'flex',
               alignItems: 'center',
+              width: '100%',
             }}
           >
             {tickers.map((ticker, index) => (
@@ -146,8 +149,8 @@ export const InvestmentIndex: React.FC = () => {
                   display: "inline-flex",
                   alignItems: "center",
                   flexShrink: 0,
-                  px: 4,
-                  py: 1,
+                  px: { xs: 2, md: 4 },
+                  py: { xs: 0.5, md: 1 },
                 }}
               >
                 <Box
@@ -155,14 +158,14 @@ export const InvestmentIndex: React.FC = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
-                    mr: 3,
+                    mr: { xs: 2, md: 3 },
                   }}
                 >
                   <Typography
                     variant="body1"
                     sx={{
                       color: "#ffffff",
-                      fontSize: "1.1rem",
+                      fontSize: { xs: "0.9rem", md: "1.1rem" },
                       fontWeight: 700,
                       fontFamily: "monospace",
                       letterSpacing: "0.05em",
@@ -174,7 +177,7 @@ export const InvestmentIndex: React.FC = () => {
                     variant="body2"
                     sx={{
                       color: "#888888",
-                      fontSize: "0.75rem",
+                      fontSize: { xs: "0.65rem", md: "0.75rem" },
                       mt: 0.25,
                     }}
                   >
@@ -186,15 +189,17 @@ export const InvestmentIndex: React.FC = () => {
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-end",
-                    mr: 3,
-                    minWidth: "90px",
+                    mr: { xs: 2, md: 3 },
+                    minWidth: { xs: "70px", md: "90px" },
                   }}
                 >
                   <Typography
                     variant="body1"
                     sx={{
                       color: ticker.isPrivate ? "#888888" : "#ffffff",
-                      fontSize: ticker.isPrivate ? "0.875rem" : "1.1rem",
+                      fontSize: ticker.isPrivate 
+                        ? { xs: "0.75rem", md: "0.875rem" }
+                        : { xs: "0.9rem", md: "1.1rem" },
                       fontWeight: 600,
                       fontFamily: ticker.isPrivate ? "inherit" : "monospace",
                       textTransform: ticker.isPrivate ? "uppercase" : "none",
@@ -207,7 +212,7 @@ export const InvestmentIndex: React.FC = () => {
                     <Box
                       sx={{
                         backgroundColor: ticker.change >= 0 ? "#4CAF50" : "#f44336",
-                        px: 1.5,
+                        px: { xs: 1, md: 1.5 },
                         py: 0.25,
                         borderRadius: 0.5,
                         mt: 0.5,
@@ -218,7 +223,7 @@ export const InvestmentIndex: React.FC = () => {
                         variant="body2"
                         sx={{
                           color: "#ffffff",
-                          fontSize: "0.75rem",
+                          fontSize: { xs: "0.65rem", md: "0.75rem" },
                           fontWeight: 600,
                           fontFamily: "monospace",
                         }}
@@ -230,11 +235,11 @@ export const InvestmentIndex: React.FC = () => {
                 </Box>
                 <Box
                   sx={{
-                    width: "6px",
-                    height: "6px",
+                    width: { xs: "4px", md: "6px" },
+                    height: { xs: "4px", md: "6px" },
                     borderRadius: "50%",
                     backgroundColor: "#6b95ac",
-                    mx: 3,
+                    mx: { xs: 2, md: 3 },
                     opacity: 0.6,
                   }}
                 />
