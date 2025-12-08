@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { HomeHero } from "../components/home/home-hero";
 import { HomeHeroMoney } from "../components/home/home-hero-money";
 import {
-  Proven, Rugged, What, WhyOrbitalDataStack, OuterEdge, HowYouBuild, OrbitalAIFactorySpecs, WhoNeedsOrbitalDataStack, Big
+  Proven, Rugged, What, WhyOrbitalDataStack, OuterEdge, HowYouBuild, OrbitalAIFactorySpecs, FourPhaseScalingPath, WhoNeedsOrbitalDataStack, Big
 } from "@/components/home/home-sections";
 import { Signals } from "../components/home/home-signals";
 import { InvestmentIndex } from "../components/home/home-investment-index";
@@ -72,6 +72,7 @@ export default function Page() {
       <OuterEdge />
       <HowYouBuild />
       <OrbitalAIFactorySpecs />
+      <FourPhaseScalingPath />
       <WhoNeedsOrbitalDataStack />
       <Signals />
       <Big />

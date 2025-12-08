@@ -963,6 +963,118 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
   );
 };
 
+// ***** The 4-Phase Scaling Path *****
+export const FourPhaseScalingPath: React.FC = () => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#000000",
+        pt: { xs: 10, md: 14 },
+        pb: { xs: 14, md: 18 },
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+        borderTop: "1px solid #222222",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container justifyContent="flex-start" alignItems="flex-start" spacing={0}>
+          <Grid
+            item
+            xs={12}
+            sx={{
+              textAlign: { xs: "left", md: "left" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              pl: { xs: 0, md: 4 },
+              pb: { xs: 4, md: 6 },
+            }}
+          >
+            <Typography
+              color="#ffffff"
+              variant="h6"
+              sx={{
+                mb: 0,
+                textAlign: { xs: 'left', md: 'left' },
+              }}
+            >
+              THE ORBITAL AI FACTORY ROADMAP
+            </Typography>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 3 }}>
+              From Edge Nodes to Factory-Class Infrastructure
+            </Typography>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 4, fontSize: "1.1rem", maxWidth: "900px" }}>
+              The Orbital AI Factory is a phased infrastructure roadmap. We start with small, repeatable edge nodes to validate radiation, coolant-to-radiator loops, and laser networking — then scale into serviceable megawatt-class factory nodes.
+            </Typography>
+
+            <Box
+              sx={{
+                backgroundColor: "#1b1b1d",
+                p: 4,
+                borderRadius: 1,
+                mb: 4,
+                maxWidth: "900px",
+              }}
+            >
+              <Typography variant="h5" color="white" sx={{ mb: 3, fontWeight: 600 }}>
+                The 4-Phase Scaling Path
+              </Typography>
+              <List sx={{ color: "#cccccc", pl: 0 }}>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
+                  <ListItemText 
+                    primary="Phase 1: 10–50 kW Proving Nodes — Validate the stack in orbit"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
+                  <ListItemText 
+                    primary="Phase 2: 100 kW Edge Nodes — First scalable commercial form"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
+                  <ListItemText 
+                    primary="Phase 3: 1 MW Factory Nodes — The orbital regional data center"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
+                  <ListItemText 
+                    primary="Phase 4: Off-Earth Manufacturing — Multi-TW cost curve"
+                    primaryTypographyProps={{ fontSize: "1.1rem" }}
+                  />
+                </ListItem>
+              </List>
+            </Box>
+
+            <Link href="/orbital-ai-factory/roadmap" style={{ textDecoration: 'none' }}>
+              <Box
+                component="span"
+                sx={{
+                  display: 'inline-block',
+                  backgroundColor: '#297BC4',
+                  color: 'white',
+                  px: 4,
+                  py: 2,
+                  borderRadius: 1,
+                  fontWeight: 600,
+                  fontSize: '1.1rem',
+                  '&:hover': {
+                    backgroundColor: '#1e5a8a',
+                  },
+                }}
+              >
+                Explore the Full Roadmap →
+              </Box>
+            </Link>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
 // ***** Who the Orbital AI Factory is for *****
 export const WhoNeedsOrbitalDataStack: React.FC = () => {
   return (
