@@ -72,28 +72,27 @@ export default function RoadmapPage() {
             <Typography color="#ffffff">Roadmap</Typography>
           </Breadcrumbs>
 
-          <Typography variant="h1" color="white" sx={{ mb: 2, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
-            The Orbital AI Factory Roadmap
-          </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 6, maxWidth: '800px' }}>
-            From Edge Nodes to Factory-Class Infrastructure
-          </Typography>
-
-          <Box
+          <Typography
+            color="#ffffff"
+            variant="h6"
             sx={{
-              backgroundColor: '#1b1b1d',
-              p: 4,
-              borderRadius: 1,
-              mb: 6,
+              mt: { xs: 2, md: 10 },
+              mb: 4,
+              textAlign: { xs: 'left', md: 'left' },
             }}
           >
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 3, fontSize: '1.1rem' }}>
-              The Orbital AI Factory is a phased infrastructure roadmap. We start with small, repeatable edge nodes to validate radiation, coolant-to-radiator loops, and laser networking — then scale into serviceable megawatt-class factory nodes. Longer-term, off-Earth manufacturing unlocks the next cost curve.
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ fontSize: '1.1rem', fontStyle: 'italic' }}>
-              The 1 MW node is our reference design for what a mature Orbital AI Factory looks like — and it becomes inevitable once earlier phases validate the economics of power, thermal, and radiation-tolerant compute.
-            </Typography>
-          </Box>
+            FROM EDGE NODES TO FACTORY-CLASS INFRASTRUCTURE
+          </Typography>
+          <Typography variant="h2" color="white" sx={{ mt: 0, mb: 6, mr: { xs: 4, md: 40 } }}>
+            The Orbital AI Factory Roadmap
+          </Typography>
+
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 3, }}>
+            The Orbital AI Factory is a phased infrastructure roadmap. We start with small, repeatable edge nodes to validate radiation, coolant-to-radiator loops, and laser networking — then scale into serviceable megawatt-class factory nodes. Longer-term, off-Earth manufacturing unlocks the next cost curve.
+          </Typography>
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 8, }}>
+            The 1 MW node is our reference design for what a mature Orbital AI Factory looks like — and it becomes inevitable once earlier phases validate the economics of power, thermal, and radiation-tolerant compute.
+          </Typography>
 
           <Grid container spacing={4}>
             {/* Phase 1 */}

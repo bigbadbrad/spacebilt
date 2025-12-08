@@ -963,13 +963,13 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
   );
 };
 
-// ***** The 4-Phase Scaling Path *****
+// ***** ROADMAP *****
 export const FourPhaseScalingPath: React.FC = () => {
   return (
     <Box
       sx={{
         backgroundColor: "#000000",
-        pt: { xs: 10, md: 14 },
+        pt: { xs: 10, md: 20 },
         pb: { xs: 14, md: 18 },
         width: "100%",
         position: "relative",
@@ -995,16 +995,16 @@ export const FourPhaseScalingPath: React.FC = () => {
               color="#ffffff"
               variant="h6"
               sx={{
-                mb: 0,
+                mb: 4,
                 textAlign: { xs: 'left', md: 'left' },
               }}
             >
               THE ORBITAL AI FACTORY ROADMAP
             </Typography>
-            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 3 }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 4, mr: { xs: 4, md: 40 } }}>
               From Edge Nodes to Factory-Class Infrastructure
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 4, fontSize: "1.1rem", maxWidth: "900px" }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mb: 6, fontSize: "1.1rem", maxWidth: "900px" }}>
               The Orbital AI Factory is a phased infrastructure roadmap. We start with small, repeatable edge nodes to validate radiation, coolant-to-radiator loops, and laser networking — then scale into serviceable megawatt-class factory nodes.
             </Typography>
 
@@ -1014,7 +1014,7 @@ export const FourPhaseScalingPath: React.FC = () => {
                 p: 4,
                 borderRadius: 1,
                 mb: 4,
-                maxWidth: "900px",
+                width: "fit-content",
               }}
             >
               <Typography variant="h5" color="white" sx={{ mb: 3, fontWeight: 600 }}>
