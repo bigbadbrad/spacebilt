@@ -651,26 +651,26 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Typography>
             </Box>
 
-            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 3, fontWeight: 600 }}>
+            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 6, fontWeight: 600 }}>
               Node at a Glance
             </Typography>
-            <Grid container spacing={3} sx={{ mb: 4 }}>
+            <Grid container spacing={6} sx={{ mb: 4 }}>
               <Grid item xs={12} md={6}>
                 <Box
+                  component="div"
                   sx={{
-                    backgroundColor: "#000000",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    pr: { md: 3 },
                   }}
                 >
+                  <GradientLine />
                   <Typography
-                    variant="h6"
                     sx={{
                       color: "#ffffff",
                       fontSize: "1.25rem",
                       fontWeight: 600,
-                      mb: 2,
+                      mb: 1,
                     }}
                   >
                     Power & Scale
@@ -688,20 +688,20 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box
+                  component="div"
                   sx={{
-                    backgroundColor: "#000000",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    pl: { md: 3 },
                   }}
                 >
+                  <GradientLine />
                   <Typography
-                    variant="h6"
                     sx={{
                       color: "#ffffff",
                       fontSize: "1.25rem",
                       fontWeight: 600,
-                      mb: 2,
+                      mb: 1,
                     }}
                   >
                     Structure & Servicing
@@ -716,29 +716,24 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Grid>
             </Grid>
 
-            <Grid container spacing={3} sx={{ mb: 4 }}>
+            <Grid container spacing={6} sx={{ mb: 4 }}>
               <Grid item xs={12} md={6}>
                 <Link href="/orbital-ai-factory/network-interconnect" style={{ textDecoration: "none" }}>
                   <Box
+                    component="div"
                     sx={{
-                      backgroundColor: "#000000",
-                      p: 3,
-                      height: "100%",
-                      borderRadius: 1,
-                      border: "1px solid #333333",
-                      transition: "border-color 0.2s",
-                      "&:hover": {
-                        borderColor: "#555555",
-                      },
+                      display: "flex",
+                      flexDirection: "column",
+                      pr: { md: 3 },
                     }}
                   >
+                    <GradientLine />
                     <Typography
-                      variant="h6"
                       sx={{
                         color: "#ffffff",
                         fontSize: "1.25rem",
                         fontWeight: 600,
-                        mb: 2,
+                        mb: 1,
                       }}
                     >
                       Network & Interconnect
@@ -751,20 +746,20 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Grid>
               <Grid item xs={12} md={6}>
                 <Box
+                  component="div"
                   sx={{
-                    backgroundColor: "#000000",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    pl: { md: 3 },
                   }}
                 >
+                  <GradientLine />
                   <Typography
-                    variant="h6"
                     sx={{
                       color: "#ffffff",
                       fontSize: "1.25rem",
                       fontWeight: 600,
-                      mb: 2,
+                      mb: 1,
                     }}
                   >
                     Reliability
