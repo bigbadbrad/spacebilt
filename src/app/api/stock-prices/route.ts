@@ -5,7 +5,7 @@ interface StockQuote {
   symbol: string;
   name: string;
   price: number | null;
-  change?: number;
+  change?: number | null;
   changePercent?: number;
   isPrivate?: boolean; // For private companies like SpaceX
 }
