@@ -72,14 +72,11 @@ export default function ComputePodsPage() {
             <Typography color="#ffffff">Compute Pods</Typography>
           </Breadcrumbs>
 
-          <Typography variant="h1" color="white" sx={{ mb: 2, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+          <Typography variant="h2" color="white" sx={{ mt: 0, mb: 6 }}>
             Orbital AI Compute Pod
           </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 4, maxWidth: '800px', fontSize: '1.1rem', fontStyle: 'italic' }}>
-            Think of this as the "rack" inside the orbital data center.
-          </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 6, maxWidth: '800px' }}>
-            Physical specs, AI compute configurations, storage, networking, and pod-level power/thermal
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 8, maxWidth: '900px' }}>
+            Physical specs, AI compute configurations, storage, networking, and pod-level power/thermal. Think of this as the "rack" inside the orbital data center.
           </Typography>
 
           <Divider sx={{ borderColor: '#333333', mb: 6 }} />

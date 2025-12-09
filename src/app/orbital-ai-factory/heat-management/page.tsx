@@ -72,10 +72,10 @@ export default function HeatManagementPage() {
             <Typography color="#ffffff">Heat Management</Typography>
           </Breadcrumbs>
 
-          <Typography variant="h1" color="white" sx={{ mb: 2, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+          <Typography variant="h2" color="white" sx={{ mt: 0, mb: 6 }}>
             Heat Management & Radiators
           </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 6, maxWidth: '800px' }}>
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 8, maxWidth: '900px' }}>
             Direct liquid cooling from AI chips to low-mass deployable radiators, rejecting ~1 MW of heat via high-emissivity panels pointed at deep space
           </Typography>
 

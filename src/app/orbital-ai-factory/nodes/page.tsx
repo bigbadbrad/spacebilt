@@ -72,10 +72,10 @@ export default function NodesPage() {
             <Typography color="#ffffff">Node Architecture</Typography>
           </Breadcrumbs>
 
-          <Typography variant="h1" color="white" sx={{ mb: 2, fontSize: { xs: '2.5rem', md: '3.5rem' } }}>
+          <Typography variant="h2" color="white" sx={{ mt: 0, mb: 6 }}>
             Orbital AI Factory Node Architecture
           </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 6, maxWidth: '800px' }}>
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 8, maxWidth: '900px' }}>
             An Orbital AI Factory is a cluster of high-power nodes working together in orbit. Each node is a 1 MW-class AI data center with structure, spine design, modularity, and robotic servicing interfaces.
           </Typography>
 
