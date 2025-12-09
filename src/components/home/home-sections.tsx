@@ -6,6 +6,7 @@ import { PowerIcon } from "@/components/icons/power";
 import { StructureIcon } from "@/components/icons/structure";
 import { NetworkIcon } from "@/components/icons/network";
 import { RadiationIcon } from "@/components/icons/radiation";
+import { LaserIcon } from "@/components/icons/laser";
 
 // Reusable gradient line constant
 const gradientLineStyle = {
@@ -25,14 +26,19 @@ const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
 const GradientIcon: React.FC<{ children: React.ReactNode; sx?: any }> = ({ children, sx }) => {
   const gradientId = React.useMemo(() => `gradient-${Math.random().toString(36).substr(2, 9)}`, []);
   
+  // Extract height from child icon props, default to 48px
+  const childElement = children as React.ReactElement;
+  const iconHeight = childElement?.props?.height || '48px';
+  const heightValue = typeof iconHeight === 'number' ? `${iconHeight}px` : iconHeight;
+  
   return (
     <Box
       sx={{
-        width: '48px',
-        height: '48px',
+        width: heightValue,
+        height: heightValue,
         mb: 2,
         position: 'relative',
-        display: 'inline-block',
+        display: 'block',
         ...sx,
       }}
     >
@@ -46,7 +52,7 @@ const GradientIcon: React.FC<{ children: React.ReactNode; sx?: any }> = ({ child
           </linearGradient>
         </defs>
       </svg>
-      {React.cloneElement(children as React.ReactElement, {
+      {React.cloneElement(childElement, {
         fill: `url(#${gradientId})`,
       })}
     </Box>
@@ -639,51 +645,98 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               Concept reference design for free-flying SpaceBilt nodes
             </Typography>
 
-            <Typography variant="h5" color="white" sx={{ mt: 4, mb: 3, fontWeight: 600 }}>
+            <Typography variant="h5" color="white" sx={{ mt: 4, mb: 4, fontWeight: 600 }}>
               Mission Profile
             </Typography>
             <Box
               sx={{
-                backgroundColor: "#000000",
-                p: 3,
-                borderRadius: 1,
-                mb: 4,
+                mb: 6,
                 maxWidth: { xs: '100%', md: '50%' },
               }}
             >
-              <Typography variant="h5" color="text.secondary" sx={{ mb: 2 }}>
-                <strong>Role:</strong> High-density AI compute + storage node in low Earth orbit
-              </Typography>
-              <Typography variant="h5" color="text.secondary" sx={{ mb: 2 }}>
-                <strong>Use cases:</strong>
-              </Typography>
-              <List sx={{ color: "#cccccc", pl: 4, mb: 3 }}>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
-                  <ListItemText 
-                    primary="On-orbit AI inference and training near telescopes, sensor constellations, stations, in-space factories"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
-                  <ListItemText 
-                    primary="Data reduction + compression at the edge"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 0.5 }}>
-                  <ListItemText 
-                    primary="Secure orbital data center for commercial, defense, and science payloads"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-              </List>
-              <Typography variant="h5" color="text.secondary">
-                <strong>Orbit:</strong> Sun-synchronous LEO, ~600–700 km, ~97–98° inclination<br />
-                <strong>Design life:</strong> 5–10 years, robotically serviceable
-              </Typography>
+              <Box sx={{ mb: 4 }}>
+                <Typography variant="h6" color="text.secondary" sx={{ mb: 1, fontSize: '0.875rem', fontWeight: 500, letterSpacing: '0.02em', textTransform: 'uppercase' }}>
+                  Role
+                </Typography>
+                <Typography variant="h6" color="white" sx={{ fontSize: '1.1rem', lineHeight: 1.6 }}>
+                  High-density AI compute + storage node in low Earth orbit
+                </Typography>
+              </Box>
+
+              <Box sx={{ mb: 4 }}>
+                <Typography variant="h6" color="text.secondary" sx={{ mb: 2, fontSize: '0.875rem', fontWeight: 500, letterSpacing: '0.02em', textTransform: 'uppercase' }}>
+                  Use cases
+                </Typography>
+                <Box component="ul" sx={{ color: "#cccccc", pl: 3, m: 0, listStyle: 'none' }}>
+                  <Box component="li" sx={{ mb: 1.5, fontSize: '1.1rem', lineHeight: 1.6, position: 'relative', pl: 2.5 }}>
+                    <Box
+                      component="span"
+                      sx={{
+                        position: 'absolute',
+                        left: 0,
+                        top: '0.6em',
+                        width: '4px',
+                        height: '4px',
+                        borderRadius: '50%',
+                        backgroundColor: '#cccccc',
+                      }}
+                    />
+                    On-orbit AI inference and training near telescopes, sensor constellations, stations, in-space factories
+                  </Box>
+                  <Box component="li" sx={{ mb: 1.5, fontSize: '1.1rem', lineHeight: 1.6, position: 'relative', pl: 2.5 }}>
+                    <Box
+                      component="span"
+                      sx={{
+                        position: 'absolute',
+                        left: 0,
+                        top: '0.6em',
+                        width: '4px',
+                        height: '4px',
+                        borderRadius: '50%',
+                        backgroundColor: '#cccccc',
+                      }}
+                    />
+                    Data reduction + compression at the edge
+                  </Box>
+                  <Box component="li" sx={{ mb: 0, fontSize: '1.1rem', lineHeight: 1.6, position: 'relative', pl: 2.5 }}>
+                    <Box
+                      component="span"
+                      sx={{
+                        position: 'absolute',
+                        left: 0,
+                        top: '0.6em',
+                        width: '4px',
+                        height: '4px',
+                        borderRadius: '50%',
+                        backgroundColor: '#cccccc',
+                      }}
+                    />
+                    Secure orbital data center for commercial, defense, and science payloads
+                  </Box>
+                </Box>
+              </Box>
+
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: { xs: 3, sm: 6 } }}>
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="h6" color="text.secondary" sx={{ mb: 1, fontSize: '0.875rem', fontWeight: 500, letterSpacing: '0.02em', textTransform: 'uppercase' }}>
+                    Orbit
+                  </Typography>
+                  <Typography variant="h6" color="white" sx={{ fontSize: '1.1rem', lineHeight: 1.6 }}>
+                    Sun-synchronous LEO, ~600–700 km, ~97–98° inclination
+                  </Typography>
+                </Box>
+                <Box sx={{ flex: 1 }}>
+                  <Typography variant="h6" color="text.secondary" sx={{ mb: 1, fontSize: '0.875rem', fontWeight: 500, letterSpacing: '0.02em', textTransform: 'uppercase' }}>
+                    Design life
+                  </Typography>
+                  <Typography variant="h6" color="white" sx={{ fontSize: '1.1rem', lineHeight: 1.6 }}>
+                    5–10 years, robotically serviceable
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
 
-            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 6, fontWeight: 600 }}>
+            <Typography variant="h5" color="white" sx={{ mt: 8, mb: 4, fontWeight: 600 }}>
               Node at a Glance
             </Typography>
             <Grid container spacing={6} sx={{ mb: 4 }}>
@@ -697,7 +750,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                   }}
                 >
                   <GradientIcon>
-                    <PowerIcon height="54px" />
+                    <PowerIcon height="56px" />
                   </GradientIcon>
                   <Typography
                     sx={{
@@ -730,7 +783,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                   }}
                 >
                   <GradientIcon>
-                    <StructureIcon height="54px" />
+                    <StructureIcon height="56px" />
                   </GradientIcon>
                   <Typography
                     sx={{
@@ -764,7 +817,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                     }}
                   >
                     <GradientIcon>
-                      <NetworkIcon height="54px" />
+                      <LaserIcon height="56px" />
                     </GradientIcon>
                     <Typography
                       sx={{
@@ -792,7 +845,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                   }}
                 >
                   <GradientIcon>
-                    <RadiationIcon height="54px" />
+                    <RadiationIcon height="56px" />
                   </GradientIcon>
                   <Typography
                     sx={{
