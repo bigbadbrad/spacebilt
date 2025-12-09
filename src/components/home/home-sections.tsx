@@ -1000,7 +1000,7 @@ export const FourPhaseScalingPath: React.FC = () => {
               From Edge Nodes to Factory-Class Infrastructure
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mb: 6, fontSize: "1.1rem", maxWidth: "900px" }}>
-              The Orbital AI Factory is a phased infrastructure roadmap. We start with small, repeatable edge nodes to validate radiation, coolant-to-radiator loops, and laser networking — then scale into serviceable megawatt-class factory nodes.
+              An Orbital AI Factory scales in three clear steps. We start with manufacturable 100 kW-class nodes to validate economics and operations in LEO, then scale to megawatt-class factory nodes, and finally unlock the next cost curve with off-Earth manufacturing.
             </Typography>
 
             <Box
@@ -1013,30 +1013,24 @@ export const FourPhaseScalingPath: React.FC = () => {
               }}
             >
               <Typography variant="h5" color="white" sx={{ mb: 3, fontWeight: 600 }}>
-                The 4-Phase Scaling Path
+                The 3-Phase Scaling Path
               </Typography>
               <List sx={{ color: "#cccccc", pl: 0 }}>
                 <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
                   <ListItemText 
-                    primary="Phase 1: 10–50 kW Proving Nodes — Validate the stack in orbit"
+                    primary="Phase 1: 100 kW Edge Nodes — Localized AI near sensors"
                     primaryTypographyProps={{ fontSize: "1.1rem" }}
                   />
                 </ListItem>
                 <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
                   <ListItemText 
-                    primary="Phase 2: 100 kW Edge Nodes — First scalable commercial form"
+                    primary="Phase 2: 1 MW Factory Nodes — Serviceable, upgradeable orbital data center nodes"
                     primaryTypographyProps={{ fontSize: "1.1rem" }}
                   />
                 </ListItem>
                 <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
                   <ListItemText 
-                    primary="Phase 3: 1 MW Factory Nodes — The orbital regional data center"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
-                  <ListItemText 
-                    primary="Phase 4: Off-Earth Manufacturing — Multi-TW cost curve"
+                    primary="Phase 3: Off-Earth Manufacturing — The multi-TW scaling horizon"
                     primaryTypographyProps={{ fontSize: "1.1rem" }}
                   />
                 </ListItem>

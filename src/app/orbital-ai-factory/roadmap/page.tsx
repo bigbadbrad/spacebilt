@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { Box, Container, Typography, Grid, Breadcrumbs } from '@mui/material';
 
 export const metadata: Metadata = {
-  title: 'Orbital AI Factory Roadmap – 4-Phase Scaling Path from Edge Nodes to Factory-Class Infrastructure',
-  description: 'The Orbital AI Factory roadmap: Phase 1 (10–50 kW Proving Nodes), Phase 2 (100 kW Edge Nodes), Phase 3 (1 MW Factory Nodes), Phase 4 (Off-Earth Manufacturing). From edge nodes to megawatt-class factory infrastructure.',
+  title: 'Orbital AI Factory Roadmap – 3-Phase Scaling Path from Edge Nodes to Factory-Class Infrastructure',
+  description: 'The Orbital AI Factory roadmap: Phase 1 (100 kW Edge Nodes), Phase 2 (1 MW Factory Nodes), Phase 3 (Off-Earth Manufacturing). From manufacturable nodes to megawatt-class factory infrastructure.',
   keywords: ['orbital AI factory roadmap', 'space data center scaling', 'orbital infrastructure phases', 'space compute roadmap', 'orbital data center evolution'],
   openGraph: {
-    title: 'Orbital AI Factory Roadmap – 4-Phase Scaling Path',
-    description: 'The Orbital AI Factory is a phased infrastructure roadmap from edge nodes to megawatt-class factory infrastructure.',
+    title: 'Orbital AI Factory Roadmap – 3-Phase Scaling Path',
+    description: 'The Orbital AI Factory is a phased infrastructure roadmap from manufacturable 100 kW nodes to megawatt-class factory infrastructure.',
     url: 'https://www.orbitalaifactory.com/orbital-ai-factory/roadmap',
     siteName: 'Orbital AI Factory',
     locale: 'en_US',
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Orbital AI Factory Roadmap – 4-Phase Scaling Path',
-    description: 'From edge nodes to factory-class infrastructure: the phased roadmap for Orbital AI Factories.',
+    title: 'Orbital AI Factory Roadmap – 3-Phase Scaling Path',
+    description: 'From manufacturable nodes to factory-class infrastructure: the phased roadmap for Orbital AI Factories.',
     site: '@orbitalfactory',
   },
   alternates: {
@@ -81,22 +81,19 @@ export default function RoadmapPage() {
               textAlign: { xs: 'left', md: 'left' },
             }}
           >
-            FROM EDGE NODES TO FACTORY-CLASS INFRASTRUCTURE
+            THE ORBITAL AI FACTORY ROADMAP
           </Typography>
           <Typography variant="h2" color="white" sx={{ mt: 0, mb: 6, mr: { xs: 4, md: 40 } }}>
-            The Orbital AI Factory Roadmap
+            The 3-Phase Scaling Path
           </Typography>
 
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 3, }}>
-            The Orbital AI Factory is a phased infrastructure roadmap. We start with small, repeatable edge nodes to validate radiation, coolant-to-radiator loops, and laser networking — then scale into serviceable megawatt-class factory nodes. Longer-term, off-Earth manufacturing unlocks the next cost curve.
-          </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 8, }}>
-            The 1 MW node is our reference design for what a mature Orbital AI Factory looks like — and it becomes inevitable once earlier phases validate the economics of power, thermal, and radiation-tolerant compute.
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 8, maxWidth: "900px" }}>
+            An Orbital AI Factory scales in three clear steps. We start with manufacturable 100 kW-class nodes to validate economics and operations in LEO, then scale to megawatt-class factory nodes, and finally unlock the next cost curve with off-Earth manufacturing.
           </Typography>
 
           <Grid container spacing={4}>
             {/* Phase 1 */}
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={4}>
               <Box
                 sx={{
                   backgroundColor: '#1b1b1d',
@@ -115,25 +112,25 @@ export default function RoadmapPage() {
                     mb: 1,
                   }}
                 >
-                  Phase 1 — 10–50 kW Proving Nodes
+                  Phase 1 — 100 kW Edge Nodes
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', mb: 2, fontWeight: 500 }}>
-                  Power class: 10–50 kW
+                  Localized AI near sensors
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2, fontWeight: 600 }}>
-                  Goal: Validate the stack in orbit
+                  The first truly scalable class of orbital AI infrastructure.
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2 }}>
-                  Small, cheap payload-class nodes. Test: GPU thermal loop behavior, radiation mitigation + ECC/scrubbing, basic FSO routing + results-only downlink.
+                  Optimized for low mass, high packing efficiency, and repeatable manufacturing. Uses liquid-cooled AI racks with heat rejected through low-mass deployable radiators. Primary model: process in orbit, beam back results.
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#888888', fontSize: '1rem', fontStyle: 'italic' }}>
-                  Outcome: Real flight data that derisks scaled designs
+                  Why it matters: This is the fastest path to real, commercial-scale orbital AI.
                 </Typography>
               </Box>
             </Grid>
 
             {/* Phase 2 */}
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={4}>
               <Box
                 sx={{
                   backgroundColor: '#1b1b1d',
@@ -152,25 +149,25 @@ export default function RoadmapPage() {
                     mb: 1,
                   }}
                 >
-                  Phase 2 — 100 kW Edge Nodes
+                  Phase 2 — 1 MW Factory Nodes
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', mb: 2, fontWeight: 500 }}>
-                  Power class: 100 kW
+                  Our Reference Design
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2, fontWeight: 600 }}>
-                  Goal: First scalable commercial form
+                  Serviceable, upgradeable orbital data center nodes
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2 }}>
-                  Sensor-adjacent AI with results-only downlink. Optimized for: low mass, high area-to-mass deployables, manufacturability.
+                  The mature "regional backbone" of an Orbital AI Factory. ROSA-class mega-wings, large deployable radiators, modular compute pods. High-bandwidth laser networking enables synchronized workloads across multiple nodes. Built for robotic servicing and multi-generation upgrades.
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#888888', fontSize: '1rem', fontStyle: 'italic' }}>
-                  Outcome: The first economically repeatable node class
+                  Why it matters: This is where orbital AI becomes a true data center architecture.
                 </Typography>
               </Box>
             </Grid>
 
             {/* Phase 3 */}
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={4}>
               <Box
                 sx={{
                   backgroundColor: '#1b1b1d',
@@ -189,56 +186,19 @@ export default function RoadmapPage() {
                     mb: 1,
                   }}
                 >
-                  Phase 3 — 1 MW Factory Nodes
+                  Phase 3 — Off-Earth Manufacturing
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', mb: 2, fontWeight: 500 }}>
-                  Power class: 1 MW
+                  The multi-TW scaling horizon
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2, fontWeight: 600 }}>
-                  Goal: The orbital "regional data center"
+                  Lunar/cislunar manufacturing of structures, arrays, and radiators.
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2 }}>
-                  Serviceable spine + modular pods. ROSA-class mega-wings + low-mass deployable radiators. High-capacity node-to-node FSO mesh.
+                  Potential mass-driver logistics dramatically reduce Earth launch dependence. Enables orders-of-magnitude expansion of orbital compute capacity.
                 </Typography>
                 <Typography variant="body1" sx={{ color: '#888888', fontSize: '1rem', fontStyle: 'italic' }}>
-                  Outcome: A true orbital data center building block
-                </Typography>
-              </Box>
-            </Grid>
-
-            {/* Phase 4 */}
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  backgroundColor: '#1b1b1d',
-                  p: 4,
-                  height: '100%',
-                  borderRadius: 1,
-                  border: '1px solid #333333',
-                }}
-              >
-                <Typography
-                  variant="h4"
-                  sx={{
-                    color: '#ffffff',
-                    fontSize: '1.5rem',
-                    fontWeight: 600,
-                    mb: 1,
-                  }}
-                >
-                  Phase 4 — Off-Earth Manufacturing
-                </Typography>
-                <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', mb: 2, fontWeight: 500 }}>
-                  Power class: Multi-TW scale
-                </Typography>
-                <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2, fontWeight: 600 }}>
-                  Goal: The multi-TW cost curve
-                </Typography>
-                <Typography variant="body1" sx={{ color: '#cccccc', fontSize: '1.1rem', mb: 2 }}>
-                  Lunar / cislunar production. Potential mass-driver logistics.
-                </Typography>
-                <Typography variant="body1" sx={{ color: '#888888', fontSize: '1rem', fontStyle: 'italic' }}>
-                  Outcome: Infrastructure scaling unconstrained by Earth launch economics
+                  Why it matters: This is the long-term path to civilization-scale infrastructure.
                 </Typography>
               </Box>
             </Grid>
