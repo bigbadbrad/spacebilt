@@ -999,43 +999,147 @@ export const FourPhaseScalingPath: React.FC = () => {
             <Typography variant="h2" color="white" sx={{ mt: 0, mb: 4, mr: { xs: 4, md: 40 } }}>
               From Edge Nodes to Factory-Class Infrastructure
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 6, fontSize: "1.1rem", maxWidth: "900px" }}>
+            <Typography variant="h6" color="text.secondary" sx={{ mb: 12, maxWidth: "900px" }}>
               An Orbital AI Factory scales in three clear steps. We start with manufacturable 100 kW-class nodes to validate economics and operations in LEO, then scale to megawatt-class factory nodes, and finally unlock the next cost curve with off-Earth manufacturing.
             </Typography>
 
-            <Box
-              sx={{
-                backgroundColor: "#1b1b1d",
-                p: 4,
-                borderRadius: 1,
-                mb: 4,
-                width: "fit-content",
-              }}
-            >
-              <Typography variant="h5" color="white" sx={{ mb: 3, fontWeight: 600 }}>
-                The 3-Phase Scaling Path
-              </Typography>
-              <List sx={{ color: "#cccccc", pl: 0 }}>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
-                  <ListItemText 
-                    primary="Phase 1: 100 kW Edge Nodes — Localized AI near sensors"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
-                  <ListItemText 
-                    primary="Phase 2: 1 MW Factory Nodes — Serviceable, upgradeable orbital data center nodes"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-                <ListItem disableGutters sx={{ display: "list-item", listStyleType: "disc", pb: 1.5, pl: 2 }}>
-                  <ListItemText 
-                    primary="Phase 3: Off-Earth Manufacturing — The multi-TW scaling horizon"
-                    primaryTypographyProps={{ fontSize: "1.1rem" }}
-                  />
-                </ListItem>
-              </List>
-            </Box>
+            <Grid container spacing={4} sx={{ mb: 4 }}>
+              <Grid item xs={12} md={4}>
+                <Box
+                  component="div"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <GradientLine />
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#ffffff",
+                      mt: 2,
+                      mb: 1,
+                    }}
+                  >
+                    Phase 1
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      backgroundImage: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      mb: -1,
+                    }}
+                  >
+                    100 kW
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#ffffff",
+                      mb: 4,
+                    }}
+                  >
+                    edge nodes
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
+                    Localized AI near sensors. The first truly scalable class of orbital AI infrastructure.
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box
+                  component="div"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <GradientLine />
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#ffffff",
+                      mt: 2,
+                      mb: 1,
+                    }}
+                  >
+                    Phase 2
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      backgroundImage: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      mb: -1,
+                    }}
+                  >
+                    1 mW
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#ffffff",
+                      mb: 4,
+                    }}
+                  >
+                    factory nodes
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
+                    Serviceable, upgradeable orbital data center nodes. Our reference design.
+                  </Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <Box
+                  component="div"
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <GradientLine />
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#ffffff",
+                      mt: 2,
+                      mb: 1,
+                    }}
+                  >
+                    Phase 3
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    sx={{
+                      backgroundImage: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      mb: -1,
+                    }}
+                  >
+                    1 eW
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#ffffff",
+                      mb: 4,
+                    }}
+                  >
+                    off-earth manufacturing
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
+                    The multi-TW scaling horizon. Lunar/cislunar manufacturing unlocks civilization-scale infrastructure.
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
 
             <Link href="/orbital-ai-factory/roadmap" style={{ textDecoration: 'none' }}>
               <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
