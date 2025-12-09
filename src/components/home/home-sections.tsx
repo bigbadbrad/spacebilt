@@ -7,6 +7,7 @@ import { StructureIcon } from "@/components/icons/structure";
 import { NetworkIcon } from "@/components/icons/network";
 import { RadiationIcon } from "@/components/icons/radiation";
 import { LaserIcon } from "@/components/icons/laser";
+import { OrbitIcon } from "@/components/icons/orbit";
 
 // Reusable gradient line constant
 const gradientLineStyle = {
@@ -408,6 +409,11 @@ export const OuterEdge: React.FC = () => {
               pb: { xs: 2, md: 6 },
             }}
           >
+            <Box sx={{ mb: 2 }}>
+              <GradientIcon>
+                <OrbitIcon height="64px" />
+              </GradientIcon>
+            </Box>
             <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
               We enable the outer edge of AI.
             </Typography>
