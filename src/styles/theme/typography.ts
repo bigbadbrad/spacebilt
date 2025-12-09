@@ -20,6 +20,6 @@ export const typography = {
   h2: { fontSize: '4rem', fontWeight: 600, lineHeight: 1.2 },
   h3: { fontSize: '2.25rem', fontWeight: 600, lineHeight: 1.2 },
   h4: { fontSize: '2rem', fontWeight: 600, lineHeight: 1.2 }, // 32px
-  h5: { fontSize: '1.4rem', fontWeight: 600, lineHeight: 1.15 }, // 28px
+  h5: { fontSize: '1.4rem', fontWeight: 600, lineHeight: 1.2 }, // 28px
   h6: { fontSize: '1.2rem', fontWeight: 600, lineHeight: 1.42 },
 } satisfies TypographyOptions;

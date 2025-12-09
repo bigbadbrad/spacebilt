@@ -2,6 +2,10 @@
 import React from "react";
 import Link from 'next/link';
 import { Box, Container, Grid, Typography, Table, TableBody, TableCell, TableContainer, TableRow, Paper, List, ListItem, ListItemText, Divider } from "@mui/material";
+import { PowerIcon } from "@/components/icons/power";
+import { StructureIcon } from "@/components/icons/structure";
+import { NetworkIcon } from "@/components/icons/network";
+import { RadiationIcon } from "@/components/icons/radiation";
 
 // Reusable gradient line constant
 const gradientLineStyle = {
@@ -16,6 +20,38 @@ const gradientLineStyle = {
 const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
   <Box component="div" sx={{ ...gradientLineStyle, ...sx }} />
 );
+
+// Gradient icon wrapper component - applies gradient fill to SVG icons
+const GradientIcon: React.FC<{ children: React.ReactNode; sx?: any }> = ({ children, sx }) => {
+  const gradientId = React.useMemo(() => `gradient-${Math.random().toString(36).substr(2, 9)}`, []);
+  
+  return (
+    <Box
+      sx={{
+        width: '48px',
+        height: '48px',
+        mb: 2,
+        position: 'relative',
+        display: 'inline-block',
+        ...sx,
+      }}
+    >
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#e4f6f0" />
+            <stop offset="31%" stopColor="#9dcfca" />
+            <stop offset="68%" stopColor="#6b95ac" />
+            <stop offset="100%" stopColor="#45657d" />
+          </linearGradient>
+        </defs>
+      </svg>
+      {React.cloneElement(children as React.ReactElement, {
+        fill: `url(#${gradientId})`,
+      })}
+    </Box>
+  );
+};
 
 
 // ***** What is the Orbital Data Stack *****
@@ -52,18 +88,17 @@ export const What: React.FC = () => {
               Three-layer breakdown:
             </Typography>
             <Grid container spacing={4} sx={{ mb: 4 }}>
-              <Grid item xs={12} md={12}>
+              <Grid item xs={12} md={12} sx={{mb: 6}}>
                 <Box
+                  component="div"
                   sx={{
-                    backgroundColor: "#000000",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                     maxWidth: { xs: '100%', md: '50%' },
                   }}
                 >
+                  <GradientLine />
                   <Typography
-                    variant="h6"
                     sx={{
                       color: "#ffffff",
                       fontSize: "1.25rem",
@@ -74,7 +109,6 @@ export const What: React.FC = () => {
                     1. Orbital Compute & Storage
                   </Typography>
                   <Typography
-                    variant="body2"
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
@@ -84,18 +118,17 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={12}>
+              <Grid item xs={12} md={12} sx={{mb: 6}}>
                 <Box
+                  component="div"
                   sx={{
-                    backgroundColor: "#000000",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                     maxWidth: { xs: '100%', md: '50%' },
                   }}
                 >
+                  <GradientLine />
                   <Typography
-                    variant="h6"
                     sx={{
                       color: "#ffffff",
                       fontSize: "1.25rem",
@@ -106,7 +139,6 @@ export const What: React.FC = () => {
                     2. Data Center Integration
                   </Typography>
                   <Typography
-                    variant="body2"
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
@@ -116,18 +148,17 @@ export const What: React.FC = () => {
                   </Typography>
                 </Box>
               </Grid>
-              <Grid item xs={12} md={12}>
+              <Grid item xs={12} md={12} sx={{mb: 6}}>
                 <Box
+                  component="div"
                   sx={{
-                    backgroundColor: "#000000",
-                    p: 3,
-                    height: "100%",
-                    borderRadius: 1,
+                    display: "flex",
+                    flexDirection: "column",
                     maxWidth: { xs: '100%', md: '50%' },
                   }}
                 >
+                  <GradientLine />
                   <Typography
-                    variant="h6"
                     sx={{
                       color: "#ffffff",
                       fontSize: "1.25rem",
@@ -138,7 +169,6 @@ export const What: React.FC = () => {
                     3. Orbital Logistics & Lifecycle
                   </Typography>
                   <Typography
-                    variant="body2"
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
@@ -209,6 +239,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
               flexDirection: "column",
               justifyContent: "flex-start",
               pl: { xs: 0, md: 4 },
+              pr: { xs: 0, md: 12 },
               pb: { xs: 2, md: 6 },
             }}
           >
@@ -455,6 +486,7 @@ export const HowYouBuild: React.FC = () => {
               flexDirection: "column",
               justifyContent: "flex-start",
               pl: { xs: 0, md: 4 },
+              pr: { xs: 0, md: 12 },
               pb: { xs: 2, md: 6 },
             }}
           >
@@ -619,10 +651,10 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                 maxWidth: { xs: '100%', md: '50%' },
               }}
             >
-              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+              <Typography variant="h5" color="text.secondary" sx={{ mb: 2 }}>
                 <strong>Role:</strong> High-density AI compute + storage node in low Earth orbit
               </Typography>
-              <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+              <Typography variant="h5" color="text.secondary" sx={{ mb: 2 }}>
                 <strong>Use cases:</strong>
               </Typography>
               <List sx={{ color: "#cccccc", pl: 4, mb: 3 }}>
@@ -645,7 +677,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                   />
                 </ListItem>
               </List>
-              <Typography variant="body1" color="text.secondary">
+              <Typography variant="h5" color="text.secondary">
                 <strong>Orbit:</strong> Sun-synchronous LEO, ~600–700 km, ~97–98° inclination<br />
                 <strong>Design life:</strong> 5–10 years, robotically serviceable
               </Typography>
@@ -664,7 +696,9 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                     pr: { md: 3 },
                   }}
                 >
-                  <GradientLine />
+                  <GradientIcon>
+                    <PowerIcon height="54px" />
+                  </GradientIcon>
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -695,7 +729,9 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                     pl: { md: 3 },
                   }}
                 >
-                  <GradientLine />
+                  <GradientIcon>
+                    <StructureIcon height="54px" />
+                  </GradientIcon>
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -727,7 +763,9 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       pr: { md: 3 },
                     }}
                   >
-                    <GradientLine />
+                    <GradientIcon>
+                      <NetworkIcon height="54px" />
+                    </GradientIcon>
                     <Typography
                       sx={{
                         color: "#ffffff",
@@ -753,7 +791,9 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                     pl: { md: 3 },
                   }}
                 >
-                  <GradientLine />
+                  <GradientIcon>
+                    <RadiationIcon height="54px" />
+                  </GradientIcon>
                   <Typography
                     sx={{
                       color: "#ffffff",
@@ -762,7 +802,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
                       mb: 1,
                     }}
                   >
-                    Reliability
+                    Radiation & Reliability
                   </Typography>
                   <Typography variant="body2" sx={{ color: "#cccccc", fontSize: "1.1rem" }}>
                     <strong>Radiation-aware AI pods:</strong> H100-class AI stacks run inside shielded compute pods with ECC, scrubbing, watchdogs and workload-level redundancy, so the system tolerates single-event upsets and long-term dose while still using mostly commercial hardware.
@@ -771,7 +811,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               </Grid>
             </Grid>
 
-            <Typography variant="h5" color="white" sx={{ mt: 6, mb: 4, fontWeight: 600 }}>
+            <Typography variant="h5" color="white" sx={{ mt: 8, mb: 4, fontWeight: 600 }}>
               Explore the Details
             </Typography>
             <Grid container spacing={3} sx={{ mb: 4 }}>
@@ -996,14 +1036,14 @@ export const FourPhaseScalingPath: React.FC = () => {
             >
               THE ORBITAL AI FACTORY ROADMAP
             </Typography>
-            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 4, mr: { xs: 4, md: 40 } }}>
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 6, mr: { xs: 4, md: 40 } }}>
               From Edge Nodes to Factory-Class Infrastructure
             </Typography>
             <Typography variant="h6" color="text.secondary" sx={{ mb: 12, maxWidth: "900px" }}>
               An Orbital AI Factory scales in three clear steps. We start with manufacturable 100 kW-class nodes to validate economics and operations in LEO, then scale to megawatt-class factory nodes, and finally unlock the next cost curve with off-Earth manufacturing.
             </Typography>
 
-            <Grid container spacing={4} sx={{ mb: 4 }}>
+            <Grid container spacing={12} sx={{ mb: 4 }}>
               <Grid item xs={12} md={4}>
                 <Box
                   component="div"
@@ -1477,7 +1517,7 @@ export const Big: React.FC = () => {
             >
               Over the next decade, three things are going to <span style={{ color: '#ffffff' }}>space</span> at the same time:
             </Typography>
-            <Grid container spacing={3} sx={{ mb: 9, maxWidth: 900 }}>
+            <Grid container spacing={6} sx={{ mb: 9, maxWidth: 900 }}>
               <Grid item xs={12} md={4}>
                 <GradientLine />
                 <Typography

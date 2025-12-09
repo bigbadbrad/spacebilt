@@ -4,6 +4,19 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Box, Container, Typography, Grid, Breadcrumbs } from '@mui/material';
 
+// Reusable gradient line component
+const gradientLineStyle = {
+  height: '1px',
+  width: '100%',
+  display: 'block',
+  background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+  mb: 2,
+};
+
+const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
+  <Box component="div" sx={{ ...gradientLineStyle, ...sx }} />
+);
+
 export const metadata: Metadata = {
   title: 'Orbital AI Factory Roadmap – 3-Phase Scaling Path from Edge Nodes to Factory-Class Infrastructure',
   description: 'The Orbital AI Factory roadmap: Phase 1 (100 kW Edge Nodes), Phase 2 (1 MW Factory Nodes), Phase 3 (Off-Earth Manufacturing). From manufacturable nodes to megawatt-class factory infrastructure.',
@@ -95,14 +108,13 @@ export default function RoadmapPage() {
             {/* Phase 1 */}
             <Grid item xs={12} md={4}>
               <Box
+                component="div"
                 sx={{
-                  backgroundColor: '#1b1b1d',
-                  p: 4,
-                  height: '100%',
-                  borderRadius: 1,
-                  border: '1px solid #333333',
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
+                <GradientLine />
                 <Typography
                   variant="h4"
                   sx={{
@@ -110,6 +122,7 @@ export default function RoadmapPage() {
                     fontSize: '1.5rem',
                     fontWeight: 600,
                     mb: 1,
+                    mt: 2,
                   }}
                 >
                   Phase 1 — 100 kW Edge Nodes
@@ -132,14 +145,13 @@ export default function RoadmapPage() {
             {/* Phase 2 */}
             <Grid item xs={12} md={4}>
               <Box
+                component="div"
                 sx={{
-                  backgroundColor: '#1b1b1d',
-                  p: 4,
-                  height: '100%',
-                  borderRadius: 1,
-                  border: '1px solid #333333',
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
+                <GradientLine />
                 <Typography
                   variant="h4"
                   sx={{
@@ -147,6 +159,7 @@ export default function RoadmapPage() {
                     fontSize: '1.5rem',
                     fontWeight: 600,
                     mb: 1,
+                    mt: 2,
                   }}
                 >
                   Phase 2 — 1 MW Factory Nodes
@@ -169,14 +182,13 @@ export default function RoadmapPage() {
             {/* Phase 3 */}
             <Grid item xs={12} md={4}>
               <Box
+                component="div"
                 sx={{
-                  backgroundColor: '#1b1b1d',
-                  p: 4,
-                  height: '100%',
-                  borderRadius: 1,
-                  border: '1px solid #333333',
+                  display: "flex",
+                  flexDirection: "column",
                 }}
               >
+                <GradientLine />
                 <Typography
                   variant="h4"
                   sx={{
@@ -184,6 +196,7 @@ export default function RoadmapPage() {
                     fontSize: '1.5rem',
                     fontWeight: 600,
                     mb: 1,
+                    mt: 2,
                   }}
                 >
                   Phase 3 — Off-Earth Manufacturing

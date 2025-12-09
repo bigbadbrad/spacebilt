@@ -2,6 +2,19 @@
 import React, { FC } from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 
+// Reusable gradient line component
+const gradientLineStyle = {
+  height: '1px',
+  width: '100%',
+  display: 'block',
+  background: 'linear-gradient(90deg, #e4f6f0, #9dcfca 31%, #6b95ac 68%, #45657d)',
+  mb: 2,
+};
+
+const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
+  <Box component="div" sx={{ ...gradientLineStyle, ...sx }} />
+);
+
 interface HomeHeroProps {
   backgroundColor?: string;
 }
@@ -181,43 +194,41 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
         <Typography
           variant="h5"
           color="white"
-          sx={{ mt: 6, mb: 6, textAlign: { xs: 'left', md: 'center' } }}
+          sx={{ mt: 6, mb: 0, textAlign: { xs: 'left', md: 'center' } }}
         >
           SpaceBilt isn&apos;t just talking about it. We&apos;ve already flown
           the core layers of that stack:
         </Typography>
 
       </Container>
-      <Container maxWidth="lg" sx={{
+      <Container maxWidth="md" sx={{
           px: { xs: 2, md: 0 },
           pb: 20,
         }}>
-        <Grid container spacing={3} sx={{ mt: 2 }}>
+        <Grid container spacing={8} sx={{ mt: 2 }}>
           <Grid item xs={12} md={4}>
             <Box
+              component="div"
               sx={{
-                backgroundColor: '#1b1b1d',
-                p: 3,
-                borderRadius: 2,
-                height: '100%',
+                display: "flex",
+                flexDirection: "column",
               }}
             >
+              <GradientLine />
               <Typography
-                variant="h6"
                 sx={{
                   color: '#ffffff',
                   fontSize: '1.25rem',
                   fontWeight: 600,
-                  mb: 1.5,
+                  mb: 1,
                 }}
               >
                 Compute + storage layer.
               </Typography>
               <Typography
-                variant="body2"
                 sx={{
                   color: '#cccccc',
-                  fontSize: '1rem',
+                  fontSize: '1.1rem',
                 }}
               >
                 Large in-Space Server (LiSS), the world&apos;s first 100+ TB orbital data server, flight-qualified on the ISS.
@@ -226,29 +237,27 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           </Grid>
           <Grid item xs={12} md={4}>
             <Box
+              component="div"
               sx={{
-                backgroundColor: '#1b1b1d',
-                p: 3,
-                borderRadius: 2,
-                height: '100%',
+                display: "flex",
+                flexDirection: "column",
               }}
             >
+              <GradientLine />
               <Typography
-                variant="h6"
                 sx={{
                   color: '#ffffff',
                   fontSize: '1.25rem',
                   fontWeight: 600,
-                  mb: 1.5,
+                  mb: 1,
                 }}
               >
                 Data center node layer.
               </Typography>
               <Typography
-                variant="body2"
                 sx={{
                   color: '#cccccc',
-                  fontSize: '1rem',
+                  fontSize: '1.1rem',
                 }}
               >
                 Axiom Orbital Data Center Node on the ISS, where SpaceBilt leads engineering and integration of optically interconnected, petabyte-class infrastructure.
@@ -257,29 +266,27 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           </Grid>
           <Grid item xs={12} md={4}>
             <Box
+              component="div"
               sx={{
-                backgroundColor: '#1b1b1d',
-                p: 3,
-                borderRadius: 2,
-                height: '100%',
+                display: "flex",
+                flexDirection: "column",
               }}
             >
+              <GradientLine />
               <Typography
-                variant="h6"
                 sx={{
                   color: '#ffffff',
                   fontSize: '1.25rem',
                   fontWeight: 600,
-                  mb: 1.5,
+                  mb: 1,
                 }}
               >
                 Lunar and cislunar layer.
               </Typography>
               <Typography
-                variant="body2"
                 sx={{
                   color: '#cccccc',
-                  fontSize: '1rem',
+                  fontSize: '1.1rem',
                 }}
               >
                 The first commercial data server to the Moon, generating real performance data in deep-space environments.
