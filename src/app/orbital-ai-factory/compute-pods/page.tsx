@@ -60,7 +60,7 @@ export default function ComputePodsPage() {
         sx={{
           backgroundColor: '#000000',
           minHeight: '100vh',
-          pt: { xs: 10, md: 15 },
+          pt: { xs: 4, md: 15 },
           pb: 15,
         }}
       >
