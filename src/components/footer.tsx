@@ -114,7 +114,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
   }}
 >
   <a
-    href="https://x.com/spacebilt"
+    href="https://x.com/orbitalfactory"
     target="_blank"
     rel="noopener noreferrer"
   >
