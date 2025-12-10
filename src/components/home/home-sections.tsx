@@ -186,7 +186,7 @@ export const What: React.FC = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3, maxWidth: '66.67%' }}>
+            <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3, maxWidth: { xs: '100%', md: '66.67%' } }}>
               SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack. Multiple Orbital Data Stack nodes on a station come together to form an Orbital AI Factory.
             </Typography>
           </Grid>
@@ -1177,7 +1177,7 @@ export const FourPhaseScalingPath: React.FC = () => {
                       mb: -1,
                     }}
                   >
-                    1 mW
+                    1 MW
                   </Typography>
                   <Typography
                     variant="body1"
@@ -1222,7 +1222,7 @@ export const FourPhaseScalingPath: React.FC = () => {
                       mb: -1,
                     }}
                   >
-                    1 eW
+                    1 EW
                   </Typography>
                   <Typography
                     variant="body1"
@@ -1292,7 +1292,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
             <Typography
               variant="h5"
               color="text.secondary"
-              sx={{ mb: 4, maxWidth: 900 }}
+              sx={{ mb: { xs: 8, md: 4 }, maxWidth: 900 }}
             >
               As launch gets cheaper and terrestrial data centers hit power and
               cooling walls, the next wave of infrastructure isn’t another
@@ -1307,7 +1307,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   component="div"
                   sx={{
                     backgroundColor: "#000000",
-                    p: 3,
+                    p: { xs: 0, md: 3 },
                     width: "100%",
                     borderRadius: 1,
                     display: "flex",
@@ -1329,6 +1329,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
+                      mb: { xs: 6, md: 0 }
                     }}
                   >
                     Foundation models, real-time copilots, and edge inference engines need cheap solar, free radiative cooling, and proximity to sensors. Off-planet regions let them spin up orbital capacity the way they spin up cloud regions today — without waiting years for a new substation on the ground.
@@ -1341,7 +1342,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   component="div"
                   sx={{
                     backgroundColor: "#000000",
-                    p: 3,
+                    p: { xs: 0, md: 3 },
                     width: "100%",
                     borderRadius: 1,
                     display: "flex",
@@ -1363,6 +1364,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
+                      mb: { xs: 6, md: 0 }
                     }}
                   >
                     Imaging, weather, RF, and SAR constellations are drowning in raw data. Processing and filtering in orbit — next to the sensors — lets operators downlink products instead of noise, unlock new analytics, and sell 'insights-as-a-service' instead of bandwidth-hungry pixels.
@@ -1375,7 +1377,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   component="div"
                   sx={{
                     backgroundColor: "#000000",
-                    p: 3,
+                    p: { xs: 0, md: 3 },
                     width: "100%",
                     borderRadius: 1,
                     display: "flex",
@@ -1397,6 +1399,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
+                      mb: { xs: 6, md: 0 }
                     }}
                   >
                     Defense, intel, and allied space operators need resilient compute close to their assets — to fuse signals, run AI on live feeds, and keep operating when links to the ground are contested or delayed. An orbital data center is the tactical edge node for space.
@@ -1409,7 +1412,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   component="div"
                   sx={{
                     backgroundColor: "#000000",
-                    p: 3,
+                    p: { xs: 0, md: 3 },
                     width: "100%",
                     borderRadius: 1,
                     display: "flex",
@@ -1431,6 +1434,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
+                      mb: { xs: 6, md: 0 }
                     }}
                   >
                     Stations, depots, and logistics hubs need a way to monetize their real estate beyond hosting experiments. Plugging into our Orbital Data Stack turns them into orbital cloud regions — leasing compute, storage & data services to every spacecraft that flies through their neighborhood.
@@ -1443,7 +1447,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   component="div"
                   sx={{
                     backgroundColor: "#000000",
-                    p: 3,
+                    p: { xs: 0, md: 3 },
                     width: "100%",
                     borderRadius: 1,
                     display: "flex",
@@ -1465,6 +1469,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
+                      mb: { xs: 6, md: 0 }
                     }}
                   >
                     Physical factories in orbit — from semiconductor foundries & fiber lines to biopharma & 3D-printed structures — generate huge volumes of process & sensor data that can't wait to come back to Earth. Our Orbital Data Stack lets manufacturers run AI-driven process control, quality inspection & digital twins next to the line.
@@ -1477,7 +1482,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                   component="div"
                   sx={{
                     backgroundColor: "#000000",
-                    p: 3,
+                    p: { xs: 0, md: 3 },
                     width: "100%",
                     borderRadius: 1,
                     display: "flex",
@@ -1499,6 +1504,7 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
                     sx={{
                       color: "#cccccc",
                       fontSize: "1.1rem",
+                      mb: { xs: 6, md: 0 }
                     }}
                   >
                     ISAM missions use the same infrastructure to coordinate robotic assembly, servicing, and refueling. It's the data backbone for everything we build and repair in space.
