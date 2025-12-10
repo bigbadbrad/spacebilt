@@ -648,7 +648,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
               1 MW Class Node
             </Typography>
             <Typography variant="body1" color="text.secondary" sx={{ mt: 2, mb: 4, fontStyle: "italic" }}>
-              Concept reference design for free-flying SpaceBilt nodes
+              Concept reference design for free-flying orbital ai factory nodes
             </Typography>
 
             <Typography variant="h5" color="white" sx={{ mt: 4, mb: 4, fontWeight: 600 }}>
