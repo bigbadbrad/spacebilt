@@ -7,8 +7,7 @@ import { Box } from '@mui/material';
 import { UserProvider } from '@/contexts/user-context';
 import { LocalizationProvider } from '@/components/core/localization-provider';
 import { ThemeProvider } from '@/components/core/theme-provider/theme-provider';
-import { MainNavbar } from '@/components/main-navbar';
-import { Footer } from '@/components/footer';
+import { LayoutWrapper } from '@/components/layout-wrapper';
 import { GoogleAnalytics } from '@/utils/GoogleAnalytics';
 
 export const viewport = { width: 'device-width', initialScale: 1 } satisfies Viewport;
@@ -43,22 +42,9 @@ export default function Layout({ children }: LayoutProps): React.JSX.Element {
         <LocalizationProvider>
           <UserProvider>
             <ThemeProvider>
-              <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', backgroundColor: '#000000', minHeight: '100vh' }}>
-                <MainNavbar colorScheme="dark" />
-                <Box
-                  component="main"
-                  sx={{
-                    paddingTop: '40',
-                    backgroundColor: '#000000',
-                    '@media (max-width:600px)': {
-                      paddingTop: '80px',
-                    },
-                  }}
-                >
-                  {children}
-                </Box>
-                <Footer colorScheme="dark" />
-              </Box>
+              <LayoutWrapper>
+                {children}
+              </LayoutWrapper>
             </ThemeProvider>
           </UserProvider>
         </LocalizationProvider>

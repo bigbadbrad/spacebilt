@@ -19,7 +19,7 @@ const gradientLineStyle = {
 };
 
 // Reusable gradient line component
-const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
+export const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
   <Box component="div" sx={{ ...gradientLineStyle, ...sx }} />
 );
 
@@ -62,7 +62,7 @@ const GradientIcon: React.FC<{ children: React.ReactNode; sx?: any }> = ({ child
 
 
 // ***** What is the Orbital Data Stack *****
-export const What: React.FC = () => {
+export const What: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -187,7 +187,7 @@ export const What: React.FC = () => {
               </Grid>
             </Grid>
             <Typography variant="h5" color="#ffffff" sx={{ mt: 3, mb: 3, maxWidth: { xs: '100%', md: '66.67%' } }}>
-              SpaceBilt is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack. Multiple Orbital Data Stack nodes on a station come together to form an Orbital AI Factory.
+              {companyName} is the only company with flight-proven hardware and partnerships across every layer of the Orbital Data Stack. Multiple Orbital Data Stack nodes on a station come together to form an Orbital AI Factory.
             </Typography>
           </Grid>
         </Grid>
@@ -198,7 +198,7 @@ export const What: React.FC = () => {
 
 
 // ***** Why the Orbital Data Stack is hard *****
-export const WhyOrbitalDataStack: React.FC = () => {
+export const WhyOrbitalDataStack: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -255,7 +255,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
             </Typography>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
-              Four things most companies can't do — and SpaceBilt already has:
+              Four things most companies can't do — and {companyName} already has:
             </Typography>
 
             <List sx={{ 
@@ -365,7 +365,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
             </List>
 
             <Typography variant="h5" color="#ffffff" sx={{ mt: 2, mb: 3 }}>
-              Very few companies on Earth can deliver the full Orbital Data Stack. SpaceBilt is one of them — and we've already flown most of it. That's why we're in a position to build the first true Orbital AI Factories.
+              Very few companies on Earth can deliver the full Orbital Data Stack. {companyName} is one of them — and we've already flown most of it. That's why we're in a position to build the first true Orbital AI Factories.
             </Typography>
           </Grid>
         </Grid>
@@ -375,7 +375,7 @@ export const WhyOrbitalDataStack: React.FC = () => {
 };
 
 // ***** We enable the outer edge of AI *****
-export const OuterEdge: React.FC = () => {
+export const OuterEdge: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -423,7 +423,7 @@ export const OuterEdge: React.FC = () => {
               color="text.secondary"
               sx={{ mt: 4, mb: 3 }}
             >
-              SpaceBilt accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Multiple <Box component="span" sx={{ color: "#ffffff" }}>Orbital Data Stack</Box> nodes on a station come together as an <Box component="span" sx={{ color: "#ffffff" }}>Orbital AI Factory</Box> – a cluster where raw feeds from telescopes, sensor constellations, factories, and spacecraft are turned into decisions on the spot, not after a round trip to Earth. Instead of hauling data home, models run in space, filtering, fusing, and acting in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
+              {companyName} accelerates the velocity of data on the outer edge by moving compute and storage off the ground and into orbit and onto the Moon. Multiple <Box component="span" sx={{ color: "#ffffff" }}>Orbital Data Stack</Box> nodes on a station come together as an <Box component="span" sx={{ color: "#ffffff" }}>Orbital AI Factory</Box> – a cluster where raw feeds from telescopes, sensor constellations, factories, and spacecraft are turned into decisions on the spot, not after a round trip to Earth. Instead of hauling data home, models run in space, filtering, fusing, and acting in real time. That means faster decisions, lighter downlinks, and AI systems that keep working even when Earth is far away, congested, or completely offline.
             </Typography>
           </Grid>
 
@@ -450,7 +450,7 @@ export const OuterEdge: React.FC = () => {
 };
 
 // *****  How you actually build an orbital data center *****
-export const HowYouBuild: React.FC = () => {
+export const HowYouBuild: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -511,7 +511,7 @@ export const HowYouBuild: React.FC = () => {
             </Typography>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 5 }}>
-              At SpaceBilt, the Orbital Data Stack is built around three realities:
+              At {companyName}, the Orbital Data Stack is built around three realities:
             </Typography>
 
             <List sx={{ 
@@ -597,7 +597,7 @@ export const HowYouBuild: React.FC = () => {
             </List>
 
             <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 3 }}>
-              Whitepapers describe how orbital data centers should work. SpaceBilt's Orbital Data Stack is how they actually do — with the interfaces, envelopes, and failure modes already proven in space. It's the foundation every Orbital AI Factory we build runs on.
+              Whitepapers describe how orbital data centers should work. {companyName}'s Orbital Data Stack is how they actually do — with the interfaces, envelopes, and failure modes already proven in space. It's the foundation every Orbital AI Factory we build runs on.
             </Typography>
           </Grid>
         </Grid>
@@ -608,7 +608,7 @@ export const HowYouBuild: React.FC = () => {
 
 
 // ***** Orbital AI Factory Specs & Details *****
-export const OrbitalAIFactorySpecs: React.FC = () => {
+export const OrbitalAIFactorySpecs: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -1058,7 +1058,7 @@ export const OrbitalAIFactorySpecs: React.FC = () => {
 };
 
 // ***** ROADMAP *****
-export const FourPhaseScalingPath: React.FC = () => {
+export const FourPhaseScalingPath: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -1253,7 +1253,7 @@ export const FourPhaseScalingPath: React.FC = () => {
 };
 
 // ***** Who the Orbital AI Factory is for *****
-export const WhoNeedsOrbitalDataStack: React.FC = () => {
+export const WhoNeedsOrbitalDataStack: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -1539,7 +1539,80 @@ export const WhoNeedsOrbitalDataStack: React.FC = () => {
   );
 };
 
-export const Big: React.FC = () => {
+// ***** Payload as a Service *****
+export const PayloadAsAService: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
+  return (
+    <Box
+      sx={{
+        backgroundColor: "#000000",
+        pt: { xs: 15, md: 20 },
+        pb: 15,
+        width: "100%",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="flex-start"
+          spacing={0}
+        >
+          {/* Left: Visual placeholder */}
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{
+              order: { xs: 1, md: 1 },
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-start",
+              mt: { xs: 0, md: 0 },
+              pl: { xs: 0, md: 4 },
+            }}
+          >
+            {/* Drop an illustration / diagram here */}
+          </Grid>
+
+          {/* Right: Text */}
+          <Grid
+            item
+            xs={12}
+            md={8}
+            sx={{
+              order: { xs: 2, md: 2 },
+              textAlign: { xs: "left", md: "left" },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "flex-start",
+              pl: { xs: 0, md: 4 },
+              pr: { xs: 0, md: 12 },
+              pb: { xs: 2, md: 6 },
+            }}
+          >
+            <Typography variant="h2" color="white" sx={{ mt: 0, mb: 2 }}>
+              Payload as a Service
+            </Typography>
+
+            <Typography variant="h5" color="text.secondary" sx={{ mt: 4, mb: 4 }}>
+              {companyName}'s Payload as a Service turns orbital capability into a hosted platform experience. Customers bring the payload and mission objective. {companyName} provides a standardized, flight-proven environment with defined power, thermal, data, and mission-support budgets — without requiring customers to build a bespoke spacecraft program.
+            </Typography>
+
+            <Link href="/payload-as-a-service" style={{ textDecoration: 'none' }}>
+              <Typography variant="body2" sx={{ color: '#297BC4', fontSize: '1rem', fontWeight: 500 }}>
+                Learn more &gt;
+              </Typography>
+            </Link>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export const Big: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -1638,7 +1711,7 @@ export const Big: React.FC = () => {
               color="white"
               sx={{ mb: 4, maxWidth: 900 }}
             >
-              That's the layer SpaceBilt is building.
+              That's the layer {companyName} is building.
             </Typography>
 
 
@@ -1649,7 +1722,7 @@ export const Big: React.FC = () => {
   );
 };
 
-export const Proven: React.FC = () => {
+export const Proven: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -1682,7 +1755,7 @@ export const Proven: React.FC = () => {
               FLIGHT-PROVEN ORBITAL DATA SERVERS
             </Typography>
             <Typography variant="h2" color="#ffffff" sx={{ mt: 0, mb: 3 }}>
-              From ISS to the Moon, SpaceBilt servers are already operating where other orbital cloud concepts are still just a PowerPoint.
+              From ISS to the Moon, {companyName} servers are already operating where other orbital cloud concepts are still just a PowerPoint.
             </Typography>
 
 
@@ -1710,7 +1783,7 @@ export const Proven: React.FC = () => {
   );
 };
 
-export const Rugged: React.FC = () => {
+export const Rugged: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{

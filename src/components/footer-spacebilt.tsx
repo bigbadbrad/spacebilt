@@ -1,4 +1,4 @@
-// /components/footer.tsx
+// /components/footer-spacebilt.tsx
 "use client";
 
 import type { FC } from 'react';
@@ -44,8 +44,8 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
       >
         
         <Link href="/" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Box sx={{ mt: 1, mb: 0, width: { xs: '30%', sm: '30%' } }}>
-            <Icon fill={iconColor} />
+          <Box sx={{ mt: 1, mb: 0, width: { xs: '40%', sm: '40%' } }}>
+            <IconBetter fill={iconColor} />
           </Box>
         </Link>
         <Typography variant="h6" sx={{ pt: 1, pb: 3, }}>
@@ -136,7 +136,7 @@ export const Footer: FC<FooterProps> = ({ colorScheme = 'dark' }) => {
                 pb: 5,
               }}
             >
-              © 2026 Orbital AI Factory<br />
+              © 2026 SpaceBilt<br />
               All Rights Reserved.
             </Typography>
       </Box>

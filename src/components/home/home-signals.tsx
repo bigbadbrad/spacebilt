@@ -2,7 +2,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-export const Signals: React.FC = () => {
+export const Signals: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   const signals = [
     { quote: 'In-orbit data centers market projected to $39B by 2035 (67% CAGR).', source: 'GlobeNewswire' },
     { quote: 'In-space manufacturing forecast to $62.8B by 2040.', source: 'Dawnbreaker' },

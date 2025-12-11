@@ -1,9 +1,9 @@
-// /app/page.tsx
+// /app/spacebilt/page.tsx
 import React from "react";
 import { Metadata } from "next";
 import { HomePageContent } from "@/components/home/home-page-content";
 
-const companyName = "Orbital";
+const companyName = "SpaceBilt";
 
 export const metadata: Metadata = {
   title: `${companyName} – We build the data centers that live in space.`,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${companyName} – We build the data centers that live in space.`,
     description: `${companyName} – We build the data centers that live in space.`,
-    url: "https://orbitalaifactory.com",
+    url: "https://orbitalaifactory.com/spacebilt",
     siteName: companyName,
     locale: "en_US",
     type: "website",
@@ -45,13 +45,14 @@ const jsonLd = {
   name: companyName,
   sameAs: [
     "https://orbitalaifactory.com",
-    "https://twitter.com/orbitalfactory",
+    "https://twitter.com/spacebilt",
+    "https://facebook.com/spacebilt"
   ],
   image: "/logo192.png",
   description: `${companyName} – We build the data centers that live in space.`,
 };
 
-export default function Page() {
+export default function SpaceBiltPage() {
   return (
     <>
       <HomePageContent companyName={companyName} />

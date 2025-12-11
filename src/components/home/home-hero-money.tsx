@@ -17,9 +17,10 @@ const GradientLine: React.FC<{ sx?: any }> = ({ sx }) => (
 
 interface HomeHeroProps {
   backgroundColor?: string;
+  companyName?: string;
 }
 
-export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }) => {
+export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000', companyName = "SpaceBilt" }) => {
   return (
     <Box
       sx={{
@@ -65,7 +66,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
             variant="h5"
             >
             From the first commercial lunar data server to petabyte-class orbital
-            data center nodes on the ISS, SpaceBilt designs and integrates the
+            data center nodes on the ISS, {companyName} designs and integrates the
             servers, storage, and infrastructure that turn stations into Orbital
             AI Factories – and all of it runs on our Orbital Data Stack.
           </Typography>
@@ -196,7 +197,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
           color="white"
           sx={{ mt: 6, mb: 0, textAlign: { xs: 'left', md: 'center' } }}
         >
-          SpaceBilt isn&apos;t just talking about it. We&apos;ve already flown
+          {companyName} isn&apos;t just talking about it. We&apos;ve already flown
           the core layers of that stack:
         </Typography>
 
@@ -260,7 +261,7 @@ export const HomeHeroMoney: FC<HomeHeroProps> = ({ backgroundColor = '#000000' }
                   fontSize: '1.1rem',
                 }}
               >
-                Axiom Orbital Data Center Node on the ISS, where SpaceBilt leads engineering and integration of optically interconnected, petabyte-class infrastructure.
+                Axiom Orbital Data Center Node on the ISS, where {companyName} leads engineering and integration of optically interconnected, petabyte-class infrastructure.
               </Typography>
             </Box>
           </Grid>

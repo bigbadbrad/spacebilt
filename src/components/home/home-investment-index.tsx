@@ -13,7 +13,7 @@ interface TickerData {
   isPrivate?: boolean;
 }
 
-export const InvestmentIndex: React.FC = () => {
+export const InvestmentIndex: React.FC<{ companyName?: string }> = ({ companyName = "SpaceBilt" }) => {
   const [tickers, setTickers] = useState<TickerData[]>([]);
   const [loading, setLoading] = useState(true);
 
