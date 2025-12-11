@@ -192,7 +192,7 @@ export default function PayloadAsAServicePage() {
                             fontSize: "1.1rem",
                           }}
                         >
-                          Integration of high-performance edge computing hardware capable of running AI inference and training (e.g., partnerships with companies like Microchip for the PIC64-HPSC or adapting commercial GPUs/TPUs for radiation environments).
+                          Integration of high-performance edge computing hardware capable of running AI inference and training (e.g., partnerships with companies like Microchip for the PIC64-HPSC, or adapting commercial NVIDIA Blackwell (B200/GB200) GPUs/TPUs for radiation environments).
                         </Typography>
                       </Box>
                     </Grid>
@@ -722,6 +722,464 @@ export default function PayloadAsAServicePage() {
                     This isn't a one-size-fits-all node. Customers pick and choose modular building blocks to match their application:
                   </Typography>
 
+                  {/* The Compute Bricks (The "Brains") */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    1. Compute Bricks
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ mb: 3, maxWidth: 900 }}
+                  >
+                    Customers choose the balance between raw speed (AI performance) and radiation hardening (reliability).
+                  </Typography>
+
+                  <Grid container spacing={3} sx={{ mb: 6, width: "100%" }}>
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module A: The "Tank" (Rad-Hard FPGA Node)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Hardware: Xilinx Versal or Microchip PolarFire FPGAs.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Pro: Almost immune to radiation; never crashes.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Con: Lower AI performance per watt.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Use Case: Mission-critical flight software, initial data filtering, and control logic.
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module B: The "Hot Rod" (Shielded AI Accelerator)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Hardware: NVIDIA Jetson Orin or Google Coral Edge TPU (encased in a heavy Aluminum/Tantalum radiation vault).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Pro: Massive FLOPS (Floating Point Operations per Second).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Con: High thermal output; susceptible to "bit flips" (needs frequent reboots).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Use Case: High-speed image recognition, pattern detection, video processing.
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module C: The "Voting" Node (Redundant Array)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Hardware: Three commercial CPUs wired in parallel.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Use Case: "Triple Modular Redundancy" (TMR). The system compares results from all three; if one is corrupted by radiation, it is outvoted by the other two.
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+
+                  {/* The Storage Blocks (The "Locker") */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    2. Storage Blocks
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ mb: 3, maxWidth: 900 }}
+                  >
+                    Data usage in space is different than on Earth. You need distinct tiers for "ingest," "processing," and "archive."
+                  </Typography>
+
+                  <Grid container spacing={3} sx={{ mb: 6, width: "100%" }}>
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module D: NVMe "Scratchpad" (Hot Storage)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Tech: SLC (Single-Level Cell) Industrial SSDs. Extremely fast read/write.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Use Case: Immediate buffering of high-res satellite imagery for real-time AI processing.
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module E: The "Vault" (Cold Storage)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Tech: High-density 3D NAND Flash (100TB+ bricks).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Use Case: Storing raw data to be physically downlinked later, or keeping multiple versions of Large Language Models (LLMs) ready to load.
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+
+                  {/* The Connectivity Cards (The "Mouth") */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    3. Connectivity Cards
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ mb: 3, maxWidth: 900 }}
+                  >
+                    Just like choosing a Network Interface Card (NIC), customers pick how their node talks to the universe.
+                  </Typography>
+
+                  <Grid container spacing={3} sx={{ mb: 6, width: "100%" }}>
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module F: The "Sniper" (Optical/Laser Terminal)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Specs: 100 Gbps+ Laser Link. This creates the "Space Cloud."
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Function: Point-to-point connection to other satellites (e.g., Starlink, SDA Transport Layer, or observation satellites).
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module G: The "Broadcaster" (High-Gain RF Antenna)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Specs: Ka-Band steerable dish.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Function: High-bandwidth downlink to Earth ground stations.
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module H: The "Listener" (IoT Receiver)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Specs: Software Defined Radio (SDR) array.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Function: Picking up signals from shipping containers, ocean buoys, or phones on Earth to process locally.
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+
+                  {/* Utility Backpacks (The "Life Support") */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    4. Utility Backpacks
+                  </Typography>
+                  <Typography
+                    variant="body1"
+                    color="text.secondary"
+                    sx={{ mb: 3, maxWidth: 900 }}
+                  >
+                    This is the aerospace differentiator. You can't just plug into a wall outlet. These modules are added based on the power/heat needs of the Compute Bricks selected above.
+                  </Typography>
+
                   <Grid container spacing={3} sx={{ mb: 4, width: "100%" }}>
                     <Grid item xs={12} md={6} sx={{ display: "flex" }}>
                       <Box
@@ -744,7 +1202,16 @@ export default function PayloadAsAServicePage() {
                             mb: 1,
                           }}
                         >
-                          Power packages
+                          Module I: The "Radiator Wing" (Thermal Management)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Function: A deployable fluid loop panel.
                         </Typography>
                         <Typography
                           sx={{
@@ -753,7 +1220,7 @@ export default function PayloadAsAServicePage() {
                             mb: { xs: 6, md: 0 }
                           }}
                         >
-                          Solar wing pairs sized to mission kW
+                          Why it's needed: If a customer picks the "Hot Rod" AI chip, they must attach this module to dump the 500W+ of heat into deep space, or the chip will melt.
                         </Typography>
                       </Box>
                     </Grid>
@@ -779,7 +1246,16 @@ export default function PayloadAsAServicePage() {
                             mb: 1,
                           }}
                         >
-                          Thermal packages
+                          Module J: The "Battery Brick" (Power Extension)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Function: Modular Lithium-ion packs.
                         </Typography>
                         <Typography
                           sx={{
@@ -788,112 +1264,7 @@ export default function PayloadAsAServicePage() {
                             mb: { xs: 6, md: 0 }
                           }}
                         >
-                          Deployable radiator blocks scaled to heat load
-                        </Typography>
-                      </Box>
-                    </Grid>
-
-                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
-                      <Box
-                        component="div"
-                        sx={{
-                          backgroundColor: "#000000",
-                          p: { xs: 0, md: 3 },
-                          width: "100%",
-                          borderRadius: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <GradientLine />
-                        <Typography
-                          sx={{
-                            color: "#ffffff",
-                            fontSize: "1.25rem",
-                            fontWeight: 600,
-                            mb: 1,
-                          }}
-                        >
-                          Payload & compute bays
-                        </Typography>
-                        <Typography
-                          sx={{
-                            color: "#cccccc",
-                            fontSize: "1.1rem",
-                            mb: { xs: 6, md: 0 }
-                          }}
-                        >
-                          Sensor, storage, AI or custom payload modules
-                        </Typography>
-                      </Box>
-                    </Grid>
-
-                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
-                      <Box
-                        component="div"
-                        sx={{
-                          backgroundColor: "#000000",
-                          p: { xs: 0, md: 3 },
-                          width: "100%",
-                          borderRadius: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <GradientLine />
-                        <Typography
-                          sx={{
-                            color: "#ffffff",
-                            fontSize: "1.25rem",
-                            fontWeight: 600,
-                            mb: 1,
-                          }}
-                        >
-                          Network packages
-                        </Typography>
-                        <Typography
-                          sx={{
-                            color: "#cccccc",
-                            fontSize: "1.1rem",
-                            mb: { xs: 6, md: 0 }
-                          }}
-                        >
-                          Laser link options based on latency/throughput
-                        </Typography>
-                      </Box>
-                    </Grid>
-
-                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
-                      <Box
-                        component="div"
-                        sx={{
-                          backgroundColor: "#000000",
-                          p: { xs: 0, md: 3 },
-                          width: "100%",
-                          borderRadius: 1,
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <GradientLine />
-                        <Typography
-                          sx={{
-                            color: "#ffffff",
-                            fontSize: "1.25rem",
-                            fontWeight: 600,
-                            mb: 1,
-                          }}
-                        >
-                          Mobility modules
-                        </Typography>
-                        <Typography
-                          sx={{
-                            color: "#cccccc",
-                            fontSize: "1.1rem",
-                            mb: { xs: 6, md: 0 }
-                          }}
-                        >
-                          Station-keeping or cislunar-capable configurations
+                          Why it's needed: If the AI model needs to run while the satellite is in Earth's shadow (eclipse) for 45 minutes, extra battery bricks are snapped on to keep the GPUs running without sunlight.
                         </Typography>
                       </Box>
                     </Grid>

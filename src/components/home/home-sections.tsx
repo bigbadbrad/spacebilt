@@ -1518,20 +1518,11 @@ export const WhoNeedsOrbitalDataStack: React.FC<{ companyName?: string }> = ({ c
               color="text.secondary"
               sx={{ mt: 0, mb: 1, maxWidth: 900, fontWeight: 600 }}
             >
-              SpaceBilt is building the default Orbital AI Factory those
+              {companyName} is building the default Orbital AI Factory those
               customers plug into — the off-planet layer every high-value
               workload will eventually land on.
             </Typography>
 
-            {/* <Typography
-              variant="h6"
-              color="#cccccc"
-              sx={{ mt: 1, maxWidth: 900 }}
-            >
-              If you believe AI, sensing, and security are moving into space,
-              the upside isn’t one more satellite. It’s owning the data centers
-              they all depend on. That’s the bet SpaceBilt is giving you.
-            </Typography> */}
           </Grid>
         </Grid>
       </Container>
