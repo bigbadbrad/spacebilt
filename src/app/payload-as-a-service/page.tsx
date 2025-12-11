@@ -80,7 +80,7 @@ export default function PayloadAsAServicePage() {
         }}
       >
         <Container maxWidth="lg">
-          <Breadcrumbs sx={{ mb: 4, color: '#cccccc' }}>
+          <Breadcrumbs sx={{ mb: 4, color: '#cccccc', display: { xs: 'none', md: 'flex' } }}>
             <Link href="/" style={{ textDecoration: 'none', color: '#cccccc' }}>
               Orbital AI Factory
             </Link>
@@ -1431,6 +1431,216 @@ export default function PayloadAsAServicePage() {
                           }}
                         >
                           Use Case: Ideal for the "Tank" or "Listener" nodes that don't need much power but need to be highly agile (no flimsy wings flapping around during maneuvers).
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+
+                  {/* Operational Availability & Power Profile */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 6, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    Operational Availability & Power Profile (SLA)
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{ mb: 4, maxWidth: 900 }}
+                  >
+                    Orbit never stops, but the Sun does. In Low Earth Orbit, your hardware faces a 35-minute total eclipse during every 90-minute rotation. We have abstracted this thermal-power challenge into simple Availability Tiers. Whether you need cost-efficient batch processing that pauses during eclipse, or fully redundant, always-on capabilities for real-time mission assurance, Orbital dynamically scales the energy storage and generation modules to match your required uptime.
+                  </Typography>
+
+                  <Grid container spacing={3} sx={{ mb: 6, width: "100%" }}>
+                    {/* Standard Availability */}
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Standard Availability (Sun-Synchronous)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1,
+                            fontWeight: 600
+                          }}
+                        >
+                          Maximum compute per dollar. Workloads run at full capacity during sunlight and hibernate during eclipse.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Perfect For: AI Training, Rendering, Data Archiving.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Hardware: Direct Solar Integration (No dedicated battery banks).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Price: Base
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    {/* High Availability */}
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          High Availability (Eclipse-Bridged)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1,
+                            fontWeight: 600
+                          }}
+                        >
+                          Zero interruption. Your instance maintains active state and network connectivity through the eclipse phase.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Perfect For: Web Hosting, Standard API Endpoints.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Hardware: Includes Standard Module J (Battery).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Price: +25%
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    {/* Mission Critical */}
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Mission Critical (Continuous Redundant)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1,
+                            fontWeight: 600
+                          }}
+                        >
+                          The 'Always-On' guarantee. Fully redundant power storage ensures 100% duty cycle for peak compute loads, regardless of orbital position.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Perfect For: ISR (Ocean Watcher), Defense Applications, Real-Time Inference.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Hardware: Includes High-Capacity Module J + Expanded Solar Array.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Price: +60%
                         </Typography>
                       </Box>
                     </Grid>
