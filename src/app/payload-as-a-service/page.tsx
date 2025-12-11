@@ -4,6 +4,48 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Box, Container, Grid, Typography, List, ListItem, Breadcrumbs } from '@mui/material';
 import { GradientLine } from '@/components/home/home-sections';
+// Lego block wrapper component - puts content inside the lego block shape
+const LegoBlockWrapper: React.FC<{ children: React.ReactNode; sx?: any }> = ({ children, sx }) => (
+  <Box
+    sx={{
+      position: 'relative',
+      width: '100%',
+      minHeight: '200px',
+      ...sx,
+    }}
+  >
+    {/* SVG background/border */}
+    <Box
+      component="svg"
+      viewBox="0 0 800 800"
+      sx={{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        fill: '#000000',
+        stroke: '#297BC4',
+        strokeWidth: '3',
+        zIndex: 0,
+      }}
+    >
+      <path d="M733.3,132V0H466.7v132H333.3V0H66.7v132H0v668h800V132H733.3z M533.3,66.7h133.3V132H533.3V66.7z M133.3,66.7h133.3V132H133.3V66.7z M733.3,678.5H66.7V253.5h666.7V678.5z" />
+    </Box>
+    {/* Content positioned inside the white rectangle area */}
+    <Box
+      sx={{
+        position: 'relative',
+        zIndex: 1,
+        p: { xs: 2, md: 3 },
+        pt: { xs: 4, md: 5 }, // Extra top padding to account for studs
+        height: '100%',
+      }}
+    >
+      {children}
+    </Box>
+  </Box>
+);
 
 export const metadata: Metadata = {
   title: 'Payload as a Service – Orbital',
@@ -728,10 +770,10 @@ export default function PayloadAsAServicePage() {
                     color="#ffffff"
                     sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
                   >
-                    1. Compute Bricks
+                    1. Compute
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="h6"
                     color="text.secondary"
                     sx={{ mb: 3, maxWidth: 900 }}
                   >
@@ -914,10 +956,10 @@ export default function PayloadAsAServicePage() {
                     color="#ffffff"
                     sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
                   >
-                    2. Storage Blocks
+                    2. Storage
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="h6"
                     color="text.secondary"
                     sx={{ mb: 3, maxWidth: 900 }}
                   >
@@ -1020,10 +1062,10 @@ export default function PayloadAsAServicePage() {
                     color="#ffffff"
                     sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
                   >
-                    3. Connectivity Cards
+                    3. Connectivity
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="h6"
                     color="text.secondary"
                     sx={{ mb: 3, maxWidth: 900 }}
                   >
@@ -1170,14 +1212,14 @@ export default function PayloadAsAServicePage() {
                     color="#ffffff"
                     sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
                   >
-                    4. Utility Backpacks
+                    4. Utility
                   </Typography>
                   <Typography
-                    variant="body1"
+                    variant="h6"
                     color="text.secondary"
                     sx={{ mb: 3, maxWidth: 900 }}
                   >
-                    This is the aerospace differentiator. You can't just plug into a wall outlet. These modules are added based on the power/heat needs of the Compute Bricks selected above.
+                    These modules are added based on the power/heat needs of the Compute Bricks selected above.
                   </Typography>
 
                   <Grid container spacing={3} sx={{ mb: 4, width: "100%" }}>
@@ -1270,6 +1312,185 @@ export default function PayloadAsAServicePage() {
                     </Grid>
                   </Grid>
 
+                  {/* The Power Generators (The "Power Plant") */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 4, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    5. Power
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{ mb: 3, maxWidth: 900 }}
+                  >
+                    Standard satellites have fixed solar wings. For an AI factory, you need to order power by the kilowatt based on how many "Hot Rod" chips you are installing.
+                  </Typography>
+
+                  <Grid container spacing={3} sx={{ mb: 6, width: "100%" }}>
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module K: The "Party horn or scroll" (ROSA-Style Deployable Array)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Tech: Roll-Out Solar Array (flexible blankets that unroll like a party horn).
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Capacity: 20kW – 50kW per wing.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Why it's needed: These are surprisingly light and compact during launch. If your AI cluster needs 100kW, you don't build a new satellite; you just snap on two extra "Scroll" modules to the truss.
+                        </Typography>
+                      </Box>
+                    </Grid>
+
+                    <Grid item xs={12} md={6} sx={{ display: "flex" }}>
+                      <Box
+                        component="div"
+                        sx={{
+                          backgroundColor: "#000000",
+                          p: { xs: 0, md: 3 },
+                          width: "100%",
+                          borderRadius: 1,
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <GradientLine />
+                        <Typography
+                          sx={{
+                            color: "#ffffff",
+                            fontSize: "1.25rem",
+                            fontWeight: 600,
+                            mb: 1,
+                          }}
+                        >
+                          Module L: The "Panel" (Body-Mounted Array)
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Tech: Rigid Gallium Arsenide cells bolted directly to the structure.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: 1
+                          }}
+                        >
+                          Capacity: 1kW – 3kW.
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#cccccc",
+                            fontSize: "1.1rem",
+                            mb: { xs: 6, md: 0 }
+                          }}
+                        >
+                          Use Case: Ideal for the "Tank" or "Listener" nodes that don't need much power but need to be highly agile (no flimsy wings flapping around during maneuvers).
+                        </Typography>
+                      </Box>
+                    </Grid>
+                  </Grid>
+
+                  {/* Example Configuration */}
+                  <Typography
+                    variant="h4"
+                    color="#ffffff"
+                    sx={{ mt: 6, mb: 3, fontSize: "1.5rem", fontWeight: 600 }}
+                  >
+                    Example Configuration: "The Ocean Watcher"
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{ mb: 3, maxWidth: 900 }}
+                  >
+                    A maritime logistics company wants to track ships and predict port congestion.  They would build their Payload-as-a-Service node using these components:
+                  </Typography>
+
+                  <Box component="ul" sx={{ pl: 3, mb: 4, maxWidth: 900 }}>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module H (The Listener): To pick up AIS beacons from ships.
+                    </Typography>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module F (The Sniper): To receive optical images from a partner's spy satellite.
+                    </Typography>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      2x Module B (The Hot Rod): To run computer vision algorithms that match the ship beacon to the ship image (verifying identity).
+                    </Typography>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module I (Radiator Wing): To cool the two Hot Rod chips.
+                    </Typography>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module G (The Broadcaster): To beam only the final report ("Ship X is at Port Y") down to Earth.
+                    </Typography>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module K (The "Scroll" - Mini Variant): A full-scale AI training cluster might need huge arrays, but for this specific inference mission (2 chips), a smaller, single-wing deployable ROSA (approx 2kW - 5kW) is required. This ensures the AI chips can run at 100% utilization rather than being throttled down to save power.
+                    </Typography>
+                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      2x Module J (Battery Bricks): "Ocean watching" is a 24/7 job. Ships don't stop moving at night. Without these heavy-duty battery packs, the AI nodes would have to shut down every time the satellite enters the Earth's shadow (approx. 40 minutes of every 90-minute orbit). You cannot have 40% downtime in a security product.
+                    </Typography>
+                  </Box>
+
+                  <Typography
+                    variant="h5"
+                    color="#ffffff"
+                    sx={{ mt: 4, mb: 2, fontSize: "1.25rem", fontWeight: 600 }}
+                  >
+                    The "Clean Path to Scale":
+                  </Typography>
+                  <Typography
+                    variant="h6"
+                    color="text.secondary"
+                    sx={{ mb: 4, maxWidth: 900 }}
+                  >
+                    If the customer realizes their AI is too slow, Orbital doesn't de-orbit the satellite. On the next servicing mission, they simply fly up two more Module B (Hot Rods) and a Module J (Battery), and a robot snaps them onto the existing structure, instantly doubling the processing power of the orbital factory.
+                  </Typography>
+
                   <Typography
                     variant="h5"
                     color="text.secondary"
@@ -1283,7 +1504,7 @@ export default function PayloadAsAServicePage() {
           </Box>
 
           {/* 6. Assembled in Space - Like "Who the Orbital AI Factory is for" style */}
-          <Box
+          {/* <Box
             sx={{
               backgroundColor: "#000000",
               pt: { xs: 10, md: 14 },
@@ -1326,7 +1547,7 @@ export default function PayloadAsAServicePage() {
                 </Grid>
               </Grid>
             </Container>
-          </Box>
+          </Box> */}
         </Container>
       </Box>
     </>
