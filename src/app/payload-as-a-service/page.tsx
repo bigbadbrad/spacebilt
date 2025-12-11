@@ -1244,7 +1244,7 @@ export default function PayloadAsAServicePage() {
                             mb: 1,
                           }}
                         >
-                          Module I: The "Radiator Wing" (Thermal Management)
+                          Module I: The "Radiator" (Thermal Management)
                         </Typography>
                         <Typography
                           sx={{
@@ -1288,7 +1288,7 @@ export default function PayloadAsAServicePage() {
                             mb: 1,
                           }}
                         >
-                          Module J: The "Battery Brick" (Power Extension)
+                          Module J: The "Battery" (Power Extension)
                         </Typography>
                         <Typography
                           sx={{
@@ -1350,7 +1350,7 @@ export default function PayloadAsAServicePage() {
                             mb: 1,
                           }}
                         >
-                          Module K: The "Party horn or scroll" (ROSA-Style Deployable Array)
+                          Module K: The "Scroll" (ROSA-Style Deployable Array)
                         </Typography>
                         <Typography
                           sx={{
@@ -1359,7 +1359,7 @@ export default function PayloadAsAServicePage() {
                             mb: 1
                           }}
                         >
-                          Tech: Roll-Out Solar Array (flexible blankets that unroll like a party horn).
+                          Tech: Roll-Out Solar Array (flexible blankets that unroll like a party horn or scroll).
                         </Typography>
                         <Typography
                           sx={{
@@ -1452,27 +1452,27 @@ export default function PayloadAsAServicePage() {
                     A maritime logistics company wants to track ships and predict port congestion.  They would build their Payload-as-a-Service node using these components:
                   </Typography>
 
-                  <Box component="ul" sx={{ pl: 3, mb: 4, maxWidth: 900 }}>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      1x Module H (The Listener): To pick up AIS beacons from ships.
+                  <Box sx={{ mb: 4, maxWidth: 900 }}>
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module H (Listener): To pick up AIS beacons from ships.
                     </Typography>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      1x Module F (The Sniper): To receive optical images from a partner's spy satellite.
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module F (Sniper): To receive optical images from a partner's spy satellite.
                     </Typography>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      2x Module B (The Hot Rod): To run computer vision algorithms that match the ship beacon to the ship image (verifying identity).
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      2x Module B (Hot Rod): To run computer vision algorithms that match the ship beacon to the ship image (verifying identity).
                     </Typography>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      1x Module I (Radiator Wing): To cool the two Hot Rod chips.
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module I (Radiator): To cool the two Hot Rod chips.
                     </Typography>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      1x Module G (The Broadcaster): To beam only the final report ("Ship X is at Port Y") down to Earth.
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module G (Broadcaster): To beam only the final report ("Ship X is at Port Y") down to Earth.
                     </Typography>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      1x Module K (The "Scroll" - Mini Variant): A full-scale AI training cluster might need huge arrays, but for this specific inference mission (2 chips), a smaller, single-wing deployable ROSA (approx 2kW - 5kW) is required. This ensures the AI chips can run at 100% utilization rather than being throttled down to save power.
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      1x Module K (Scroll - Mini Variant): A full-scale AI training cluster might need huge arrays, but for this specific inference mission (2 chips), a smaller, single-wing deployable ROSA (approx 2kW - 5kW) is required. This ensures the AI chips can run at 100% utilization rather than being throttled down to save power.
                     </Typography>
-                    <Typography component="li" color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
-                      2x Module J (Battery Bricks): "Ocean watching" is a 24/7 job. Ships don't stop moving at night. Without these heavy-duty battery packs, the AI nodes would have to shut down every time the satellite enters the Earth's shadow (approx. 40 minutes of every 90-minute orbit). You cannot have 40% downtime in a security product.
+                    <Typography color="#ffffff" sx={{ mb: 2, fontSize: "1.1rem" }}>
+                      2x Module J (Battery): "Ocean watching" is a 24/7 job. Ships don't stop moving at night. Without these heavy-duty battery packs, the AI nodes would have to shut down every time the satellite enters the Earth's shadow (approx. 40 minutes of every 90-minute orbit). You cannot have 40% downtime in a security product.
                     </Typography>
                   </Box>
 
