@@ -16,18 +16,21 @@ interface LayoutWrapperProps {
 export function LayoutWrapper({ children }: LayoutWrapperProps) {
   const pathname = usePathname();
   const isSpaceBiltRoute = pathname?.startsWith('/spacebilt');
+  const isLeanSpaceRoute = pathname === '/lean-space';
 
   const Navbar = isSpaceBiltRoute ? MainNavbarSpacebilt : MainNavbarOrbital;
   const FooterComponent = isSpaceBiltRoute ? FooterSpaceBilt : Footer;
+  const colorScheme = isLeanSpaceRoute ? 'light' : 'dark';
+  const backgroundColor = isLeanSpaceRoute ? '#F9F9F9' : '#000000';
 
   return (
-    <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', backgroundColor: '#000000', minHeight: '100vh' }}>
-      <Navbar colorScheme="dark" />
+    <Box sx={{ display: 'flex', flex: '1 1 auto', flexDirection: 'column', backgroundColor: isLeanSpaceRoute ? '#F9F9F9' : '#000000', minHeight: '100vh' }}>
+      <Navbar colorScheme={colorScheme} />
       <Box
         component="main"
         sx={{
           paddingTop: '40',
-          backgroundColor: '#000000',
+          backgroundColor: isLeanSpaceRoute ? '#F9F9F9' : '#000000',
           '@media (max-width:600px)': {
             paddingTop: '80px',
           },
@@ -35,7 +38,7 @@ export function LayoutWrapper({ children }: LayoutWrapperProps) {
       >
         {children}
       </Box>
-      <FooterComponent colorScheme="dark" />
+      <FooterComponent colorScheme={colorScheme} />
     </Box>
   );
 }
