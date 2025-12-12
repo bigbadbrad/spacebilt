@@ -752,7 +752,12 @@ export default function PayloadAsAServicePage() {
                     pl: { xs: 0, md: 4 },
                   }}
                 >
-                  <Typography variant="h2" color="#ffffff" sx={{ mb: 3 }}>
+                  <Typography 
+                    id="configurable-by-design"
+                    variant="h2" 
+                    color="#ffffff" 
+                    sx={{ mb: 3, scrollMarginTop: '100px' }}
+                  >
                     Configurable by Design
                   </Typography>
 

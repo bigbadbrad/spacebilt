@@ -22,7 +22,7 @@ const readableFont = Inter({
 export const metadata: Metadata = {
   title: 'Lean Space: The Methodology That Could Finally Speed Up the Orbital Era – Orbital',
   description: 'How combining the seriousness of aerospace with the learning cadence of Lean Startup could finally speed up the orbital era. By Brad Meinert.',
-  keywords: ['lean space', 'aerospace', 'orbital compute', 'spacex', 'lean startup', 'orbital ai factory'],
+  keywords: ['lean space' , 'minimal viable payload', 'aerospace', 'orbital compute', 'spacex', 'lean startup', 'orbital ai factory'],
   openGraph: {
     title: 'Lean Space: The Methodology That Could Finally Speed Up the Orbital Era',
     description: 'How combining the seriousness of aerospace with the learning cadence of Lean Startup could finally speed up the orbital era.',
@@ -410,11 +410,12 @@ export default function LeanSpacePage() {
               color="#1C1C1E"
               sx={{ mb: 2, mt: 4 }}
             >
-              1) Redefine MVP for orbit
+              1) Minimal Viable Payload (MVP)
+              
             </Typography>
 
             <Typography variant="body1" sx={{ mb: 3, color: '#1D1D1F' }}>
-              In software, MVP proves demand. In space hardware, MVP proves feasibility and repeatability.
+              Redefine MVP for orbit.  In software, MVP proves demand. In space hardware, MVP proves feasibility and repeatability.
             </Typography>
 
             <Typography variant="body1" sx={{ mb: 3, color: '#1D1D1F' }}>
