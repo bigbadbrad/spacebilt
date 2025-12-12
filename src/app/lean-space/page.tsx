@@ -20,11 +20,11 @@ const readableFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Lean Space: The Operating System That Could Finally Speed Up the Orbital Era – Orbital',
+  title: 'Lean Space: The Methodology That Could Finally Speed Up the Orbital Era – Orbital',
   description: 'How combining the seriousness of aerospace with the learning cadence of Lean Startup could finally speed up the orbital era. By Brad Meinert.',
   keywords: ['lean space', 'aerospace', 'orbital compute', 'spacex', 'lean startup', 'orbital ai factory'],
   openGraph: {
-    title: 'Lean Space: The Operating System That Could Finally Speed Up the Orbital Era',
+    title: 'Lean Space: The Methodology That Could Finally Speed Up the Orbital Era',
     description: 'How combining the seriousness of aerospace with the learning cadence of Lean Startup could finally speed up the orbital era.',
     url: 'https://www.orbitalaifactory.com/lean-space',
     siteName: 'Orbital AI Factory',
@@ -87,7 +87,7 @@ export default function LeanSpacePage() {
             variant="h5"
             sx={{ mb: 4, color: '#3C3C43' }}
           >
-            The Operating System That Could Finally Speed Up the Orbital Era
+            The Methodology That Could Finally Speed Up the Orbital Era
           </Typography>
 
           {/* Author */}
@@ -402,7 +402,7 @@ export default function LeanSpacePage() {
             </Typography>
 
             <Typography variant="body1" sx={{ mb: 3, color: '#1D1D1F' }}>
-              If orbital AI factories are to be real, they'll need this operating system from day one.
+              If orbital AI factories are to be real, they'll need this methodology from day one.
             </Typography>
 
             <Typography
