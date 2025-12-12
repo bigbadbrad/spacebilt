@@ -135,7 +135,7 @@ export default function LeanSpacePage() {
               Because when SpaceX began accelerating flight and iteration cadence, it wasn't just impressive — it was exhilarating. What fascinated me wasn't only the ambition. It was the tempo. For the first time, the world that taught me patience started to resemble the world that taught me speed.
             </Typography>
 
-            <Typography variant="body1" sx={{ mb: 8, color: '#1D1D1F' }}>
+            <Typography variant="body1" sx={{ mb: 10, color: '#1D1D1F' }}>
               That collision is the heart of this post.
             </Typography>
 
@@ -186,7 +186,7 @@ export default function LeanSpacePage() {
               </Typography>
             </Box>
 
-            <Typography variant="body1" sx={{ mb: 8, color: '#3C3C43' }}>
+            <Typography variant="body1" sx={{ mb: 10, color: '#3C3C43' }}>
               Lean Space doesn't reject rigor. It relocates it. From risk-avoidance through schedule to risk-reduction through iteration. This is how you preserve safety while escaping glacial timelines.
             </Typography>
 
@@ -270,7 +270,7 @@ export default function LeanSpacePage() {
               Competitors trying to imitate hardware are already behind. Competitors trying to imitate a learning engine are years behind.
             </Typography>
 
-            <Typography variant="body1" sx={{ mb: 8, color: '#1D1D1F' }}>
+            <Typography variant="body1" sx={{ mb: 10, color: '#1D1D1F' }}>
               SpaceX didn't just build rockets. They built an iteration machine.
             </Typography>
 
@@ -389,7 +389,7 @@ export default function LeanSpacePage() {
               That's the conceptual bridge from frontier model releases to space hardware: not literally shipping a new "factory" every quarter, but adopting a culture where each flight is a version, each node is a learning unit, and each iteration compounds the roadmap.
             </Typography>
 
-            <Typography variant="body1" sx={{ mb: 8, color: '#1D1D1F' }}>
+            <Typography variant="body1" sx={{ mb: 10, color: '#1D1D1F' }}>
               Brand new ball game
             </Typography>
 
@@ -477,11 +477,19 @@ export default function LeanSpacePage() {
             </Typography>
 
             <Typography variant="body1" sx={{ mb: 3, color: '#1D1D1F' }}>
-              In a "Payload as a Service" model, the satellite isn't a monolith; it's a backbone. Need to run inference? Snap on the "Hot Rod" AI accelerator module. Need to survive an eclipse? Snap on the "Mission Critical" battery pack. Need more power? Click in a deployable solar "Scroll."
+              In a{' '}
+              <Link href="/payload-as-a-service" style={{ color: '#1D1D1F', textDecoration: 'underline' }}>
+                "Payload as a Service"
+              </Link>{' '}
+              model, the satellite isn't a monolith; it's a backbone. Need to run inference? Snap on the "Hot Rod" AI accelerator module. Need to survive an eclipse? Snap on the "Mission Critical" battery pack. Need more power? Click in a deployable solar "Scroll."
             </Typography>
 
             <Typography variant="body1" sx={{ mb: 3, color: '#1D1D1F' }}>
-              This is "Configurable by Design." It allows you to use the same manufacturing line to build a low-power IoT listener or a high-wattage AI factory. You don't redesign the car for every driver; you just change the options package.
+              This is{' '}
+              <Link href="/payload-as-a-service#configurable-by-design" style={{ color: '#1D1D1F', textDecoration: 'underline' }}>
+                "Configurable by Design."
+              </Link>{' '}
+              It allows you to use the same manufacturing line to build a low-power IoT listener or a high-wattage AI factory. You don't redesign the car for every driver; you just change the options package.
             </Typography>
 
             <Typography
@@ -512,7 +520,7 @@ export default function LeanSpacePage() {
               In the old aerospace world, you sold a customer a battery and a solar array. In Lean Space, you sell them Availability.
             </Typography>
 
-            <Typography variant="body1" sx={{ mb: 8, color: '#1D1D1F' }}>
+            <Typography variant="body1" sx={{ mb: 10, color: '#1D1D1F' }}>
               When a customer wants to run a 24/7 "Ocean Watcher" AI model, you don't ask them to spec the energy density of the lithium-ion cells. You offer them a "Mission Critical SLA" that guarantees uptime through the orbital eclipse. The engineering (swapping in heavy battery modules) is abstracted away. The customer buys the result (continuous data), and the provider handles the rigor. That is how you move at the speed of software.
             </Typography>
 
